@@ -1,14 +1,15 @@
-import { FETCH_LISTDATA } from "./actions.type";
-import {
+import { FETCH_SELECTED_WORK } from "./actions.type";
+import { dataWorks } from "../data/works"
+import { 
     FETCH_START, 
-    FETCH_END
+    FETCH_END,
+    SET_WORK
 } from "./mutations.type";
-
-import axios from 'axios';
 
 const state = {
   listData: [],
   isLoading: true,
+  workDetail: ""
 };
 
 const getters = {
@@ -17,16 +18,16 @@ const getters = {
   },
   getListData(state) {
     return state.listData;
+  },
+  getWorkDetail(state){
+    return state.workDetail
   }
 };
 
 const actions = {
-  async [FETCH_LISTDATA]({ commit }) {
-    const response = await axios.get(
-        'https://jsonplaceholder.typicode.com/users'
-      );
-  
-    commit(FETCH_END, response.data);
+  [FETCH_SELECTED_WORK]({ commit }, workTarget) {
+    const work = dataWorks.filter( work => work.slug == workTarget )
+    commit(SET_WORK, work[0]);
   },
 };
 
@@ -39,6 +40,9 @@ const mutations = {
     state.isLoading = false;
     state.listData = response
   },
+  [SET_WORK](state, work){
+    state.workDetail = work
+  }
 };
 
 export default {

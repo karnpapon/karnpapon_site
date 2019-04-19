@@ -15,7 +15,7 @@ export default new Router({
       component: () => import("@/views/About"),
     },
     {
-      path: "/work",
+      path: "/work/:slug",
       component: () => import("@/views/Work"),
     }
   ]

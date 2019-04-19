@@ -1,17 +1,4 @@
 <template>
-  <!-- <div class="home">
-    <h1 class="header-title">{{ hometitle }}</h1>
-    <div v-on:click="getdata" class="home-detail"></div>
-    <ul class="tag-list">
-      <li
-        v-for="(data, index) of getListData"
-        :key="index"
-      >
-        <span v-text="data.name" />
-      </li>
-    </ul>
-  </div> -->
-
   <div class="color-grey">
     <section v-for="( work, index) of workyears" :key="index" class="section">
       <div class="columns">
@@ -35,7 +22,6 @@
 
       </div>
     </section>
-
   </div>
 </template>
 
@@ -43,8 +29,6 @@
 import Header from "../components/Header";
 import { FETCH_LISTDATA } from "@/store/actions.type";
 import { mapGetters } from 'vuex'
-import BScroll from 'better-scroll'
-
 
 
 export default {
@@ -66,8 +50,6 @@ export default {
   },
   mounted() {
     this.$store.dispatch(FETCH_LISTDATA);
-    const scroll = new BScroll('.scroll-wrapper')
-    console.log("scroll", scroll)
   },
   components: {
     },
@@ -76,9 +58,6 @@ export default {
   },
   computed: {
     ...mapGetters(['getListData', 'isLoading']),
-    onScroll(pos) {
-      console.log(`Now position is x: ${pos.x}, y: ${pos.y}`)
-    }
   },
   methods: {
     getdata(){

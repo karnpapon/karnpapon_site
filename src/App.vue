@@ -34,6 +34,11 @@ html{
     color: #2c3e50;
   }
 
+  a url{ 
+    color: $color-black !important;
+    &:hover{ color: $hover-color !important; }
+  }
+
   .container{
     height: 100vh;
     align-items: center;
@@ -87,4 +92,16 @@ html{
   .no-pointer-event{ pointer-events: none; }
 
   .no-border-top{ border-top: unset !important;}
+
+  .tag-cat{ 
+    border: 1px solid $color-black; 
+    font-weight: bolder !important;
+    /* font-family: $font-input-mono-bold; */
+    font-size: 10px;
+    padding: $medium-padding;
+  }
+
+  .active{
+    p{ font-weight: bolder;} 
+  }
 </style>

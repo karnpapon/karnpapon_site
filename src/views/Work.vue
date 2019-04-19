@@ -1,37 +1,57 @@
 <template>
-    <div class="container-ctrl">
+    <div class="container-ctrl scroll-wrapper">
+
+      <!-- Header Detail -->
       <section class="column is-full title-detail-level with-padding">
         <div>
-          <div class="title detail-level">Cadson Demak Project</div>
-            <div class="subtitle is-6  w-light padding-top">
-              <p>custom sequencer</p>  
-              <p>live-coding environment</p>  
-            </div>
-
+          <div class="title detail-level">{{ getWorkDetail.name }}</div>
+          <div class="subtitle is-6  w-light padding-top">
+            <p>{{ getWorkDetail.description1}}</p>  
+            <p>{{ getWorkDetail.description2}}</p>  
+          </div>
           <div class="subtitle is-6  w-light ">
-            <p> 2019 </p> 
+            <p> {{ getWorkDetail.year }} </p> 
           </div>
-
           <div class="subtitle is-6  w-light">
-            <p> Collaboration </p> 
+            <p> {{ getWorkDetail.workType }} </p> 
           </div>
-            
         </div>
       </section>
 
       <section class="container is-fullhd detail-section">
         <div class="columns detail-wrapper">
-          <div class="column is-3 w-light">
-            <div class="with-padding-medium">
-              <strong> Category:</strong>
+
+          <!--  work detail: overview -->
+          <div class="column is-3 w-light no-padding">
+            <div class="with-padding">
+              <div class="flex-wrapper">
+                <span class="icon padding-right-small">
+                    <i class="fas fa-link"></i>
+                </span>
+                <a target="blank" href="https://github.com/karnpapon">
+                  <url> theblack.codes </url>
+                </a>
+              </div>
+
+              <div class="flex-wrapper">
+                <span class="icon padding-right-small">
+                    <i class="fab fa-github"></i>
+                </span>
+                <a target="blank" href="https://github.com/karnpapon">
+                  <url> /songkranizer </url>
+                </a>
+              </div>
             </div>
-            <div class="inline-grid-wrapper">
-              <span class="tag is-success">graphic design</span>
-              <span class="tag is-warning">Development</span>
-              <span class="tag is-danger">illustration</span>
+
+            <div class="inline-grid-wrapper with-padding">
+              <strong> Category:</strong>
+              <span class="tag-cat">graphic design</span>
+              <span class="tag-cat">Development</span>
+              <span class="tag-cat">illustration</span>
             </div>
           </div>
 
+          <!--  work detail: Body -->
           <div class="column is-6">
             <div>
               <div class="column is-10 w-light padding-top">
@@ -140,8 +160,6 @@
         </div>
       </section>
 
-      <!-- <div class="break-line"></div> -->
-
       <section class="column is-full nav-next-work-section">
         <div class="columns scroll-spacing">
             <div class="column is-half no-padding-top">
@@ -156,13 +174,17 @@
               >
               <div class="flex-wrapper">
                 <span class="icon icon-size-2x">
-                  <i class="fas fa-arrow-left padding-top padding-right"></i>
+                  <i 
+                    class="fas padding-top padding-right"
+                    :class="['fa-arrow-' + data.icon]"
+                  >
+                  </i>
                 </span>
                 <div class="next-item-wrapper">
                   <p class="title is-3">{{data.title}}</p>
                   <div class="subtitle is-6  w-light padding-top">
-                    <p>custom sequencer</p>  
-                    <p>custom sequencer</p>  
+                    <p>{{ data.detail1}}</p>  
+                    <p>{{ data.detail2}}</p>  
                   </div>
                 </div>
               </div>
@@ -177,27 +199,23 @@
 </template>
 
 <script>
-import { FETCH_LISTDATA } from "@/store/actions.type";
+// import { FETCH_LISTDATA } from "@/store/actions.type";
 import { mapGetters } from 'vuex'
+import BScroll from 'better-scroll'
 
 export default {
   name: 'Work',
   data(){
     return {
-      hometitle: "Karnpapon Vue's Boiler Plate",
       worklists: [
-        { title: "Kinjai Gallery"},
-        { title: "Rewind to the next"},
-      ],
-      workyears: [
-        { year: "2019"},
-        { year: "2018"},
-        { year: "Late"},
-      ],
+        { title: "Kinjai Gallery", detail1: "custom sequencer", detail2: 'custom detail 2', icon: 'left'},
+        { title: "Rewind to the next", detail1: "custom detail1", detail2: 'custom detail2', icon: 'right'},
+      ]
     }
   },
   mounted() {
-    this.$store.dispatch(FETCH_LISTDATA);
+    // this.$store.dispatch(FETCH_LISTDATA);
+    const scroll = new BScroll('.scroll-wrapper')
   },
   components: {
     },
@@ -205,7 +223,7 @@ export default {
     msg: String
   },
   computed: {
-    ...mapGetters(['getListData', 'isLoading']),
+    ...mapGetters(['getListData', 'isLoading', 'getWorkDetail']),
     onScroll(pos) {
       console.log(`Now position is x: ${pos.x}, y: ${pos.y}`)
     }
@@ -222,12 +240,14 @@ export default {
 <style lang="scss"  scoped>
 @import '../assets/styles/_base.scss';
   .work-list-detail{
-    transition: 150ms;
+    /* transition: 150ms; */
     height: 100%;
 
     &:hover{
       cursor: pointer;
-      background-color: $hover-color;
+      background-color: $color-black;
+     p{ color: white;}
+     i{ color: white;}
     }
 
   }
@@ -332,6 +352,7 @@ export default {
     margin-left: unset;
     background-color: $main-color;
     pointer-events: auto;
+    padding-bottom: 40px;
   }
 
   .scroll-spacing{

@@ -12,8 +12,18 @@
           :class="['is-' + list.widthRatio]"
         >
           <p class="title is-6 padding-top-small">{{ list.year }}</p>
-          <div v-for="(itemlist , itemindex) of list.item" :key="itemindex" class="padding-top-medium list-overview">
+          <div 
+            v-for="(itemlist , itemindex) of list.item" :key="itemindex" 
+            class="padding-top-medium list-overview"
+            v-on:click="selectWork(itemlist)"
+          >
+            <router-link 
+              :to="{ path: `/work/${itemlist.slug}`}" 
+              active-class="active"
+              exact 
+            >
             <p class="subtitle is-6">{{ itemlist.name }}</p>
+            </router-link>
           </div>
         </div>
       </div>
@@ -23,12 +33,12 @@
   <div class="footer-wrapper">
     <div 
       class="footer footer-ctl column is-1 footer-overview"
-      @click="showOverview"
+      @click="toggleOverview"
       :class="{'no-border-top': isShowOverview }"
     >
       <div class="level">
         <span class="icon padding-right-small">
-          <i class="far fa-arrow-alt-circle-up"></i>
+          <i class="fas fa-arrow-up"></i>
         </span>
         <p>overview</p>
       </div>
@@ -75,6 +85,8 @@
 </template>
 
 <script>
+import { FETCH_SELECTED_WORK } from "@/store/actions.type";
+
 export default {
   name: "Footer",
   data(){
@@ -85,51 +97,55 @@ export default {
           year: '2019', 
           widthRatio: 2,
           item: [
-            {name: 'seeq'},
-            {name: 'ect-ect-ect'},
-            {name: 'Songkranizer'},
+            {name: 'seeq', slug: 'seeq'},
+            {name: 'ect-ect-ect', slug: 'ect-ect-ect'},
+            {name: 'Songkranizer', slug: 'songkranizer'},
           ]
         },
         { 
           year: '2018', 
           widthRatio: 2,
           item: [
-            {name: 'livecodefest'},
-            {name: 'The blacksmith.'},
-            {name: 'The Blackcodes'},
-            {name: 'Cadson Demak Project'},
-            {name: 'Kinjai Gallery'},
-            {name: 'Bkk Design Week 2018'},
+            {name: 'livecodefest', slug: 'livecodingfest'},
+            {name: 'The blacksmith.', slug: 'the-blacksmith'},
+            {name: 'The Blackcodes', slug: 'the-blackcodes'},
+            {name: 'Cadson Demak Project', slug: 'cadson-demak'},
+            {name: 'Kinjai Gallery', slug: 'kinjai-gallery'},
+            {name: 'Bkk Design Week 2018', slug: 'bkk-design-week'},
           ]
         },
         { 
           year: 'Late', 
           widthRatio: 3,
           item: [
-            {name: '2017 - Rewind to the next '},
-            {name: '2015 - The Blackcodes (Visual) '},
+            {name: '2017 - Rewind to the next ', slug: 'rewind-to-the-next'},
+            {name: '2015 - The Blackcodes (Visual) ', slug: 'the-black-codes-visuals'},
           ]
         },
         { 
           year: 'Lab', 
           widthRatio: 2,
           item: [
-            {name: 'soon'},
+            {name: 'soon', slug: 'lab-soon'},
           ]
         },
         { 
           year: 'Journal', 
           widthRatio: 3,
           item: [
-            {name: 'soon'},
+            {name: 'soon', slug: 'journal-soon'},
           ]
         },
       ]
     }
   },
   methods: {
-    showOverview(){
+    toggleOverview(){
       this.isShowOverview = !this.isShowOverview
+    },
+    selectWork( selectedWork){
+      this.$store.dispatch(FETCH_SELECTED_WORK, selectedWork.slug )
+      this.toggleOverview()
     }
   }
 }
@@ -141,7 +157,6 @@ export default {
  
   .footer-ctl{ 
     padding: 1rem 1.5rem;
-    /* position: fixed; */
     width: 100%;
     bottom: 0;
     border-top: 1px solid $color-black;
@@ -152,6 +167,8 @@ export default {
     border-right: 1px solid $color-black;
     left: 0;
     padding-left: 15px;
+
+    p{ font-weight: bolder;}
 
     &:hover{ 
       user-select: none;
@@ -177,12 +194,12 @@ export default {
     margin-left: $main-padding;
     padding-left: $medium-padding;
     padding-right: $medium-padding;
-    transition: 100ms;
+    /* transition: 100ms; */
 
     &:hover{
-      background-color: $hover-light-color;
-      /* p {color: white;}
-      i {color: white;} */
+      background-color: $color-black;
+      p {color: white;}
+      i {color: white;}
     }
   }
 
