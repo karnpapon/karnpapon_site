@@ -1,24 +1,25 @@
 <template>
-  <div>
+  <div class="index-page-container">
     <div id="app"></div>
-    <!-- <Header/> -->
     <router-view></router-view>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 
-import Header from "./components/Header";
+import Footer from "./components/Footer";
 export default {
   name: 'app',
   components: {
-    Header
+    Footer
   }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+@import './assets/styles/_base.scss';
+@import './assets/styles/_font.scss';
 html{
   font-size: 14px !important;
 }
@@ -39,4 +40,51 @@ html{
     display: flex;
     flex-direction: column;
   }
+
+  .quotes{ 
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 2.5rem;
+    padding: 4rem 0rem;
+  }
+
+  .container-ctrl{
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+
+  .index-page-container{
+    background-color: $main-color;
+  }
+
+  .code-snippet{
+    background-color: white;
+    margin: $medium-padding;
+    p {font-family: $font-input-mono;}
+  }
+
+  .padding-top{ padding-top: $main-padding;}
+  .padding-right{ padding-right: $main-padding;}
+  .padding-right-small{ padding-right: $small-padding;}
+  .padding-top-small{ padding-top: $small-padding;}
+  .padding-top-medium{ padding-top: $medium-padding;}
+  .padding-left{ padding-left: $main-padding;}
+  .padding-bottom{ padding-bottom: 20px;}
+  .with-padding{ padding: 20px !important;}
+  .with-padding-medium{ padding: $medium-padding !important;}
+  .no-padding{ padding: 0px !important;}
+  .no-padding-top{ padding-top: 0 !important;}
+  .no-padding-bottom{ padding-bottom: 0 !important;}
+  .no-padding-left{ padding-left: 0 !important;}
+  .no-padding-right{ padding-right: 0 !important;}
+  .padding-top-3rem{ padding-top: 3rem !important;}
+
+  .flex-wrapper{ display: flex;}
+  .inline-grid-wrapper{ display: inline-grid; grid-row-gap: 10px;}
+
+  .no-pointer-event{ pointer-events: none; }
+
+  .no-border-top{ border-top: unset !important;}
 </style>

@@ -27,5 +27,4 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# vue_boiler_plate
 # karnpapon_site
