@@ -40,7 +40,10 @@
         <span class="icon padding-right-small">
           <i class="fas fa-arrow-up"></i>
         </span>
-        <p>overview</p>
+         <span class="icon padding-right-small">
+          <i class="fas fa-network-wired"></i>
+        </span>
+        <!-- <p>overview</p> -->
       </div>
     </div>
 
@@ -85,7 +88,9 @@
 </template>
 
 <script>
-import { FETCH_SELECTED_WORK } from "@/store/actions.type";
+import { FETCH_SELECTED_WORK, SET_SCROLL_TO_TRUE } from "@/store/actions.type";
+import { mapGetters } from 'vuex'
+import Work from '@/views/Work'
 
 export default {
   name: "Footer",
@@ -146,8 +151,14 @@ export default {
     selectWork( selectedWork){
       this.$store.dispatch(FETCH_SELECTED_WORK, selectedWork.slug )
       this.toggleOverview()
+      // this.$store.dispatch(SET_SCROLL_TO_TRUE)
+      Work.methods.setIsScroll()
     }
-  }
+  },
+  mounted(){
+  },
+  computed: {
+  },
 }
 </script>
 
@@ -167,6 +178,8 @@ export default {
     border-right: 1px solid $color-black;
     left: 0;
     padding-left: 15px;
+    justify-content: center;
+    display: flex;
 
     p{ font-weight: bolder;}
 

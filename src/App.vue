@@ -9,6 +9,8 @@
 <script>
 
 import Footer from "./components/Footer";
+
+
 export default {
   name: 'app',
   components: {
@@ -34,7 +36,7 @@ html{
     color: #2c3e50;
   }
 
-  a url{ 
+  a p{ 
     color: $color-black !important;
     &:hover{ color: $hover-color !important; }
   }

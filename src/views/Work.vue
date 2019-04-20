@@ -1,6 +1,16 @@
 <template>
     <div class="container-ctrl scroll-wrapper">
 
+        <div 
+          class="back-to-top" 
+          :class="{'show' :isShowBackToTopBtn}"
+          @click="goToTop"
+        >
+          <span class="icon padding-right-small">
+            <i class="far fa-arrow-alt-circle-up"></i>
+          </span>
+        </div>
+
       <!-- Header Detail -->
       <section class="column is-full title-detail-level with-padding">
         <div>
@@ -23,36 +33,46 @@
 
           <!--  work detail: overview -->
           <div class="column is-3 w-light no-padding">
-            <div class="with-padding">
-              <div class="flex-wrapper">
-                <span class="icon padding-right-small">
-                    <i class="fas fa-link"></i>
-                </span>
-                <a target="blank" href="https://github.com/karnpapon">
-                  <url> theblack.codes </url>
-                </a>
+            <div 
+              id="overview-console" 
+              class="position-sticky"
+            >
+              <div class="with-padding">
+                <div class="flex-wrapper">
+                  <span class="icon padding-right-small">
+                      <i class="fas fa-link"></i>
+                  </span>
+                  <a target="blank" href="https://github.com/karnpapon">
+                    <p> theblack.codes </p>
+                  </a>
+                </div>
+
+                <div class="flex-wrapper">
+                  <span class="icon padding-right-small">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <a target="blank" href="https://github.com/karnpapon">
+                    <p> /songkranizer </p>
+                  </a>
+                </div>
               </div>
 
-              <div class="flex-wrapper">
-                <span class="icon padding-right-small">
-                    <i class="fab fa-github"></i>
-                </span>
-                <a target="blank" href="https://github.com/karnpapon">
-                  <url> /songkranizer </url>
-                </a>
+              <div class="inline-grid-wrapper with-padding">
+                <strong> Category:</strong>
+                <span class="tag-cat">graphic design</span>
+                <span class="tag-cat">Development</span>
+                <span class="tag-cat">illustration</span>
               </div>
-            </div>
 
-            <div class="inline-grid-wrapper with-padding">
-              <strong> Category:</strong>
-              <span class="tag-cat">graphic design</span>
-              <span class="tag-cat">Development</span>
-              <span class="tag-cat">illustration</span>
             </div>
           </div>
+            
 
           <!--  work detail: Body -->
-          <div class="column is-6">
+          <div 
+            class="column is-6"
+            @click="toggleOverviewClose"
+          >
             <div>
               <div class="column is-10 w-light padding-top">
                 <p>
@@ -199,14 +219,21 @@
 </template>
 
 <script>
-// import { FETCH_LISTDATA } from "@/store/actions.type";
 import { mapGetters } from 'vuex'
-import BScroll from 'better-scroll'
+import { 
+  FETCH_SELECTED_WORK,
+  SET_SCROLL_TO 
+} from "@/store/actions.type";
+import jump from 'jump.js'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'Work',
   data(){
     return {
+      isScrollToTop: false,
+      isShowBackToTopBtn: false,
+      scrollEl: "",
       worklists: [
         { title: "Kinjai Gallery", detail1: "custom sequencer", detail2: 'custom detail 2', icon: 'left'},
         { title: "Rewind to the next", detail1: "custom detail1", detail2: 'custom detail2', icon: 'right'},
@@ -214,25 +241,62 @@ export default {
     }
   },
   mounted() {
-    // this.$store.dispatch(FETCH_LISTDATA);
-    const scroll = new BScroll('.scroll-wrapper')
+    window.addEventListener("scroll", this.showBackToTop)
+  },
+  created () {
+    this.$store.dispatch(FETCH_SELECTED_WORK, this.$route.params.slug )
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.showBackToTop);
   },
   components: {
-    },
+  },
   props: {
     msg: String
   },
   computed: {
-    ...mapGetters(['getListData', 'isLoading', 'getWorkDetail']),
-    onScroll(pos) {
-      console.log(`Now position is x: ${pos.x}, y: ${pos.y}`)
-    }
+    ...mapGetters(['isLoading', 'getWorkDetail']),
   },
   methods: {
-    getdata(){
-      console.log("getListData", this.getListData)
+    setIsScroll(){
+      this.isScrollToTop = true
+      // prevent stuttering.
+      if(window.scrollY > 200){
+        this.setScrollToTop()
+      }
     },
-   
+    setScrollToTop(){
+      if(this.isScrollToTop){
+        jump('.scroll-wrapper', { duration: this.setScrollSpeed()})
+        this.isScrollToTop = false
+      }
+    },
+    setScrollSpeed(){
+      let scrollSpeed 
+      let clientHeight = document.documentElement.getBoundingClientRect().height
+
+      if(window.scrollY < clientHeight/2){
+        scrollSpeed = 1000
+      } else {
+        scrollSpeed = 1500
+        this.isClientHalfHeight = true
+      }
+      return scrollSpeed
+    },
+    showBackToTop(){
+     let clientHeight = document.documentElement.getBoundingClientRect().height
+     if(window.scrollY > clientHeight/8){
+        this.isShowBackToTopBtn = true
+     } else {
+        this.isShowBackToTopBtn = false
+     }
+    },
+    goToTop(){
+      jump('.scroll-wrapper', { duration: this.setScrollSpeed()}) 
+    },
+    toggleOverviewClose(){
+      Footer.methods.toggleOverview()
+    }
   }
 }
 </script>
@@ -357,5 +421,38 @@ export default {
 
   .scroll-spacing{
     height: $scroll-space-height;
+  }
+
+  .position-sticky{
+    position: sticky;
+    top: 0;
+  }
+
+  .position-fixed{
+    position: fixed;
+    top: 0;
+  }
+
+  .back-to-top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 40px;
+    margin-bottom: 70px;
+    margin-right: 50px;
+    z-index: 7;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 200ms ease-in-out;
+
+    &:hover{
+      cursor: pointer;
+      i{color: $hover-color;}
+    }
+  }
+
+  .show{ 
+    opacity: 1;
+    transform: translateY(0px);
   }
 </style>
