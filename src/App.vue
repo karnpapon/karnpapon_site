@@ -1,21 +1,24 @@
 <template>
-  <div class="index-page-container">
-    <div id="app"></div>
-    <router-view></router-view>
-    <Footer></Footer>
-  </div>
+    <div class="index-page-container">
+    <nprogress-container></nprogress-container> 
+      <div id="app"></div>
+      <router-view></router-view>
+      <Footer></Footer>
+    </div>
 </template>
 
 <script>
 
 import Footer from "./components/Footer";
-
+import NprogressContainer from '@/components/Nprogress'
 
 export default {
   name: 'app',
   components: {
-    Footer
-  }
+    Footer,
+    NprogressContainer
+  },
+ 
 }
 </script>
 
