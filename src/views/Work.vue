@@ -15,14 +15,14 @@
       <section class="column is-full title-detail-level with-padding">
         <div>
           <div class="title detail-level">{{ getWorkDetail.name }}</div>
-          <div class="subtitle is-6  w-light padding-top">
+          <div class="subtitle is-6 padding-top">
             <p>{{ getWorkDetail.description1}}</p>  
             <p>{{ getWorkDetail.description2}}</p>  
           </div>
-          <div class="subtitle is-6  w-light ">
+          <div class="subtitle is-6">
             <p> {{ getWorkDetail.year }} </p> 
           </div>
-          <div class="subtitle is-6  w-light">
+          <div class="subtitle is-6">
             <p> {{ getWorkDetail.workType }} </p> 
           </div>
         </div>
@@ -74,7 +74,7 @@
             @click="toggleOverviewClose"
           >
             <div>
-              <div class="column is-10 w-light padding-top">
+              <div class="column is-10 padding-top">
                 <p>
                   Each letter of the alphabet is an operation, 
                   lowercase letters operate on bang, uppercase letters operate each frame.
@@ -94,7 +94,7 @@
                 ideas found in the Internet 
                 are combined together.”
               </div>
-              <div class="column is-10 w-light padding-top">
+              <div class="column is-10 padding-top">
                 <p>
                   Each letter of the alphabet is an operation, 
                   lowercase letters operate on bang, 
@@ -166,7 +166,7 @@
                   </article>
                 </div>
               </div>
-              <div class="column is-10 w-light padding-top">
+              <div class="column is-10 padding-top">
                 <p>
                   Each letter of the alphabet is an operation, 
                   lowercase letters operate on bang, uppercase letters operate each frame.
@@ -176,8 +176,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-full scroll-spacing no-pointer-event">
-        </div>
+        <div class="column is-full scroll-spacing no-pointer-event"></div>
       </section>
 
       <section class="column is-full nav-next-work-section">
@@ -202,7 +201,7 @@
                 </span>
                 <div class="next-item-wrapper">
                   <p class="title is-3">{{data.title}}</p>
-                  <div class="subtitle is-6  w-light padding-top">
+                  <div class="subtitle is-6  padding-top">
                     <p>{{ data.detail1}}</p>  
                     <p>{{ data.detail2}}</p>  
                   </div>
@@ -303,18 +302,6 @@ export default {
 
 <style lang="scss"  scoped>
 @import '../assets/styles/_base.scss';
-  .work-list-detail{
-    /* transition: 150ms; */
-    height: 100%;
-
-    &:hover{
-      cursor: pointer;
-      background-color: $color-black;
-     p{ color: white;}
-     i{ color: white;}
-    }
-
-  }
 
   .control-worklist-detail{
     justify-content: center;
@@ -364,10 +351,7 @@ export default {
     padding: $medium-padding;
   }
 
-  .detail-level{
-    font-size: 4rem;
-    font-weight: lighter;
-  }
+  
 
   .title-detail-level{
     &:after {
@@ -378,19 +362,6 @@ export default {
       background: black;
       margin-top: $main-margin;
     }
-  }
-
-  .nav-next-work-section{
-    position: fixed;
-    bottom: 0;
-    background-color: white;
-    margin-bottom: 50px;
-    z-index: 0;
-    border-top: 1px solid $color-black;
-  }
-
-  .next-item-wrapper{
-    height: 100%;
   }
 
   .break-line{
@@ -406,22 +377,7 @@ export default {
     border-bottom: 1px solid $color-black;
   }
 
-  .detail-section{
-    height: unset;
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .detail-wrapper{
-    margin-left: unset;
-    background-color: $main-color;
-    pointer-events: auto;
-    padding-bottom: 40px;
-  }
-
-  .scroll-spacing{
-    height: $scroll-space-height;
-  }
+ 
 
   .position-sticky{
     position: sticky;
@@ -455,4 +411,6 @@ export default {
     opacity: 1;
     transform: translateY(0px);
   }
+
+
 </style>

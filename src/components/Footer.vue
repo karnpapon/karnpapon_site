@@ -53,7 +53,7 @@
           <p><strong> Karnpapon </strong></p>
           <span class="icon "><i class="fab fa-creative-commons"></i></span>
           <p class="w-medium">CC BY NC SA 4.0</p>
-          <div class="w-medium credits">
+          <div class="credits">
            <p> crafted by </p>  
            <span class="icon">
               <a target="blank" href="https://vuejs.org/">
@@ -197,9 +197,7 @@ export default {
   }
 
   .credits{ 
-    color: $secondary-color; 
     font-size: 0.75rem;
-    font-weight: lighter;
     display: flex;
     align-items: center;
     border: 1px solid;
@@ -207,7 +205,6 @@ export default {
     margin-left: $main-padding;
     padding-left: $medium-padding;
     padding-right: $medium-padding;
-    /* transition: 100ms; */
 
     &:hover{
       background-color: $color-black;

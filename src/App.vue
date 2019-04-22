@@ -25,9 +25,19 @@ export default {
 <style lang="scss">
 @import './assets/styles/_base.scss';
 @import './assets/styles/_font.scss';
-html{
-  font-size: 14px !important;
-}
+
+  html, body{
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important;
+  }
 
 * {
     box-sizing: border-box;
@@ -36,7 +46,7 @@ html{
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    /* color: #2c3e50; */
   }
 
   a p{ 
@@ -68,6 +78,8 @@ html{
   .index-page-container{
     background-color: $main-color;
   }
+
+ 
 
   .code-snippet{
     background-color: white;
@@ -104,9 +116,98 @@ html{
     /* font-family: $font-input-mono-bold; */
     font-size: 10px;
     padding: $medium-padding;
+    &:hover{
+      background-color: $color-black;
+      color: white;
+      cursor: pointer;
+    }
   }
 
   .active{
     p{ font-weight: bolder;} 
   }
+
+ .detail-section{
+    height: unset;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+ .detail-wrapper{
+    margin-left: unset;
+    background-color: $main-color;
+    pointer-events: auto;
+    padding-bottom: 40px;
+  }
+
+  .nav-next-work-section{
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    margin-bottom: 50px;
+    z-index: 0;
+    border-top: 1px solid $color-black;
+  }
+
+ .next-item-wrapper{
+    height: 100%;
+  }
+
+  .scroll-spacing{
+    height: $scroll-space-height;
+  }
+
+  .detail-level{
+    font-size: 4rem;
+    font-weight: lighter;
+  }
+
+  .control-worklist-detail{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .control-worklist-detail >.work-list-detail{
+    border-bottom: 1px solid $color-black;
+    align-items: center;
+    display: flex;
+  }
+
+  .overflow{
+    overflow: hidden;
+  }
+
+  .scrollable{
+    overflow-y: scroll;
+    margin-right: -30px;
+  }
+
+  /* .control-worklist-detail >.work-list-detail ~.work-list-detail{
+   border-bottom: unset;
+  } */
+
+  .work-list-detail{
+    /* transition: 150ms; */
+    height: 100%;
+
+    &:hover{
+      cursor: pointer;
+      background-color: $color-black;
+     p{ color: white;}
+     i{ color: white;}
+    }
+
+  }
+
+  .background-black{ 
+    background-color: $color-black; 
+    p{color: white;}
+  }
+
+  .white-text{ color: white !important; }
+
+  .auto-height{ height: auto;}
+
 </style>
