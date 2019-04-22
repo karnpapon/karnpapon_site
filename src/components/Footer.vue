@@ -103,7 +103,7 @@ export default {
           widthRatio: 2,
           item: [
             {name: 'seeq', slug: 'seeq'},
-            {name: 'ect-ect-ect', slug: 'ect-ect-ect'},
+            {name: 'ect-ect-ect', slug: 'ect-etc-tec'},
             {name: 'Songkranizer', slug: 'songkranizer'},
           ]
         },
