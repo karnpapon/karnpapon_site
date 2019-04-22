@@ -1,18 +1,25 @@
 <template>
     <div class="container-ctrl scroll-wrapper">
 
-        <div 
-          class="back-to-top" 
-          :class="{'show' :isShowBackToTopBtn}"
-          @click="goToTop"
-        >
-          <span class="icon padding-right-small">
+      <div 
+        class="back-to-top helper" 
+        :class="{'show' :isShowBackToTopBtn}"
+      >
+        <div @click="goToHome">
+          <span class="icon padding-right-small helper-icon">
+            <i class="far fa-caret-square-left"></i>
+          </span>
+        </div>
+        <div @click="goToTop">
+          <span class="icon padding-right-small helper-icon">
             <i class="far fa-arrow-alt-circle-up"></i>
           </span>
         </div>
+        
+      </div>
 
       <!-- Header Detail -->
-      <section class="column is-full title-detail-level with-padding">
+      <section class="column is-full title-detail-level with-padding header-ctrl">
         <div>
           <div class="title detail-level">{{ getWorkDetail.name }}</div>
           <div class="subtitle is-6 padding-top">
@@ -293,6 +300,9 @@ export default {
     goToTop(){
       jump('.scroll-wrapper', { duration: this.setScrollSpeed()}) 
     },
+    goToHome(){
+      this.$router.push({ path: '/' })
+    },
     toggleOverviewClose(){
       Footer.methods.toggleOverview()
     }
@@ -377,6 +387,22 @@ export default {
     border-bottom: 1px solid $color-black;
   }
 
+  .header-ctrl{
+    background-color: $main-color;
+  }
+
+  .helper{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+  }
+
+  .helper-icon{
+     &:hover{
+      cursor: pointer;
+      i{color: $hover-color;}
+    }
+  }
  
 
   .position-sticky{
@@ -400,11 +426,6 @@ export default {
     opacity: 0;
     transform: translateY(40px);
     transition: 200ms ease-in-out;
-
-    &:hover{
-      cursor: pointer;
-      i{color: $hover-color;}
-    }
   }
 
   .show{ 

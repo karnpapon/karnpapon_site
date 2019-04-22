@@ -16,8 +16,8 @@ const dataWorks = [
         ]
     },
     {
-      name: 'ect-ect-ect',
-      slug: 'ect-ect-ect',
+      name: 'ect-etc-tec',
+      slug: 'ect-etc-tec',
       year: '2019',
       img: "../assets/images/tbc10_cover_artwork.jpg",
       key: '002',

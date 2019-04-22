@@ -48,6 +48,9 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     /* color: #2c3e50; */
   }
+  a{
+    color: $color-black !important;
+  }
 
   a p{ 
     color: $color-black !important;
@@ -138,6 +141,7 @@ export default {
     background-color: $main-color;
     pointer-events: auto;
     padding-bottom: 40px;
+    margin-left: unset !important;
   }
 
   .nav-next-work-section{

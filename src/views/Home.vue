@@ -2,19 +2,22 @@
   <div class="container-ctrl">
     <section class="color-grey detail-section">
       <div class="detail-wrapper relative">
-        <section v-for="( work, index) of workyears" :key="index" class="flex-wrapper columns works-wrapper">
+        <section v-for="( data, index) of dataList" :key="index" class="flex-wrapper works-wrapper">
           <div class="column is-half w-light">
-            <p class="cate-year">{{ work.year}}</p>
+            <div class="cate-year">{{ data.year}}</div>
           </div>
 
           <div class="column is-half no-padding-top no-padding-bottom no-padding-right control-worklist-detail">
             <div 
-              v-for="( data, index ) of worklists" 
+              v-for="( _data, _index ) of data.works" 
               class="work-list-detail with-padding"
-              :key="index"
+              :key="_index"
+              @mouseover="handleShowPreview(_data.thumbnail, index)"
+              @mouseleave="handleHidePreview(_data)"
+              @click="handleClick(_data)"
             >
               <div class="next-item-wrapper">
-                <p class="title is-3 ">{{data.title}}</p>
+                <p class="title is-3 ">{{_data.title}}</p>
                 <div class="subtitle is-6  padding-top">
                   <p>custom sequencer</p>  
                   <p>custom sequencer</p>  
@@ -27,33 +30,35 @@
       <div class="column is-full home-scroll-spacing no-pointer-event"></div>
     </section>
 
-    <section class="column is-full nav-next-work-section background-black">
-      <div class="columns home-scroll-spacing">
-        <div class="column is-half no-padding-top">
-          <p class="cate-year white-text">Journal</p>
-        </div>
+    <div class="padding-right">
+      <section class="column is-full nav-next-work-section background-black">
+        <div class="columns home-scroll-spacing">
+          <div class="column is-half no-padding-top">
+            <p class="journal-title white-text">Journal</p>
+          </div>
 
-        <div class="column is-half padding-top padding-bottom control-worklist-detail overflow">
-          <div class="scrollable">
-            <div 
-              v-for="( data, index ) of journalLists" 
-              class="journal-list-select with-padding"
-              :key="index"
-            >
-            <div class="flex-wrapper">
-              <div class="next-item-wrapper">
-                <p class="title is-3">{{data.title}}</p>
-                <div class="subtitle is-6  padding-top">
-                  <p>xxxfjkjl</p>  
+          <div class="column is-half padding-top padding-bottom control-worklist-detail overflow">
+            <div class="scrollable">
+              <div 
+                v-for="( data, index ) of journalLists" 
+                class="journal-list-select with-padding"
+                :key="index"
+              >
+              <div class="flex-wrapper">
+                <div class="next-item-wrapper">
+                  <p class="title is-3">{{data.title}}</p>
+                  <div class="subtitle is-6  padding-top">
+                    <p> 12/02/1989 : 2 mins read. </p>  
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
+          </div>
+          </div>
         </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
   </div>
 
@@ -68,15 +73,100 @@ export default {
   name: 'Home',
   data(){
     return {
+      hover: false,
+      thumbnailTarget: "",
       hometitle: "Karnpapon Vue's Boiler Plate",
-      worklists: [
-        { title: "seeq"},
-        { title: "etc-etc-etc"},
-        { title: "Songkranizer"},
+      dataList: [
+        { year: '2019', works: 
+          [{ 
+              title: "seeq", 
+              thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "seeq"
+            },
+            { 
+              title: "ect-etc-tec", 
+              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
+              slug:"ect-etc-tec"
+            },
+            { 
+              title: "Songkranizer", 
+              thumbnail: "https://images.unsplash.com/photo-1555679792-6783ef0bbf61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "songkranizer"
+            }]
+        },
+        { year: '2018', works: 
+          [{ 
+              title: "seeq", 
+              thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "seeq"
+            },
+            { 
+              title: "ect-etc-tec", 
+              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
+              slug:"ect-etc-tec"
+            },
+            { 
+              title: "Songkranizer", 
+              thumbnail: "https://images.unsplash.com/photo-1555679792-6783ef0bbf61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "songkranizer"
+            }]
+        },
+        { year: 'Late', works: 
+          [{ 
+              title: "seeq", 
+              thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "seeq"
+            },
+            { 
+              title: "ect-etc-tec", 
+              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
+              slug:"ect-etc-tec"
+            },
+            { 
+              title: "Songkranizer", 
+              thumbnail: "https://images.unsplash.com/photo-1555679792-6783ef0bbf61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "songkranizer"
+            }]
+        },
+        { year: 'Lab', works: 
+          [{ 
+              title: "seeq", 
+              thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "seeq"
+            },
+            { 
+              title: "ect-etc-tec", 
+              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
+              slug:"ect-etc-tec"
+            },
+            { 
+              title: "Songkranizer", 
+              thumbnail: "https://images.unsplash.com/photo-1555679792-6783ef0bbf61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "songkranizer"
+            }]
+        },
+        { year: '2019', works: 
+          [{ 
+              title: "seeq", 
+              thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "seeq"
+            },
+            { 
+              title: "ect-etc-tec", 
+              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
+              slug:"ect-etc-tec"
+            },
+            { 
+              title: "Songkranizer", 
+              thumbnail: "https://images.unsplash.com/photo-1555679792-6783ef0bbf61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "songkranizer"
+            }]
+        },
+        
       ],
       journalLists: [
         { title: "seeq"},
-        { title: "etc-etc-etc"},
+        { title: "ect-etc-tec"},
         { title: "Songkranizer"},
         { title: "Songkranizer"},
         { title: "Songkranizer"},
@@ -99,13 +189,29 @@ export default {
     msg: String
   },
   computed: {
+  
     ...mapGetters(['getListData', 'isLoading']),
   },
   methods: {
     getdata(){
       console.log("getListData", this.getListData)
     },
-   
+    handleShowPreview(img, index){
+      if(this.hover){ return; }
+      
+      this.hover = true
+      this.thumbnailTarget = document.getElementsByClassName("cate-year")[index]
+      this.thumbnailTarget.classList.add("thumbnail-placeholder")
+      this.thumbnailTarget.style.backgroundImage = `url(${img})`
+    },
+    handleHidePreview(data){
+      this.hover = false 
+      this.thumbnailTarget.classList.remove("thumbnail-placeholder")
+      this.thumbnailTarget.style.backgroundImage = 'unset'
+    },
+    handleClick(data){
+      this.$router.push({ path: `/work/${data.slug}` })
+    }
   }
 }
 </script>
@@ -138,12 +244,21 @@ export default {
   .cate-year{
     font-size: 18rem;
     font-weight: lighter;
-    width: max-content;
     pointer-events: none;
     color:  $color-black;
-    height: 200px;
     /* -webkit-text-stroke: 1px $color-black; */
   }
+
+   .journal-title{
+    font-size: 18rem;
+    font-weight: lighter;
+    /* width: max-content; */
+    /* height: 200px; */
+    pointer-events: none;
+    color:  $color-black;
+    /* -webkit-text-stroke: 1px $color-black; */
+  }
+
 
   .w-light{ font-weight: lighter; }
   .w-normal{ font-weight: normal; }
@@ -162,6 +277,7 @@ export default {
   .journal-wrapper{
     display: block;
   }
+
 
   .relative{ 
     position: relative;
@@ -203,6 +319,7 @@ export default {
   .work-list-detail{
     /* transition: 150ms; */
     height: 100%;
+    width: 100%;
 
     &:hover{
       cursor: pointer;
@@ -213,12 +330,23 @@ export default {
 
   }
 
+  .thumbnail-placeholder{
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff00;
+    -webkit-text-stroke: 2px white;
+  }
+
   .journal-list-select{
+
+    border-bottom: 1px solid white;
     &:hover{
       cursor: pointer;
       background-color: $main-color;
      p{ color: $color-black;}
     }
+
+    &:last-child{ border-bottom: unset ;}
  
   }
 
