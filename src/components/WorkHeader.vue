@@ -1,17 +1,19 @@
 <template>
-  <!-- Header Detail -->
-  <section class="column is-full title-detail-level with-padding header-ctrl">
+  <section 
+    id="header-render"
+    class="column is-full title-detail-level with-padding"
+  >
     <div>
-      <div class="title detail-level">{{ getWorkDetail.name }}</div>
+      <div class="title detail-level">{{ dataDetails.name }}</div>
       <div class="subtitle is-6 padding-top">
-        <p>{{ getWorkDetail.description1}}</p>  
-        <p>{{ getWorkDetail.description2}}</p>  
+        <p>{{ dataDetails.description1}}</p>  
+        <p>{{ dataDetails.description2}}</p>  
       </div>
       <div class="subtitle is-6">
-        <p> {{ getWorkDetail.year }} </p> 
+        <p> {{ dataDetails.year }} </p> 
       </div>
       <div class="subtitle is-6">
-        <p> {{ getWorkDetail.workType }} </p> 
+        <p> {{ dataDetails.workType }} </p> 
       </div>
     </div>
   </section>
@@ -34,9 +36,10 @@ export default {
     }
   },
   mounted() {
+    this.setTheme() 
   },
   created () {
-    this.$store.dispatch(FETCH_SELECTED_WORK, this.$route.params.slug )
+   
   },
   destroyed () {
   },
@@ -44,13 +47,29 @@ export default {
     
   },
   props: {
+    dataDetails: Object
   },
   computed: {
     ...mapGetters(['isLoading', 'getWorkDetail']),
   },
   methods: {
-   
-   
+    setTheme(){
+      const target = document.getElementById("header-render")
+
+      switch (this.dataDetails.theme) {
+        case 'about':
+          target.classList.add("theme-about") 
+          break;
+        case 'work':
+          target.classList.add("theme-work") 
+          break;
+        case 'journal':
+          target.classList.add("theme-journal") 
+          break;
+        default:
+          break;
+      }
+    }
   }
 }
 </script>
@@ -59,13 +78,27 @@ export default {
 @import '../assets/styles/_base.scss';
 
   .title-detail-level{
-    &:after {
+    /* &:after {
       content: '';
       display: flex;
       position: relative;
       height: 1px;
       background: black;
       margin-top: $main-margin;
-    }
+    } */
+    border-bottom: 1px solid $color-black;
+  }
+
+  .theme-work{
+    background-color: $main-color;
+  }
+  .theme-about{
+    background-color: $color-black;
+    div, p {color: white;}
+  }
+  .theme-journal{
+    background-color: $color-black;
+    border-bottom: 1px solid white;
+    div, p {color: white;}
   }
 </style>

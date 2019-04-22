@@ -79,7 +79,7 @@ export default {
   }
 
   .index-page-container{
-    background-color: $main-color;
+    background-color: white;
   }
 
  
@@ -100,6 +100,7 @@ export default {
   .with-padding{ padding: 20px !important;}
   .with-padding-medium{ padding: $medium-padding !important;}
   .no-padding{ padding: 0px !important;}
+  .no-margin-tb{ margin-top: 0px !important; margin-bottom: 1px !important;}
   .no-padding-top{ padding-top: 0 !important;}
   .no-padding-bottom{ padding-bottom: 0 !important;}
   .no-padding-left{ padding-left: 0 !important;}

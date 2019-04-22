@@ -13,17 +13,21 @@
               class="journal-list-select with-padding"
               :key="index"
             >
-            <div class="flex-wrapper">
-              <div class="next-item-wrapper">
-                <p class="title is-3">{{data.title}}</p>
-                <div class="subtitle is-6  padding-top">
-                  <p> 12/02/1989 : 2 mins read. </p>  
+              <router-link 
+                :to="{ path: '/journal'}" 
+                exact 
+              >
+                <div class="flex-wrapper">
+                  <div class="next-item-wrapper">
+                    <p class="title is-3">{{data.title}}</p>
+                    <div class="subtitle is-6  padding-top">
+                      <p> 12/02/1989 : 2 mins read. </p>  
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
-
-        </div>
         </div>
       </div>
     </section>
@@ -116,10 +120,11 @@ export default {
 
   .journal-list-select{
     border-bottom: 1px solid white;
+    p{ color: white !important;}
     &:hover{
       cursor: pointer;
       background-color: $main-color;
-     p{ color: $color-black;}
+     p{ color: $color-black !important;}
     }
     &:last-child{ border-bottom: unset ;}
   }

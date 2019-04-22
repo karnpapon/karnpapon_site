@@ -50,7 +50,13 @@
     <div class="footer footer-ctl column is-11">
       <div class="level">
         <div class="level-left left-col">
+          <router-link 
+              :to="{ path: '/about'}" 
+              active-class="active"
+              exact 
+            >
           <p><strong> Karnpapon </strong></p>
+          </router-link>
           <span class="icon "><i class="fab fa-creative-commons"></i></span>
           <p class="w-medium">CC BY NC SA 4.0</p>
           <div class="credits">

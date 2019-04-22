@@ -1,6 +1,6 @@
 <template>
   <section class="container is-fullhd detail-section">
-    <div class="columns detail-wrapper">
+    <div id="content-theme" class="columns detail-wrapper no-margin-tb">
 
       <!--  work detail: overview -->
       <div class="column is-3 w-light no-padding">
@@ -14,7 +14,7 @@
                   <i class="fas fa-link"></i>
               </span>
               <a target="blank" href="https://github.com/karnpapon">
-                <p> theblack.codes </p>
+                <strong> theblack.codes </strong>
               </a>
             </div>
 
@@ -23,7 +23,7 @@
                   <i class="fab fa-github"></i>
               </span>
               <a target="blank" href="https://github.com/karnpapon">
-                <p> /songkranizer </p>
+                <strong> /songkranizer </strong>
               </a>
             </div>
           </div>
@@ -42,7 +42,6 @@
       <!--  work detail: Body -->
       <div 
         class="column is-6"
-        @click="toggleOverviewClose"
       >
         <div>
           <div class="column is-10 padding-top">
@@ -167,21 +166,39 @@ export default {
     }
   },
   mounted() {
+    this.setTheme()
   },
   created () {
-    // this.$store.dispatch(FETCH_SELECTED_WORK, this.$route.params.slug )
+
   },
   destroyed () {
   },
   components: {
   },
   props: {
-    msg: String
+    dataDetails: Object
   },
   computed: {
     ...mapGetters(['isLoading', 'getWorkDetail']),
   },
   methods: {
+    setTheme(){
+      const target = document.getElementById("content-theme")
+
+      switch (this.dataDetails.theme) {
+        case 'about':
+          target.classList.add("theme-about") 
+          break;
+        case 'work':
+          target.classList.add("theme-work") 
+          break;
+        case 'journal':
+          target.classList.add("theme-journal") 
+          break;
+        default:
+          break;
+      }
+    }
    
   }
 }
@@ -202,5 +219,15 @@ export default {
     position: sticky;
     top: 0;
   }
+
+  .theme-journal{ 
+    background-color: $color-black; 
+    p, strong, span, a, i, div { 
+      color: white !important;
+    }
+    .tag-cat { border: 1px solid white;}
+    .code-snippet { p{color: $color-black !important;}}
+  }
+
 
 </style>

@@ -2,6 +2,7 @@ const dataWorks = [
     {
       name: 'seeq',
       slug: 'seeq',
+      theme: 'work',
       year: '2019',
       img: "../assets/images/tbc10_cover_artwork.jpg",
       key: '001',
@@ -18,6 +19,7 @@ const dataWorks = [
     {
       name: 'ect-etc-tec',
       slug: 'ect-etc-tec',
+      theme: 'work',
       year: '2019',
       img: "../assets/images/tbc10_cover_artwork.jpg",
       key: '002',
@@ -34,6 +36,7 @@ const dataWorks = [
     {
       name: 'Songkranizer',
       slug: 'songkranizer',
+      theme: 'work',
       year: '2019',
       img: "../assets/images/tbc10_cover_artwork.jpg",
       key: '003',
