@@ -178,6 +178,8 @@ export default {
     bottom: 0;
     border-top: 1px solid $color-black;
     right: 0;
+
+    p{ color: $color-black;}
   }
 
   .footer-overview{
@@ -188,6 +190,7 @@ export default {
     display: flex;
 
     p{ font-weight: bolder;}
+    i{ color: $color-black;}
 
     &:hover{ 
       user-select: none;

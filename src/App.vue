@@ -82,14 +82,6 @@ export default {
     background-color: white;
   }
 
- 
-
-  .code-snippet{
-    background-color: white;
-    margin: $medium-padding;
-    p {font-family: $font-input-mono;}
-  }
-
   .padding-top{ padding-top: $main-padding;}
   .padding-right{ padding-right: $main-padding;}
   .padding-right-small{ padding-right: $small-padding;}
@@ -111,6 +103,12 @@ export default {
   .inline-grid-wrapper{ display: inline-grid; grid-row-gap: 10px;}
 
   .no-pointer-event{ pointer-events: none; }
+
+  .position-sticky{
+    position: sticky;
+    top: 0;
+  }
+
 
   .no-border-top{ border-top: unset !important;}
 

@@ -3,7 +3,17 @@
     id="header-render"
     class="column is-full title-detail-level with-padding"
   >
-    <div>
+    <div v-if="dataDetails.theme == 'journal'">
+      <div class="title detail-level is-1">
+         <p>{{ dataDetails.description1}}</p>  
+        <p>{{ dataDetails.description2}}</p>  
+      </div>
+      <div class="subtitle is-6 padding-top">
+        <p>{{ dataDetails.description1}}</p>  
+        <p>{{ dataDetails.description2}}</p>  
+      </div>
+    </div>
+    <div v-else>
       <div class="title detail-level">{{ dataDetails.name }}</div>
       <div class="subtitle is-6 padding-top">
         <p>{{ dataDetails.description1}}</p>  
@@ -78,14 +88,6 @@ export default {
 @import '../assets/styles/_base.scss';
 
   .title-detail-level{
-    /* &:after {
-      content: '';
-      display: flex;
-      position: relative;
-      height: 1px;
-      background: black;
-      margin-top: $main-margin;
-    } */
     border-bottom: 1px solid $color-black;
   }
 
@@ -101,4 +103,5 @@ export default {
     border-bottom: 1px solid white;
     div, p {color: white;}
   }
+
 </style>

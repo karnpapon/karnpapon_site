@@ -1,5 +1,5 @@
 <template>
-  <section class="column is-full nav-next-work-section">
+  <section id="suggested-work-theme" class="column is-full nav-next-work-section">
     <div class="columns scroll-spacing">
       <div class="column is-half no-padding-top">
         <div class="title detail-level padding-top-3rem">Project</div>
@@ -53,6 +53,7 @@ export default {
     }
   },
   mounted() {
+    this.setTheme()
   },
   created () {
   },
@@ -62,13 +63,29 @@ export default {
     
   },
   props: {
-    msg: String
+    dataDetails: Object
   },
   computed: {
     ...mapGetters(['isLoading']),
   },
   methods: {
-  
+    setTheme(){
+      const target = document.getElementById("suggested-work-theme")
+
+      switch (this.dataDetails.theme) {
+        case 'about':
+          target.classList.add("theme-about") 
+          break;
+        case 'work':
+          target.classList.add("theme-work") 
+          break;
+        case 'journal':
+          target.classList.add("theme-journal") 
+          break;
+        default:
+          break;
+      }
+    } 
   }
 }
 </script>
@@ -91,6 +108,16 @@ export default {
 
   .control-worklist-detail >.work-list-detail ~.work-list-detail{
    border-bottom: unset;
+  }
+
+  .theme-about{}
+  .theme-work{}
+  .theme-journal{
+    background-color: $color-black;
+    border-top: 1px solid white;
+    p, i, div{ color: white;}
+    .control-worklist-detail > .work-list-detail{ border-bottom: 1px solid white;}
+    .work-list-detail{ &:hover{ background-color: white; p, i{color: $color-black;}} }
   }
 
 </style>

@@ -3,7 +3,7 @@
       <NavHelper scrollContainer=".scroll-wrapper"></NavHelper>
       <WorkHeader :dataDetails="getJournalDetails"/>
       <WorkContent :dataDetails="getJournalDetails"/>
-      <SuggestedWorks/>
+      <SuggestedWorks :dataDetails="getJournalDetails"/>
     </div>
 </template>
 

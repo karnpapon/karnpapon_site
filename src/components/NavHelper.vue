@@ -99,7 +99,7 @@ export default {
     z-index: 7;
     opacity: 0;
     transform: translateY(40px);
-    transition: 200ms ease-in-out;
+    transition: transform 200ms, opacity 200ms ease-in-out;
   }
 
   .show{ 

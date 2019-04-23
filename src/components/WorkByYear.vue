@@ -2,8 +2,10 @@
   <section class="color-grey detail-section">
     <div class="detail-wrapper relative">
       <section v-for="( data, index) of dataList" :key="index" class="flex-wrapper works-wrapper">
-        <div class="column is-half w-light">
-          <div class="cate-year">{{ data.year}}</div>
+        <div class="column is-half w-light year-txt-dp">
+          <div class="cate-year position-sticky">
+            <p>{{ data.year}}</p>
+          </div>
         </div>
 
         <div class="column is-half no-padding-top no-padding-bottom no-padding-right control-worklist-detail">
@@ -79,6 +81,26 @@ export default {
               slug: "seeq"
             },
             { 
+              title: "seeq", 
+              thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
+              slug: "seeq"
+            },
+            { 
+              title: "ect-etc-tec", 
+              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
+              slug:"ect-etc-tec"
+            },
+            { 
+              title: "ect-etc-tec", 
+              thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
+              slug:"ect-etc-tec"
+            },
+            { 
+              title: "ect-etc-tec", 
+              thumbnail: "https://images.unsplash.com/photo-1522071740424-8b337d0dfa93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
+              slug:"ect-etc-tec"
+            },
+            { 
               title: "ect-etc-tec", 
               thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
               slug:"ect-etc-tec"
@@ -144,7 +166,9 @@ export default {
       this.hover = true
       this.thumbnailTarget = document.getElementsByClassName("cate-year")[index]
       this.thumbnailTarget.classList.add("thumbnail-placeholder")
+      // this.thumbnailTarget = document.getElementsByClassName("thumbnail-placeholder")[index]
       this.thumbnailTarget.style.backgroundImage = `url(${img})`
+
     },
     handleHidePreview(data){
       this.hover = false 
@@ -169,6 +193,8 @@ export default {
     font-weight: lighter;
     pointer-events: none;
     color:  $color-black;
+    width: 100%;
+    /* line-height: .8; */
     /* -webkit-text-stroke: 1px $color-black; */
   }
 
@@ -230,6 +256,11 @@ export default {
     background-repeat: no-repeat;
     color: #ffffff00;
     -webkit-text-stroke: 2px white;
+  }
+
+  .year-txt-dp{
+    align-items: flex-start;
+    display: flex;
   }
 
 </style>
