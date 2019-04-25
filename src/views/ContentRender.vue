@@ -49,7 +49,7 @@ export default {
     msg: String
   },
   computed: {
-    ...mapGetters(['isLoading', 'getWorkDetail', 'getAboutDetail', 'getJournalDetails']),
+    ...mapGetters(['isLoading', 'getSelectedWork', 'getAboutDetail', 'getJournalDetails']),
   },
   methods: {
     setIsScroll(){

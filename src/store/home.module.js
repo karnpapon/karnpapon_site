@@ -1,4 +1,6 @@
 import { 
+  FETCH_WORKS,
+  FETCH_WORKS_BY_YEAR,
   FETCH_SELECTED_WORK, 
   FETCH_NEXT_SUGGESTED,
   FETCH_ABOUT_DETAILS,
@@ -7,13 +9,15 @@ import {
   SET_SCROLL_TO_TRUE, 
   SET_SCROLL_TO_FALSE, 
   FETCH_SELECTED_JOURNAL} from "./actions.type";
-import { dataWorks } from "../data/works"
+import { dataWorks, workListsByYear } from "../data/works"
 import { dataAbout } from "../data/about"
 import { dataJournal } from "../data/journals"
 import { 
   FETCH_START, 
   FETCH_END,
-  SET_WORK,
+  SET_WORKS,
+  SET_WORKS_BY_YEAR,
+  SET_SELECTED_WORK,
   SET_NEXT_SUGGESTED,
   SET_ABOUT,
   SET_JOURNAL,
@@ -25,7 +29,9 @@ import {
 const state = {
   listData: [],
   isLoading: true,
-  workDetail: "",
+  workData: "",
+  worksByYearData:"",
+  selectedWork: "",
   aboutDetails: "",
   journalDetails: "",
   selectedJournal: "",
@@ -41,8 +47,14 @@ const getters = {
   getListData(state) {
     return state.listData;
   },
-  getWorkDetail(state){
-    return state.workDetail
+  getSelectedWork(state){
+    return state.selectedWork
+  },
+  getWorkData(state){
+    return state.workData
+  },
+  getWorksByYear(state){
+    return state.worksByYearData
   },
   getAboutDetail(state){
     return state.aboutDetails
@@ -65,9 +77,17 @@ const getters = {
 };
 
 const actions = {
+  [FETCH_WORKS]({ commit}){
+    const works = dataWorks
+    commit( SET_WORKS, works)
+  },
+  [FETCH_WORKS_BY_YEAR]({ commit }){
+    const works = workListsByYear
+    commit(SET_WORKS_BY_YEAR, works)
+  },
   [FETCH_SELECTED_WORK]({ commit }, workTarget) {
     const work = dataWorks.filter( work => work.slug == workTarget )
-    commit(SET_WORK, work[0]);
+    commit(SET_SELECTED_WORK, work[0]);
   },
   [FETCH_ABOUT_DETAILS]({ commit }) {
     const about = dataAbout
@@ -144,8 +164,14 @@ const mutations = {
     state.isLoading = false;
     state.listData = response
   },
-  [SET_WORK](state, work){
-    state.workDetail = work
+  [SET_SELECTED_WORK](state, work){
+    state.selectedWork = work
+  },
+  [SET_WORKS](state, work){
+    state.workData = work
+  },
+  [SET_WORKS_BY_YEAR](state, work){
+    state.worksByYearData = work
   },
   [SET_ABOUT](state, about){
     state.aboutDetails = about

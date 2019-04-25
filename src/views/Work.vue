@@ -50,7 +50,7 @@ export default {
     msg: String
   },
   computed: {
-    ...mapGetters(['isLoading', 'getWorkDetail', 'getNextSuggestedItem']),
+    ...mapGetters(['isLoading', 'getSelectedWork', 'getNextSuggestedItem']),
   },
   methods: {
     setIsScroll(){

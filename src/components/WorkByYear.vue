@@ -18,7 +18,7 @@
             @click="handleClick(_data)"
           >
             <div class="next-item-wrapper">
-              <p class="title is-3 ">{{_data.title}}</p>
+              <p class="title is-3 ">{{_data.name}}</p>
               <div class="subtitle is-6  padding-top">
                 <p>custom sequencer</p>  
                 <p>custom sequencer</p>  
@@ -34,6 +34,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { } from "@/store/actions.type";
 
 export default {
   name: 'WorkByYear',
@@ -41,121 +42,17 @@ export default {
     return {
       hover: false,
       thumbnailTarget: "",
-      dataList: [
-        { year: '2019', works: 
-          [{ 
-              title: "seeq", 
-              thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
-              slug: "seeq"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1522071740424-8b337d0dfa93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "Songkranizer", 
-              thumbnail: "https://images.unsplash.com/photo-1555679792-6783ef0bbf61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg",
-              slug: "songkranizer"
-            }]
-        },
-        { year: '2018', works: 
-          [{ 
-              title: "seeq", 
-              thumbnail: "https://images.unsplash.com/photo-1454779132693-e5cd0a216ed3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80.jpg",
-              slug: "seeq"
-            },
-            { 
-              title: "seeq", 
-              thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
-              slug: "seeq"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1522071740424-8b337d0dfa93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "Songkranizer", 
-              thumbnail: "https://images.unsplash.com/photo-1522071740424-8b337d0dfa93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug: "songkranizer"
-            }]
-        },
-        { year: 'Late', works: 
-          [{ 
-              title: "seeq", 
-              thumbnail: "https://images.unsplash.com/photo-1508780709619-79562169bc64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug: "seeq"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "Songkranizer", 
-              thumbnail: "https://images.unsplash.com/photo-1555679792-6783ef0bbf61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg",
-              slug: "songkranizer"
-            }]
-        },
-        { year: 'Lab', works: 
-          [{ 
-              title: "seeq", 
-              thumbnail: "https://images.unsplash.com/photo-1528724977141-d90af338860c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1085&q=80.jpg",
-              slug: "seeq"
-            },
-            { 
-              title: "ect-etc-tec", 
-              thumbnail: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-              slug:"ect-etc-tec"
-            },
-            { 
-              title: "Songkranizer", 
-              thumbnail: "https://images.unsplash.com/photo-1555679792-6783ef0bbf61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg",
-              slug: "songkranizer"
-            }]
-        },
-        
-      ],
     }
   },
   mounted() {
 
   },
+  created(){
+  },
   components: {
   },
   props: {
-
+    dataList: Array
   },
   computed: {
     ...mapGetters(['isLoading']),
@@ -166,7 +63,6 @@ export default {
       this.hover = true
       this.thumbnailTarget = document.getElementsByClassName("cate-year")[index]
       this.thumbnailTarget.classList.add("thumbnail-placeholder")
-      // this.thumbnailTarget = document.getElementsByClassName("thumbnail-placeholder")[index]
       this.thumbnailTarget.style.backgroundImage = `url(${img})`
 
     },

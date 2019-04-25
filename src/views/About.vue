@@ -3,7 +3,7 @@
       <NavHelper scrollContainer=".scroll-wrapper"></NavHelper>
       <WorkHeader :dataDetails="getAboutDetail"/>
       <WorkContent :dataDetails="getAboutDetail"/>
-      <SuggestedWorks :dataDetails="getAboutDetail"/>
+      <SuggestedWorks :dataDetails="getNextSuggestedItem"/>
     </div>
 </template>
 
@@ -32,8 +32,11 @@ export default {
   mounted() {
   },
   created () {
+    const t = "work"
+    const p = this.$route.params.slug
+    const payload = {path: p, theme: t }
     this.$store.dispatch(FETCH_ABOUT_DETAILS )
-    this.$store.dispatch(FETCH_NEXT_SUGGESTED, this.$route.params.slug, 'about')
+    this.$store.dispatch(FETCH_NEXT_SUGGESTED, payload)
   },
   destroyed () {
   },
@@ -47,7 +50,7 @@ export default {
 
   },
   computed: {
-    ...mapGetters(['isLoading', 'getAboutDetail']),
+    ...mapGetters(['isLoading', 'getAboutDetail','getNextSuggestedItem']),
   },
   methods: {
     setIsScroll(){

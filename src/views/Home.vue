@@ -1,6 +1,6 @@
 <template>
   <div class="container-ctrl">
-    <WorkByYear/>
+    <WorkByYear :dataList="getWorksByYear"/>
     <JournalLists/>
 
   </div>
@@ -12,6 +12,10 @@ import Header from "../components/Header";
 import { mapGetters } from 'vuex'
 import WorkByYear from '@/components/WorkByYear'
 import JournalLists from '@/components/JournalLists'
+import { 
+  FETCH_WORKS,
+  FETCH_WORKS_BY_YEAR
+} from "@/store/actions.type";
 
 
 export default {
@@ -21,7 +25,9 @@ export default {
     }
   },
   mounted() {
-
+  },
+  created(){
+    this.$store.dispatch( FETCH_WORKS_BY_YEAR )
   },
   components: {
     WorkByYear,
@@ -31,7 +37,7 @@ export default {
 
   },
   computed: {
-    ...mapGetters(['isLoading']),
+    ...mapGetters(['isLoading', 'getSelectedWork', 'getWorksByYear']),
   },
   methods: {
   }
