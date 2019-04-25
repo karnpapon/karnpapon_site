@@ -1,7 +1,7 @@
 <template>
   <div class="column is-3 w-light no-padding">
     <div id="overview-console" class="position-sticky">
-      <div class="with-padding">
+      <div class="with-padding link-info">
         <div class="flex-wrapper">
           <span class="icon padding-right-small">
               <i class="fas fa-link"></i>
@@ -67,5 +67,6 @@ export default {
 <style lang="scss"  scoped>
 @import '../assets/styles/_base.scss';
   .w-light{ font-weight: lighter; }
+  .link-info{ }
  
 </style>

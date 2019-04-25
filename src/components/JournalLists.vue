@@ -9,19 +9,19 @@
         <div class="column is-half padding-top padding-bottom control-worklist-detail overflow">
           <div class="scrollable">
             <div 
-              v-for="( data, index ) of lists" 
+              v-for="( data, index ) of getJournalDetails" 
               class="journal-list-select with-padding"
               :key="index"
             >
               <router-link 
-                :to="{ path: '/journal'}" 
+                :to="{ path: '/journal/' + data.slug}" 
                 exact 
               >
                 <div class="flex-wrapper">
                   <div class="next-item-wrapper">
-                    <p class="title is-3">{{data.title}}</p>
+                    <p class="title is-3">{{data.name}}</p>
                     <div class="subtitle is-6  padding-top">
-                      <p> 12/02/1989 : 2 mins read. </p>  
+                      <p> {{data.date}} : {{data.readingTime}} </p>  
                     </div>
                   </div>
                 </div>
@@ -36,29 +36,25 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import {FETCH_JOURNAL_DETAILS} from "@/store/actions.type"
 
 export default {
   name: 'JournalLists',
   data(){
     return {
-      lists: [
-        { title: "seeq"},
-        { title: "ect-etc-tec"},
-        { title: "Songkranizer"},
-        { title: "Songkranizer"},
-        { title: "Songkranizer"},
-        { title: "Songkranizer"},
-      ],
     }
   },
   mounted() {
+  },
+  created(){
+    this.$store.dispatch(FETCH_JOURNAL_DETAILS)
   },
   components: {
   },
   props: {
   },
   computed: {
-    ...mapGetters(['isLoading']),
+  ...mapGetters(['isLoading', 'getJournalDetails']),
   },
   methods: {
   }

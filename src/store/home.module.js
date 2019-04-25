@@ -1,10 +1,12 @@
 import { 
   FETCH_SELECTED_WORK, 
+  FETCH_NEXT_SUGGESTED,
   FETCH_ABOUT_DETAILS,
   FETCH_JOURNAL_DETAILS,
   SET_SCROLL_TO, 
   SET_SCROLL_TO_TRUE, 
-  SET_SCROLL_TO_FALSE } from "./actions.type";
+  SET_SCROLL_TO_FALSE, 
+  FETCH_SELECTED_JOURNAL} from "./actions.type";
 import { dataWorks } from "../data/works"
 import { dataAbout } from "../data/about"
 import { dataJournal } from "../data/journals"
@@ -12,8 +14,10 @@ import {
   FETCH_START, 
   FETCH_END,
   SET_WORK,
+  SET_NEXT_SUGGESTED,
   SET_ABOUT,
   SET_JOURNAL,
+  SET_SELECTED_JOURNAL,
   SET_SCROLL,
   SET_SCROLL_FUNCTION
 } from "./mutations.type";
@@ -24,6 +28,8 @@ const state = {
   workDetail: "",
   aboutDetails: "",
   journalDetails: "",
+  selectedJournal: "",
+  nextSuggested: "",
   isSetScroll: false,
   setScroll: () => {},
 };
@@ -44,11 +50,17 @@ const getters = {
   getJournalDetails(state){
     return state.journalDetails
   },
+  getSelectedJournal(state){
+    return state.selectedJournal
+  },
   getSetScroll(state){
     return state.isSetScroll
   },
   getSetScrollFunction(state){
     return state.setScroll
+  },
+  getNextSuggestedItem(){
+    return state.nextSuggested
   }
 };
 
@@ -60,6 +72,11 @@ const actions = {
   [FETCH_ABOUT_DETAILS]({ commit }) {
     const about = dataAbout
     commit(SET_ABOUT, about);
+  },
+  [FETCH_SELECTED_JOURNAL]({ commit }, payload) {
+    const { selected } = payload
+    const jn = dataJournal.filter( item => item.slug == selected)
+    commit(SET_SELECTED_JOURNAL, jn[0]);
   },
   [FETCH_JOURNAL_DETAILS]({ commit }) {
     const jn = dataJournal
@@ -73,6 +90,48 @@ const actions = {
   },
   [SET_SCROLL_TO_FALSE]({commit}){
     commit(SET_SCROLL, false);
+  },
+  [FETCH_NEXT_SUGGESTED]({commit}, payload){
+    const { path, theme} = payload
+    let length 
+    let targetIndex, prevIndex
+    const itemToShow = [1,2]
+    let suggestedItem = [] 
+    let exceptIndex 
+    let _data = [] 
+
+    if (theme == 'work'){
+      _data = dataWorks
+      length = dataWorks.length
+    } else if (theme == 'journal'){
+      _data = dataJournal 
+      length = dataJournal.length
+    } else if (theme == 'about'){
+      _data = dataAbout
+      length = dataAbout.length
+    }
+
+    
+    _data.find( ( work, index ) => {
+      if (work.slug == path){
+        exceptIndex = index
+      }
+    })
+
+    itemToShow.forEach(() => {
+      while( suggestedItem.length !== 2){
+        targetIndex = Math.floor(Math.random() * length) 
+        if( targetIndex !== exceptIndex){
+          while( prevIndex == targetIndex){
+            return;
+          } 
+          prevIndex = targetIndex
+          suggestedItem.push(_data[targetIndex])
+        } 
+      }
+    })
+
+    commit( SET_NEXT_SUGGESTED, suggestedItem)
   }
 };
 
@@ -94,11 +153,17 @@ const mutations = {
   [SET_JOURNAL](state, jn){
     state.journalDetails = jn
   },
+  [SET_SELECTED_JOURNAL](state, jn){
+    state.selectedJournal = jn
+  },
   [SET_SCROLL](state, scrollState){
     state.isSetScroll = scrollState
   },
   [SET_SCROLL_FUNCTION](state, setter){
     state.setScroll = setter
+  },
+  [SET_NEXT_SUGGESTED](state, items){
+    state.nextSuggested = items
   }
 };
 

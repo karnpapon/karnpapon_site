@@ -25,6 +25,10 @@ export default new Router({
     {
       path: "/journal/",
       component: () => import("@/views/Journal"),
+    },
+    {
+      path: "/journal/:slug",
+      component: () => import("@/views/Journal"),
     }
   ]
 })

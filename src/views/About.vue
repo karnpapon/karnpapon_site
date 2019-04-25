@@ -2,14 +2,15 @@
     <div class="container-ctrl scroll-wrapper">
       <NavHelper scrollContainer=".scroll-wrapper"></NavHelper>
       <WorkHeader :dataDetails="getAboutDetail"/>
-      <WorkContent/>
-      <SuggestedWorks/>
+      <WorkContent :dataDetails="getAboutDetail"/>
+      <SuggestedWorks :dataDetails="getAboutDetail"/>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import { 
+  FETCH_NEXT_SUGGESTED,
   FETCH_ABOUT_DETAILS,
   SET_SCROLL_TO 
 } from "@/store/actions.type";
@@ -32,6 +33,7 @@ export default {
   },
   created () {
     this.$store.dispatch(FETCH_ABOUT_DETAILS )
+    this.$store.dispatch(FETCH_NEXT_SUGGESTED, this.$route.params.slug, 'about')
   },
   destroyed () {
   },

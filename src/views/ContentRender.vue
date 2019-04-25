@@ -1,17 +1,18 @@
 <template>
     <div class="container-ctrl scroll-wrapper">
       <NavHelper scrollContainer=".scroll-wrapper"></NavHelper>
-      <WorkHeader :dataDetails="getWorkDetail"/>
-      <WorkContent :dataDetails="getWorkDetail"/>
-      <SuggestedWorks :dataDetails="getNextSuggestedItem"/>
+      <WorkHeader :dataDetails="dataDetails"/>
+      <WorkContent :dataDetails="dataDetails"/>
+      <SuggestedWorks :dataDetails="dataDetails"/>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import { 
+  FETCH_ABOUT_DETAILS,
   FETCH_SELECTED_WORK,
-  FETCH_NEXT_SUGGESTED,
+  FETCH_JOURNAL_DETAILS,
   SET_SCROLL_TO 
 } from "@/store/actions.type";
 import jump from 'jump.js'
@@ -23,20 +24,18 @@ import WorkContent from '@/components/WorkContent'
 
 
 export default {
-  name: 'Work',
+  name: 'ContentRender',
   data(){
     return {
       isScrollToTop: false,
+      dataDetails: ""
     }
   },
   mounted() {
+    this.getData()
   },
   created () {
-    const t = "work"
-    const p = this.$route.params.slug
-    const payload = {path: p, theme: t }
-    this.$store.dispatch(FETCH_SELECTED_WORK, this.$route.params.slug )
-    this.$store.dispatch(FETCH_NEXT_SUGGESTED, payload)
+    this.getDataFromRoutePath()
   },
   destroyed () {
   },
@@ -50,7 +49,7 @@ export default {
     msg: String
   },
   computed: {
-    ...mapGetters(['isLoading', 'getWorkDetail', 'getNextSuggestedItem']),
+    ...mapGetters(['isLoading', 'getWorkDetail', 'getAboutDetail', 'getJournalDetails']),
   },
   methods: {
     setIsScroll(){
@@ -77,7 +76,36 @@ export default {
       }
       return scrollSpeed
     }, 
-   
+    getDataFromRoutePath(){
+      switch (this.$route.path) {
+        case '/about':
+          this.$store.dispatch(FETCH_ABOUT_DETAILS) 
+          break;
+        case '/work/seeq':
+          this.$store.dispatch(FETCH_SELECTED_WORK, this.$route.params.slug ) 
+          break;
+        case '/journal':
+          this.$store.dispatch(FETCH_JOURNAL_DETAILS) 
+          break;
+        default:
+          break;
+      }
+    },
+    getData(){
+       switch (this.$route.path) {
+        case '/about':
+          this.dataDetails = this.getAboutDetail
+          break;
+        case '/work/seeq':
+          this.dataDetails = this.getWorkDetail
+          break;
+        case '/journal':
+          this.dataDetails = this.getJournalDetails
+          break;
+        default:
+          break;
+      }
+    }
   }
 }
 </script>

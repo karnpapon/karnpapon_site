@@ -2,18 +2,11 @@
   <div class="column is-6">
     <div class="detail-render">
       <div class="column is-10 padding-top">
-        <p>
-          Each letter of the alphabet is an operation, 
-          lowercase letters operate on bang, uppercase letters operate each frame.
-          Orca is designed to control other applications, 
-          create procedural sequencers, and to experiment with livecoding. 
-          See the documentation and installation instructions here, 
-          or have a look at a tutorial video.
-          If you need help, visit the chatroom and forum.
-        </p>  
+        <p>{{ dataRender.contents}}</p>  
       </div>
-      <figure class="image is-2by1">
-        <img class="img-ctrl" src="https://images.unsplash.com/photo-1555585153-0812cde1b4f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=656&q=80.jpg">
+
+      <figure v-for="(img, indexImg) of dataRender.contentImages" :key="indexImg" class="image is-2by1">
+        <img class="img-ctrl" :src="img.img">
       </figure>
       <p class="with-padding-medium"> Collaboration </p> 
       <div class="quotes column is-8">
@@ -129,6 +122,7 @@ export default {
   components: {
   },
   props: {
+    dataRender: Object
   },
   computed: {
     ...mapGetters(['isLoading']),

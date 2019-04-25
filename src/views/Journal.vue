@@ -1,16 +1,18 @@
 <template>
     <div class="container-ctrl scroll-wrapper">
       <NavHelper scrollContainer=".scroll-wrapper"></NavHelper>
-      <WorkHeader :dataDetails="getJournalDetails"/>
-      <WorkContent :dataDetails="getJournalDetails"/>
-      <SuggestedWorks :dataDetails="getJournalDetails"/>
+      <WorkHeader :dataDetails="getSelectedJournal"/>
+      <WorkContent :dataDetails="getSelectedJournal"/>
+      <SuggestedWorks :dataDetails="getNextSuggestedItem"/>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import { 
+  FETCH_NEXT_SUGGESTED,
   FETCH_JOURNAL_DETAILS,
+  FETCH_SELECTED_JOURNAL,
   SET_SCROLL_TO 
 } from "@/store/actions.type";
 import jump from 'jump.js'
@@ -31,7 +33,12 @@ export default {
   mounted() {
   },
   created () {
-    this.$store.dispatch(FETCH_JOURNAL_DETAILS )
+    const t = "journal"
+    const p = this.$route.params.slug
+    const payload = {path: p, theme: t }
+    const selectedPayload = { selected: p}
+    this.$store.dispatch(FETCH_SELECTED_JOURNAL, selectedPayload )
+    this.$store.dispatch(FETCH_NEXT_SUGGESTED, payload )
   },
   destroyed () {
   },
@@ -45,7 +52,7 @@ export default {
 
   },
   computed: {
-    ...mapGetters(['isLoading', 'getJournalDetails']),
+    ...mapGetters(['isLoading', 'getJournalDetails', 'getSelectedJournal',  'getNextSuggestedItem']),
   },
   methods: {
     setIsScroll(){

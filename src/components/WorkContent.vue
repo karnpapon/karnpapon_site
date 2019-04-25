@@ -2,7 +2,7 @@
   <section class="container is-fullhd detail-section">
     <div id="content-theme" class="columns detail-wrapper no-margin-tb">
       <WorkLinks/>
-      <WorkDetailsRender/>
+      <WorkDetailsRender :dataRender="dataDetails"/>
     </div>
     <!-- work scroll-spacing: preserve space. -->
     <div class="column is-full scroll-spacing no-pointer-event"></div>
@@ -12,8 +12,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import { 
-  FETCH_SELECTED_WORK,
-  SET_SCROLL_TO 
 } from "@/store/actions.type";
 import WorkDetailsRender from "@/components/WorkDetailsRender"
 import WorkLinks from "@/components/WorkLinks"
@@ -41,7 +39,7 @@ export default {
     dataDetails: Object
   },
   computed: {
-    ...mapGetters(['isLoading', 'getWorkDetail']),
+    ...mapGetters(['isLoading']),
   },
   methods: {
     setTheme(){
@@ -71,10 +69,38 @@ export default {
 
   .w-light{ font-weight: lighter; }
 
+  .theme-about /deep/{
+   .link-info{ 
+      strong{
+        &:hover{
+          color: $hover-color !important;
+        }
+      }
+    }
+  }
+
+  .theme-work /deep/{
+   .link-info{ 
+      strong{
+        &:hover{
+          color: $hover-color !important;
+        }
+      }
+    }
+  }
+
   .theme-journal /deep/{ 
     background-color: $color-black; 
      p, strong, span, a, i, div { 
       color: white !important;
+    }
+
+    .link-info{ 
+      strong{
+        &:hover{
+          color: $hover-color !important;
+        }
+      }
     }
     .tag-cat { 
       border: 1px solid white;

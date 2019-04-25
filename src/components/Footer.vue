@@ -94,7 +94,11 @@
 </template>
 
 <script>
-import { FETCH_SELECTED_WORK, SET_SCROLL_TO_TRUE } from "@/store/actions.type";
+import { 
+  FETCH_NEXT_SUGGESTED,
+  FETCH_SELECTED_WORK, 
+  SET_SCROLL_TO_TRUE 
+} from "@/store/actions.type";
 import { mapGetters } from 'vuex'
 import Work from '@/views/Work'
 
@@ -155,9 +159,12 @@ export default {
       this.isShowOverview = !this.isShowOverview
     },
     selectWork( selectedWork){
+      const t = "work"
+      const p = this.$route.params.slug
+      const payload = {path: p, theme: t }
       this.$store.dispatch(FETCH_SELECTED_WORK, selectedWork.slug )
       this.toggleOverview()
-      // this.$store.dispatch(SET_SCROLL_TO_TRUE)
+      this.$store.dispatch(FETCH_NEXT_SUGGESTED, payload)
       Work.methods.setIsScroll()
     }
   },

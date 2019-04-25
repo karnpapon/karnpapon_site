@@ -7,23 +7,21 @@
     
       <div class="column is-half no-padding-top no-padding-bottom no-padding-right control-worklist-detail">
         <div 
-          v-for="( data, index ) of worklists" 
-          class="work-list-detail with-padding"
+          v-for="( data, index ) of dataDetails" 
+          class="work-list-detail with-padding suggested-work"
           :key="index"
+          @click="handleClick(data)"
         >
         <div class="flex-wrapper">
           <span class="icon icon-size-2x">
-            <i 
-              class="fas padding-top padding-right"
-              :class="['fa-arrow-' + data.icon]"
-            >
-            </i>
+            <i v-if="index == 0" class="fas padding-top padding-right fa-arrow-left"/>
+            <i v-else class="fas padding-top padding-right fa-arrow-right"/>
           </span>
           <div class="next-item-wrapper">
-            <p class="title is-3">{{data.title}}</p>
+            <p class="title is-3">{{data.name}}</p>
             <div class="subtitle is-6  padding-top">
-              <p>{{ data.detail1}}</p>  
-              <p>{{ data.detail2}}</p>  
+              <p>{{ data.description1}}</p>  
+              <p>{{ data.description2}}</p>  
             </div>
           </div>
         </div>
@@ -38,9 +36,11 @@
 <script>
 import { mapGetters } from 'vuex'
 import { 
+  FETCH_NEXT_SUGGESTED,
   FETCH_SELECTED_WORK,
   SET_SCROLL_TO 
 } from "@/store/actions.type";
+import Work from '@/views/Work'
 
 export default {
   name: 'SuggestedWorks',
@@ -63,7 +63,7 @@ export default {
     
   },
   props: {
-    dataDetails: Object
+    dataDetails: Array
   },
   computed: {
     ...mapGetters(['isLoading']),
@@ -72,7 +72,7 @@ export default {
     setTheme(){
       const target = document.getElementById("suggested-work-theme")
 
-      switch (this.dataDetails.theme) {
+      switch (this.dataDetails[0].theme) {
         case 'about':
           target.classList.add("theme-about") 
           break;
@@ -85,7 +85,13 @@ export default {
         default:
           break;
       }
-    } 
+    },
+    handleClick(selected){
+      this.$store.dispatch(FETCH_SELECTED_WORK, selected.slug )
+      this.$router.push({ path: '/work/' + selected.slug })
+      this.$store.dispatch(FETCH_NEXT_SUGGESTED, this.$route.params.slug)
+      Work.methods.setIsScroll()
+    }
   }
 }
 </script>
