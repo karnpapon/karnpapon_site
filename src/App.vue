@@ -2,7 +2,12 @@
     <div class="index-page-container">
     <nprogress-container></nprogress-container> 
       <div id="app"></div>
-      <router-view></router-view>
+      <transition
+        name="fade"
+        mode="out-in"
+      >
+        <router-view></router-view>
+      </transition>
       <Footer></Footer>
     </div>
 </template>
@@ -36,7 +41,7 @@ export default {
     width: 100% !important;
     -moz-osx-font-smoothing: grayscale !important;
     -webkit-font-smoothing: antialiased !important;
-    font-smoothing: antialiased !important;
+    /* font-smoothing: antialiased !important; */
   }
 
 * {
@@ -48,6 +53,19 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     /* color: #2c3e50; */
   }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0
+  }
+
   a{
     color: $color-black !important;
   }

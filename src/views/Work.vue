@@ -1,8 +1,8 @@
 <template>
     <div class="container-ctrl scroll-wrapper">
       <NavHelper scrollContainer=".scroll-wrapper"></NavHelper>
-      <WorkHeader :dataDetails="getWorkDetail"/>
-      <WorkContent :dataDetails="getWorkDetail"/>
+      <WorkHeader :dataDetails="getSelectedWork"/>
+      <WorkContent :dataDetails="getSelectedWork"/>
       <SuggestedWorks :dataDetails="getNextSuggestedItem"/>
     </div>
 </template>
@@ -50,7 +50,7 @@ export default {
     msg: String
   },
   computed: {
-    ...mapGetters(['isLoading', 'getSelectedWork', 'getNextSuggestedItem']),
+    ...mapGetters(['isLoading', 'getSelectedWork', 'getWorkData', 'getNextSuggestedItem']),
   },
   methods: {
     setIsScroll(){

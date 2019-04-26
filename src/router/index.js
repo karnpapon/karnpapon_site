@@ -30,5 +30,9 @@ export default new Router({
       path: "/journal/:slug",
       component: () => import("@/views/Journal"),
     }
-  ]
+  ],
+  scrollBehavior() {
+    // return desired position
+    return { x: 0, y: 0 }
+  }
 })

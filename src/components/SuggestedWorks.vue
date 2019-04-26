@@ -1,15 +1,17 @@
 <template>
   <section id="suggested-work-theme" class="column is-full nav-next-work-section">
     <div class="columns scroll-spacing">
-      <div class="column is-half no-padding-top">
+      <div class="column is-half no-padding-top suggested-title">
         <div class="title detail-level padding-top-3rem">Project</div>
       </div>
     
-      <div class="column is-half no-padding-top no-padding-bottom no-padding-right control-worklist-detail">
+      <div class="column is-half no-padding control-worklist-detail">
         <div 
           v-for="( data, index ) of dataDetails" 
           class="work-list-detail with-padding suggested-work"
           :key="index"
+          @mouseover="handleShowPreview(data.thumbnail, index)"
+          @mouseleave="handleHidePreview(data)"
           @click="handleClick(data)"
         >
         <div class="flex-wrapper">
@@ -38,6 +40,7 @@ import { mapGetters } from 'vuex'
 import { 
   FETCH_NEXT_SUGGESTED,
   FETCH_SELECTED_WORK,
+  FETCH_SELECTED_JOURNAL,
   SET_SCROLL_TO 
 } from "@/store/actions.type";
 import Work from '@/views/Work'
@@ -46,10 +49,8 @@ export default {
   name: 'SuggestedWorks',
   data(){
     return {
-      worklists: [
-        { title: "Kinjai Gallery", detail1: "custom sequencer", detail2: 'custom detail 2', icon: 'left'},
-        { title: "Rewind to the next", detail1: "custom detail1", detail2: 'custom detail2', icon: 'right'},
-      ]
+      hover: false,
+      thumbnailTarget: "",
     }
   },
   mounted() {
@@ -60,7 +61,6 @@ export default {
   destroyed () {
   },
   components: {
-    
   },
   props: {
     dataDetails: Array
@@ -86,11 +86,31 @@ export default {
           break;
       }
     },
+     handleShowPreview(img, index){
+      if(this.hover){ return; }
+      this.hover = true
+      this.thumbnailTarget = document.getElementsByClassName("suggested-title")[0]
+      this.thumbnailTarget.classList.add("thumbnail-placeholder")
+      this.thumbnailTarget.style.backgroundImage = `url(${img})`
+    },
+    handleHidePreview(data){
+      this.hover = false 
+      this.thumbnailTarget.classList.remove("thumbnail-placeholder")
+      this.thumbnailTarget.style.backgroundImage = 'unset'
+    },
     handleClick(selected){
-      this.$store.dispatch(FETCH_SELECTED_WORK, selected.slug )
-      this.$router.push({ path: '/work/' + selected.slug })
-      this.$store.dispatch(FETCH_NEXT_SUGGESTED, this.$route.params.slug)
-      Work.methods.setIsScroll()
+      const t = selected.theme
+      const p = this.$route.params.slug
+      const payload = {path: p, theme: t }
+      if(selected.theme == 'journal'){
+        const selectedPayload = { selected: p}
+        this.$store.dispatch(FETCH_SELECTED_JOURNAL, selectedPayload )
+      } else {
+        this.$store.dispatch(FETCH_SELECTED_WORK, selected.slug ) 
+      }
+      this.$router.push({ path: '/' + selected.theme + '/' + selected.slug })
+      this.$store.dispatch(FETCH_NEXT_SUGGESTED, payload)
+      // Work.methods.setIsScroll()
     }
   }
 }
@@ -114,6 +134,18 @@ export default {
 
   .control-worklist-detail >.work-list-detail ~.work-list-detail{
    border-bottom: unset;
+  }
+
+  .suggested-title{
+    width: 100%;
+    height: 100%;
+  }
+
+   .thumbnail-placeholder{
+    background-size: cover;
+    background-repeat: no-repeat;
+    >div {color: white;}
+    /* -webkit-text-stroke: 2px white; */
   }
 
   .theme-about{}

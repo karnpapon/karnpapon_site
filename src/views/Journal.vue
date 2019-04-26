@@ -11,7 +11,6 @@
 import { mapGetters } from 'vuex'
 import { 
   FETCH_NEXT_SUGGESTED,
-  FETCH_JOURNAL_DETAILS,
   FETCH_SELECTED_JOURNAL,
   SET_SCROLL_TO 
 } from "@/store/actions.type";

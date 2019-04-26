@@ -60,7 +60,7 @@ export default {
     dataDetails: Object
   },
   computed: {
-    ...mapGetters(['isLoading', 'getSelectedWork']),
+    ...mapGetters(['isLoading']),
   },
   methods: {
     setTheme(){
