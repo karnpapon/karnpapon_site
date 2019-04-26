@@ -132,14 +132,14 @@ export default {
 
   .tag-cat{ 
     border: 1px solid $color-black; 
-    font-weight: bolder !important;
+    /* font-weight: bolder !important; */
     /* font-family: $font-input-mono-bold; */
-    font-size: 10px;
+    font-size: 0.8rem;
     padding: $medium-padding;
     &:hover{
       background-color: $color-black;
       color: white;
-      cursor: pointer;
+      /* cursor: pointer; */
     }
   }
 
@@ -159,6 +159,16 @@ export default {
     pointer-events: auto;
     padding-bottom: 40px;
     margin-left: unset !important;
+    display: flex;
+
+    @media screen and(max-width: $mobile-screen){
+      display: block;
+    }
+  }
+
+  .flex-col{ 
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-next-work-section{
@@ -168,14 +178,35 @@ export default {
     margin-bottom: 50px;
     z-index: 0;
     border-top: 1px solid $color-black;
+
+    @media screen and(max-width: $mobile-screen){
+      width: 100%;
+    }
   }
 
  .next-item-wrapper{
     height: 100%;
+
+    @media screen and(max-width: $mobile-screen){
+      >p{ margin-bottom: 10px !important;}
+
+      p{
+        font-size: 1.5rem !important;
+      }
+    }
+
   }
 
   .scroll-spacing{
     height: $scroll-space-height;
+    width: 100%;
+    display: flex !important;
+
+    @media screen and(max-width: $mobile-screen){
+      display: flex !important;
+      flex-grow: 0 !important;
+      flex-basis: unset !important;
+    }
   }
 
   .detail-level{
@@ -203,6 +234,10 @@ export default {
   .scrollable{
     overflow-y: scroll;
     margin-right: -30px;
+
+    @media screen and (max-width: $mobile-screen){
+      height: 200px;
+    }
   }
 
   /* .control-worklist-detail >.work-list-detail ~.work-list-detail{

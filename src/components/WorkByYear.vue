@@ -1,6 +1,6 @@
 <template>
   <section class="color-grey detail-section">
-    <div class="detail-wrapper relative">
+    <div class="detail-wrapper relative flex-col">
       <section v-for="( data, index) of dataList" :key="index" class="flex-wrapper works-wrapper">
         <div class="column is-half w-light year-txt-dp">
           <div class="cate-year position-sticky">
@@ -85,13 +85,17 @@ export default {
   }
 
   .cate-year{
-    font-size: 18rem;
+    font-size: 20vw;
     font-weight: lighter;
     pointer-events: none;
     color:  $color-black;
     width: 100%;
     /* line-height: .8; */
     /* -webkit-text-stroke: 1px $color-black; */
+
+    /* @media screen and(max-width: $mobile-screen){
+      font-size: 5rem;
+    } */
   }
 
   .w-light{ font-weight: lighter; }
@@ -112,6 +116,12 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: auto;
+
+    @media screen and(max-width: $mobile-screen){
+      display: block;
+      width: 100%;
+    }
+    
   }
 
   .control-worklist-detail >.work-list-detail{
@@ -130,6 +140,10 @@ export default {
           }
         }
       }
+    }
+
+    @media screen and(max-width: $mobile-screen){
+      flex-direction: column;
     }
   }
 
@@ -152,6 +166,10 @@ export default {
     background-repeat: no-repeat;
     color: #ffffff00;
     -webkit-text-stroke: 2px white;
+
+    /* @media screen and(max-width: $mobile-screen){
+      height: 100%;
+    } */
   }
 
   .year-txt-dp{

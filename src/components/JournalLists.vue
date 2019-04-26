@@ -65,7 +65,7 @@ export default {
 @import '../assets/styles/_base.scss';
  
   .journal-title{
-    font-size: 18rem;
+    font-size: 20vw;
     font-weight: lighter;
     pointer-events: none;
     color:  $main-colorize-color;
@@ -81,6 +81,10 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: auto;
+
+     @media screen and(max-width: $mobile-screen){
+      display: block;
+    }
   }
 
   .control-worklist-detail >.work-list-detail{

@@ -5,12 +5,12 @@
   >
     <div @click="goToHome">
       <span class="icon padding-right-small helper-icon">
-        <i class="far fa-caret-square-left"></i>
+        <i class="fas fa-angle-left"></i>
       </span>
     </div>
     <div @click="goToTop">
       <span class="icon padding-right-small helper-icon">
-        <i class="far fa-arrow-alt-circle-up"></i>
+        <i class="fas fa-angle-up"></i>
       </span>
     </div>
   </div>
@@ -79,6 +79,10 @@ export default {
     display: flex;
     justify-content: space-around;
     width: 100px;
+
+     @media screen and(max-width: $mobile-screen){
+      display: none;
+    }
   }
 
   .helper-icon{

@@ -37,6 +37,32 @@ const dataJournal = [
     description1: 'How to 2',
     description2: 'from noob to noober.',
     contents: ""
+  },
+  {
+    name: 'How to 3 test',
+    slug: 'journal-03',
+    theme: 'journal',
+    readingTime: "5 mins read.",
+    date: '12/02/2019',
+    img: "../assets/images/tbc10_cover_artwork.jpg",
+    key: '003',
+    workType: 'portfolios',
+    description1: 'How to 2',
+    description2: 'from noob to noober.',
+    contents: ""
+  },
+  {
+    name: 'How to 4 test',
+    slug: 'journal-04',
+    theme: 'journal',
+    readingTime: "5 mins read.",
+    date: '12/02/2019',
+    img: "../assets/images/tbc10_cover_artwork.jpg",
+    key: '003',
+    workType: 'portfolios',
+    description1: 'How to 2',
+    description2: 'from noob to noober.',
+    contents: ""
   }
 ]
 

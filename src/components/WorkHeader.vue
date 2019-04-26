@@ -104,4 +104,10 @@ export default {
     div, p {color: white;}
   }
 
+  #header-render{
+    display: flex;
+    position: relative;
+    z-index: 12;
+  }
+
 </style>

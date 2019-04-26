@@ -1,7 +1,7 @@
 <template>
   <section class="container is-fullhd detail-section">
-    <div id="content-theme" class="columns detail-wrapper no-margin-tb">
-      <WorkLinks/>
+    <div id="content-theme" class="detail-wrapper no-margin-tb">
+      <WorkLinks :dataRender="dataDetails"/>
       <WorkDetailsRender :dataRender="dataDetails"/>
     </div>
     <!-- scroll-spacing: preserve space. -->

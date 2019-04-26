@@ -55,7 +55,7 @@
               <p><strong> Karnpapon </strong></p>
             </div>
             <span class="icon "><i class="fab fa-creative-commons"></i></span>
-            <p class="w-medium">CC BY NC SA 4.0</p>
+            <p class="w-medium cc-details">CC BY NC SA 4.0</p>
             <div class="credits">
             <p> crafted by </p>  
             <span class="icon">
@@ -170,10 +170,24 @@ export default {
       >div p {color: white;}
       >div i {color: white;}
     }
+
+
+    @media screen and(max-width: $mobile-screen){
+      flex-grow: 0;
+    }
   }
 
   .w-medium{
     font-weight: 500;
+  }
+
+  .cc-details{
+    display: flex;
+
+    @media screen and(max-width: $mobile-screen){
+      display: none;
+      /* font-size: 0.8rem; */
+    }
   }
 
   .credits{ 
@@ -191,15 +205,31 @@ export default {
       p {color: white;}
       i {color: white;}
     }
+
+    @media screen and(max-width: $mobile-screen){
+      display: none;
+    }
   }
 
   .left-col{
     justify-content: space-between;
+
+    @media screen and(max-width: $mobile-screen){
+      display: flex;
+      justify-content: normal;
+    }
+
   }
 
   .right-col{
     width: 50px;
+    display: flex;
     justify-content: space-between;
+
+     @media screen and(max-width: $mobile-screen){
+        margin-top: 0 !important;
+        margin-left: auto;
+    }
   }
 
   .icon-size-2x{ 
@@ -234,10 +264,17 @@ export default {
     }
   }
 
+  .level{
+     @media screen and(max-width: $mobile-screen){
+      display: flex !important;
+    }
+  }
+
   .footer-container{ 
     position: fixed;
     bottom: 0;
     z-index: 5;
+    width: 100%;
   }
 
   .footer-wrapper{ 

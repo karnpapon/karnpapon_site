@@ -22,6 +22,15 @@ const dataWorks = [
     contentImages: [
       { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg"},
       { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg"}
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website"},
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github"}
+    ],
+    categories: [
+      { title: 'Graphic Design'},
+      { title: 'Web Development'},
+      { title: 'Illustration'},
     ]
   },
   {
@@ -40,7 +49,20 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page00.gif' },
         { type: 'image', img: 'Artwork-page01.jpg' },
         { type: 'image', img: 'Artwork-page02.jpg' },
-      ]
+      ],
+    contentImages: [
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Graphic Design' },
+      { title: 'Web Development' },
+      { title: 'Illustration' },
+    ]
   },
   {
     name: 'Songkranizer',
@@ -58,7 +80,20 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page00.gif' },
         { type: 'image', img: 'Artwork-page01.jpg' },
         { type: 'image', img: 'Artwork-page02.jpg' },
-      ]
+      ],
+    contentImages: [
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Graphic Design' },
+      { title: 'Web Development' },
+      { title: 'Illustration' },
+    ]
   },
   {
     name: 'The Blacksmith.',
@@ -76,7 +111,20 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page00.gif' },
         { type: 'image', img: 'Artwork-page01.jpg' },
         { type: 'image', img: 'Artwork-page02.jpg' },
-      ]
+      ],
+    contentImages: [
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Graphic Design' },
+      { title: 'Web Development' },
+      { title: 'Illustration' },
+    ]
   },
   {
     name: 'The Black Codes',
@@ -94,7 +142,20 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page00.gif' },
         { type: 'image', img: 'Artwork-page01.jpg' },
         { type: 'image', img: 'Artwork-page02.jpg' },
-      ]
+      ],
+    contentImages: [
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Graphic Design' },
+      { title: 'Web Development' },
+      { title: 'Illustration' },
+    ]
   },
   {
     name: 'The Black Codes (AW)',
@@ -112,7 +173,20 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page00.gif' },
         { type: 'image', img: 'Artwork-page01.jpg' },
         { type: 'image', img: 'Artwork-page02.jpg' },
-      ]
+      ],
+    contentImages: [
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Graphic Design' },
+      { title: 'Web Development' },
+      { title: 'Illustration' },
+    ]
   },
   {
     name: 'lll',
@@ -130,7 +204,20 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page00.gif' },
         { type: 'image', img: 'Artwork-page01.jpg' },
         { type: 'image', img: 'Artwork-page02.jpg' },
-      ]
+      ],
+    contentImages: [
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Graphic Design' },
+      { title: 'Web Development' },
+      { title: 'Illustration' },
+    ]
   },
   {
     name: 'sirisirisiri',
@@ -148,7 +235,20 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page00.gif' },
         { type: 'image', img: 'Artwork-page01.jpg' },
         { type: 'image', img: 'Artwork-page02.jpg' },
-      ]
+      ],
+    contentImages: [
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Graphic Design' },
+      { title: 'Web Development' },
+      { title: 'Illustration' },
+    ]
   },
   {
     name: 'fififififi',
@@ -166,7 +266,20 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page00.gif' },
         { type: 'image', img: 'Artwork-page01.jpg' },
         { type: 'image', img: 'Artwork-page02.jpg' },
-      ]
+      ],
+    contentImages: [
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+    ],
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Graphic Design' },
+      { title: 'Web Development' },
+      { title: 'Illustration' },
+    ]
   },
 ];
 

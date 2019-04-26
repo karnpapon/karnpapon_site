@@ -1,6 +1,5 @@
 <template>
-  <section id="suggested-work-theme" class="column is-full nav-next-work-section">
-    <div class="columns scroll-spacing">
+  <section id="suggested-work-theme" class="column is-full nav-next-work-section scroll-spacing no-padding">
       <div class="column is-half no-padding-top suggested-title">
         <div class="title detail-level padding-top-3rem">Project</div>
       </div>
@@ -21,7 +20,7 @@
           </span>
           <div class="next-item-wrapper">
             <p class="title is-3">{{data.name}}</p>
-            <div class="subtitle is-6  padding-top">
+            <div class="subtitle is-6  padding-top desc">
               <p>{{ data.description1}}</p>  
               <p>{{ data.description2}}</p>  
             </div>
@@ -31,7 +30,6 @@
         </div>
         
       </div>
-    </div>
   </section>
 </template>
 
@@ -146,6 +144,17 @@ export default {
     background-repeat: no-repeat;
     >div {color: white;}
     /* -webkit-text-stroke: 2px white; */
+  }
+
+  .desc{
+     @media screen and(max-width: $mobile-screen){
+      /* display: none; */
+      p{
+        margin-top: 10px;
+        font-size: 1rem !important;
+        &:last-child{ display: none;}
+      }
+    }
   }
 
   .theme-about{}
