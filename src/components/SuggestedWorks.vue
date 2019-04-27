@@ -131,7 +131,7 @@ export default {
   }
 
   .control-worklist-detail >.work-list-detail ~.work-list-detail{
-   border-bottom: unset;
+   border-bottom: unset !important;
   }
 
   .suggested-title{

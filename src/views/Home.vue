@@ -2,7 +2,6 @@
   <div class="container-ctrl">
     <WorkByYear :dataList="getWorksByYear"/>
     <JournalLists/>
-
   </div>
 
 </template>

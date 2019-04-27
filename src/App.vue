@@ -1,21 +1,17 @@
 <template>
-    <div class="index-page-container">
-    <nprogress-container></nprogress-container> 
-      <div id="app"></div>
-      <transition
-        name="fade"
-        mode="out-in"
-      >
-        <router-view></router-view>
-      </transition>
-      <Footer></Footer>
-    </div>
+  <div class="index-page-container">
+  <nprogress-container></nprogress-container> 
+    <div id="app"></div>
+    <transition name="fade" mode="out-in"><router-view/></transition>
+    <Footer></Footer>
+  </div>
 </template>
 
 <script>
 
 import Footer from "./components/Footer";
 import NprogressContainer from '@/components/Nprogress'
+import router from "@/router"
 
 export default {
   name: 'app',
@@ -23,7 +19,14 @@ export default {
     Footer,
     NprogressContainer
   },
- 
+  data(){
+    return {
+    }
+  },
+ created() {
+   console.log("this.$root.route", this.$root._route)
+  },
+
 }
 </script>
 
@@ -122,11 +125,14 @@ export default {
 
   .no-pointer-event{ pointer-events: none; }
 
+  .no-flex-basis{ flex-basis: initial !important;}
+
   .position-sticky{
     position: sticky;
     top: 0;
   }
 
+  .full-width{ width: 100% !important;}
 
   .no-border-top{ border-top: unset !important;}
 
@@ -236,7 +242,7 @@ export default {
     margin-right: -30px;
 
     @media screen and (max-width: $mobile-screen){
-      height: 200px;
+      /* height: 300px; */
     }
   }
 

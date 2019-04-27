@@ -19,9 +19,9 @@
           >
             <div class="next-item-wrapper">
               <p class="title is-3 ">{{_data.name}}</p>
-              <div class="subtitle is-6  padding-top">
-                <p>custom sequencer</p>  
-                <p>custom sequencer</p>  
+              <div class="subtitle is-6  padding-top work-lists-subtitle">
+                <p>{{ _data.description1}}</p>  
+                <p>{{_data.description2}}</p>  
               </div>
             </div>
           </div>
@@ -109,6 +109,10 @@ export default {
 
   .home-scroll-spacing{
     height: $home-scroll-space-height;
+
+    @media screen and(max-width: $mobile-screen){
+      height: calc(100vh - 50px);
+    }
   }
 
   .control-worklist-detail{
@@ -175,6 +179,16 @@ export default {
   .year-txt-dp{
     align-items: flex-start;
     display: flex;
+
+     @media screen and(max-width: $mobile-screen){
+      display: block !important;
+    }
+  }
+
+  .work-lists-subtitle{
+    @media screen and(max-width: $mobile-screen){
+      p{font-size: 1rem !important;}
+    }
   }
 
 </style>

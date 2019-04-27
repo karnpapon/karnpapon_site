@@ -12,6 +12,7 @@ Vue.use(NProgress);
 
 const nprogress = new NProgress()
 
+
 new Vue({
   router,
   store,

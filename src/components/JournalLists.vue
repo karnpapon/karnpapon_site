@@ -2,11 +2,11 @@
   <div class="padding-right">
     <section class="column is-full nav-next-work-section background-black">
       <div class="columns home-scroll-spacing">
-        <div class="column is-half no-padding-top">
+        <div class="column is-half no-padding-top no-flex-basis">
           <p class="journal-title">Journal</p>
         </div>
 
-        <div class="column is-half padding-top padding-bottom control-worklist-detail overflow">
+        <div class="padding-top padding-bottom control-worklist-detail overflow">
           <div class="scrollable">
             <div 
               v-for="( data, index ) of getJournalDetails" 
@@ -20,7 +20,7 @@
                 <div class="flex-wrapper">
                   <div class="next-item-wrapper">
                     <p class="title is-3">{{data.name}}</p>
-                    <div class="subtitle is-6  padding-top">
+                    <div class="subtitle is-6  padding-top journal-lists-subtitle">
                       <p> {{data.date}} : {{data.readingTime}} </p>  
                     </div>
                   </div>
@@ -29,6 +29,7 @@
             </div>
           </div>
         </div>
+        <dir class="footer-h-space"></dir>
       </div>
     </section>
   </div>
@@ -74,16 +75,31 @@ export default {
 
   .home-scroll-spacing{
     height: $home-scroll-space-height;
+
+    @media screen and(max-width: $mobile-screen){
+      height: calc(100vh - 50px);
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .control-worklist-detail{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
      @media screen and(max-width: $mobile-screen){
       display: block;
+      padding-top: 0;
+    }
+  }
+
+  .journal-lists-subtitle{
+    @media screen and(max-width: $mobile-screen){
+      p{font-size: 1rem !important;}
     }
   }
 
@@ -91,6 +107,17 @@ export default {
     border-bottom: 1px solid black;
     align-items: center;
     display: flex;
+  }
+
+  .footer-h-space{
+    height: 50px;
+    width: 100%;
+    display: none;
+
+    @media screen and(max-width: $mobile-screen){
+      display: block;
+    }
+
   }
 
   .works-wrapper{

@@ -7,7 +7,6 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: 'home',
       component: () => import("@/views/Home"),
     },
     {
@@ -29,10 +28,13 @@ export default new Router({
     {
       path: "/journal/:slug",
       component: () => import("@/views/Journal"),
+    },
+    {
+      path: "*",
+      component: () => import("@/views/PageNotFound"),
     }
   ],
   scrollBehavior() {
-    // return desired position
     return { x: 0, y: 0 }
   }
 })

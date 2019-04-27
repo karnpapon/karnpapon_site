@@ -1,11 +1,11 @@
 <template>
-  <div class="footer-container column is-full no-padding">
+  <div v-if="currentRoute !== '/' " class="footer-container column is-full no-padding">
     <div 
       v-if="isShowOverview"
       class="overview-wrapper column is-full"
     >
       <div class="overview-container">
-        <div class="columns is-full">
+        <div class="columns is-full ov-lists">
           <div 
             v-for="(list, index) of getWorksByYear" :key="index" 
             class="column with-padding"
@@ -88,6 +88,53 @@
       </div>
     </div>
   </div>
+
+  <div v-else>
+    <div class="footer-container column is-full no-padding">
+      <div class="footer-wrapper">
+        <div class="footer footer-ctl column is-11 full-width">
+          <div class="level">
+            <div 
+            @click="handleClick(undefined,'about')"
+              class="level-left left-col">
+              <div class="go-about">
+                <p><strong> Karnpapon </strong></p>
+              </div>
+              <span class="icon "><i class="fab fa-creative-commons"></i></span>
+              <p class="w-medium cc-details">CC BY NC SA 4.0</p>
+              <div class="credits">
+              <p> crafted by </p>  
+              <span class="icon">
+                  <a target="blank" href="https://vuejs.org/">
+                    <i class="fab fa-vuejs"></i>
+                  </a>
+                </span>
+                +
+                <span class="icon">
+                  <a target="blank" href="https://bulma.io">
+                    <i class="fab fa-bootstrap"></i>
+                  </a>
+                </span> 
+                <p> + love. </p>
+              </div>
+            </div>
+            <div class="level-right right-col">
+              <span class="icon icon-size-2x">
+                <a target="blank" href="https://twitter.com/snuffvideo1">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </span>
+              <span class="icon icon-size-2x">
+                <a target="blank" href="https://github.com/karnpapon">
+                  <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -104,6 +151,7 @@ export default {
   name: "Footer",
   data(){
     return { 
+      currentRoute: "",
       isShowOverview: false,
     }
   },
@@ -132,10 +180,24 @@ export default {
   },
   created(){
     this.$store.dispatch( FETCH_WORKS_BY_YEAR )
+    // const unwatch = this.$watch( () => 
+    //   this.$route,(route, prevRoute) => {
+    //   this.currentRoute = route.path
+    //   unwatch()
+    // })
   },
   computed: {
+    // watchedRoute(){
+    //   this.$route.beforeEach(( to, from, next ) => {
+    //     this.currentRoute = 'default'
+    //     next()
+    //   })
+    // },
     ...mapGetters(['isLoading', 'getWorksByYear']),
   },
+  props: {
+    currentPath: String
+  }
 }
 </script>
 
@@ -219,6 +281,12 @@ export default {
       justify-content: normal;
     }
 
+  }
+
+  .ov-lists{
+   @media screen and(max-width: $mobile-screen){
+      display: flex;
+    }
   }
 
   .right-col{
