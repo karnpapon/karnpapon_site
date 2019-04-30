@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'nprogress-container'
+  name: 'nprogress-container',
 }
 </script>
 

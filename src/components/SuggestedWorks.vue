@@ -41,7 +41,6 @@ import {
   FETCH_SELECTED_JOURNAL,
   SET_SCROLL_TO 
 } from "@/store/actions.type";
-import Work from '@/views/Work'
 
 export default {
   name: 'SuggestedWorks',
@@ -69,7 +68,6 @@ export default {
   methods: {
     setTheme(){
       const target = document.getElementById("suggested-work-theme")
-
       switch (this.dataDetails[0].theme) {
         case 'about':
           target.classList.add("theme-about") 
@@ -108,7 +106,6 @@ export default {
       }
       this.$router.push({ path: '/' + selected.theme + '/' + selected.slug })
       this.$store.dispatch(FETCH_NEXT_SUGGESTED, payload)
-      // Work.methods.setIsScroll()
     }
   }
 }
@@ -135,8 +132,8 @@ export default {
   }
 
   .suggested-title{
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
   }
 
    .thumbnail-placeholder{

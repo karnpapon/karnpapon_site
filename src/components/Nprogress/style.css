@@ -1,7 +1,7 @@
 /* Make clicks pass-through */
 
 :root {
-  --main-loading-color: #000000 ; 
+  --main-loading-color: #000000; 
 }
 
 #nprogress {

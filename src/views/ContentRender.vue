@@ -1,19 +1,22 @@
 <template>
     <div class="container-ctrl scroll-wrapper">
       <NavHelper scrollContainer=".scroll-wrapper"></NavHelper>
-      <WorkHeader :dataDetails="dataDetails"/>
-      <WorkContent :dataDetails="dataDetails"/>
-      <SuggestedWorks :dataDetails="dataDetails"/>
+      <WorkHeader :dataDetails="getData"/>
+      <WorkContent :dataDetails="getData"/>
+      <SuggestedWorks :dataDetails="getNextSuggestedItem"/>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import { 
+  FETCH_DATA,
   FETCH_ABOUT_DETAILS,
   FETCH_SELECTED_WORK,
+  FETCH_SELECTED_JOURNAL,
   FETCH_JOURNAL_DETAILS,
-  SET_SCROLL_TO 
+  SET_SCROLL_TO,
+  FETCH_NEXT_SUGGESTED
 } from "@/store/actions.type";
 import jump from 'jump.js'
 import Footer from '@/components/Footer'
@@ -28,14 +31,12 @@ export default {
   data(){
     return {
       isScrollToTop: false,
-      dataDetails: ""
     }
   },
   mounted() {
-    this.getData()
   },
   created () {
-    this.getDataFromRoutePath()
+    this.getQueryData()
   },
   destroyed () {
   },
@@ -49,7 +50,7 @@ export default {
     msg: String
   },
   computed: {
-    ...mapGetters(['isLoading', 'getSelectedWork', 'getAboutDetail', 'getJournalDetails']),
+    ...mapGetters(['isLoading', 'getData', 'getNextSuggestedItem']),
   },
   methods: {
     setIsScroll(){
@@ -76,36 +77,29 @@ export default {
       }
       return scrollSpeed
     }, 
-    getDataFromRoutePath(){
+    getQueryData(){
+      let payload = {}
+      let next_suggest_payload = {}
+      let p = this.$route.params.slug
       switch (this.$route.path) {
         case '/about':
-          this.$store.dispatch(FETCH_ABOUT_DETAILS) 
+          payload = { action: FETCH_ABOUT_DETAILS, params:"" }
+          next_suggest_payload = { path: p, theme: "about"}
           break;
-        case '/work/seeq':
-          this.$store.dispatch(FETCH_SELECTED_WORK, this.$route.params.slug ) 
+        case '/work/' + p:
+          payload = { action: FETCH_SELECTED_WORK, params: p }
+          next_suggest_payload = { path: p, theme: "work"}
           break;
-        case '/journal':
-          this.$store.dispatch(FETCH_JOURNAL_DETAILS) 
+        case '/journal/' + p:
+          payload = { action: FETCH_SELECTED_JOURNAL, params: p }
+          next_suggest_payload = { path: p, theme: "journal"}
           break;
         default:
           break;
       }
+      this.$store.dispatch(FETCH_DATA, payload)
+      this.$store.dispatch(FETCH_NEXT_SUGGESTED, next_suggest_payload )
     },
-    getData(){
-       switch (this.$route.path) {
-        case '/about':
-          this.dataDetails = this.getAboutDetail
-          break;
-        case '/work/seeq':
-          this.dataDetails = this.getWorkDetail
-          break;
-        case '/journal':
-          this.dataDetails = this.getJournalDetails
-          break;
-        default:
-          break;
-      }
-    }
   }
 }
 </script>

@@ -11,23 +11,23 @@ export default new Router({
     },
     {
       path: "/about",
-      component: () => import("@/views/About"),
+      component: () => import("@/views/ContentRender"),
     },
     {
       path: "/work/",
-      component: () => import("@/views/Work"),
+      component: () => import("@/views/ContentRender"),
     },
     {
       path: "/work/:slug",
-      component: () => import("@/views/Work"),
+      component: () => import("@/views/ContentRender"),
     },
     {
       path: "/journal/",
-      component: () => import("@/views/Journal"),
+      component: () => import("@/views/ContentRender"),
     },
     {
       path: "/journal/:slug",
-      component: () => import("@/views/Journal"),
+      component: () => import("@/views/ContentRender"),
     },
     {
       path: "*",

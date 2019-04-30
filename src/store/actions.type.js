@@ -1,3 +1,4 @@
+export const FETCH_DATA = "fetchData";
 export const FETCH_WORKS = "fetchWorks";
 export const FETCH_WORKS_BY_YEAR = "fetchWorksByYear";
 export const FETCH_SELECTED_WORK = "fetchSelectedWork";

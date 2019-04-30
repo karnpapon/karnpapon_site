@@ -55,7 +55,8 @@ export default {
     },
     showBackToTop(){
      let clientHeight = document.documentElement.getBoundingClientRect().height
-     if(window.scrollY > clientHeight/8){
+     let parentHeight = document.getElementById("content-theme").clientHeight;
+     if(window.scrollY > clientHeight/8 && window.scrollY < parentHeight - 500){
         this.isShowBackToTopBtn = true
      } else {
         this.isShowBackToTopBtn = false

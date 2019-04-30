@@ -145,7 +145,6 @@ import {
   FETCH_WORKS_BY_YEAR
 } from "@/store/actions.type";
 import { mapGetters } from 'vuex'
-import Work from '@/views/Work'
 
 export default {
   name: "Footer",

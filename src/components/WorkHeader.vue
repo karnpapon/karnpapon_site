@@ -1,33 +1,34 @@
 <template>
   <section 
     id="header-render"
-    class="column is-full title-detail-level with-padding"
+    class="column is-full title-detail-level"
   >
-    <div v-if="dataDetails.theme == 'journal'">
-      <div class="title detail-level is-1">
-         <p>{{ dataDetails.description1}}</p>  
-        <p>{{ dataDetails.description2}}</p>  
+    <div class="with-padding">
+      <div v-if="dataDetails.theme == 'journal'">
+        <div class="title detail-level is-1">
+          <p>{{ dataDetails.description1}}</p>  
+          <p>{{ dataDetails.description2}}</p>  
+        </div>
+        <div class="subtitle is-6 padding-top">
+          <p>{{ dataDetails.description1}}</p>  
+          <p>{{ dataDetails.description2}}</p>  
+        </div>
       </div>
-      <div class="subtitle is-6 padding-top">
-        <p>{{ dataDetails.description1}}</p>  
-        <p>{{ dataDetails.description2}}</p>  
-      </div>
-    </div>
-    <div v-else>
-      <div class="title detail-level">{{ dataDetails.name }}</div>
-      <div class="subtitle is-6 padding-top">
-        <p>{{ dataDetails.description1}}</p>  
-        <p>{{ dataDetails.description2}}</p>  
-      </div>
-      <div class="subtitle is-6">
-        <p> {{ dataDetails.year }} </p> 
-      </div>
-      <div class="subtitle is-6">
-        <p> {{ dataDetails.workType }} </p> 
+      <div v-else>
+        <div class="title detail-level">{{ dataDetails.name }}</div>
+        <div class="subtitle is-6 padding-top">
+          <p>{{ dataDetails.description1}}</p>  
+          <p>{{ dataDetails.description2}}</p>  
+        </div>
+        <div class="subtitle is-6">
+          <p> {{ dataDetails.year }} </p> 
+        </div>
+        <div class="subtitle is-6">
+          <p> {{ dataDetails.workType }} </p> 
+        </div>
       </div>
     </div>
   </section>
-     
 </template>
 
 <script>
@@ -42,11 +43,12 @@ export default {
   name: 'WorkHeader',
   data(){
     return {
-     
+      thumbnailTarget:""
     }
   },
   mounted() {
     this.setTheme() 
+    // this.handleShowPreview(this.dataDetails.thumbnail)
   },
   created () {
    
@@ -79,7 +81,16 @@ export default {
         default:
           break;
       }
-    }
+    },
+      handleShowPreview(img){
+      this.thumbnailTarget = document.getElementsByClassName("title-detail-level")[0]
+
+      const imgNode = document.createElement("div")
+      imgNode.classList.add("thumbnail-placeholder")
+      imgNode.style.backgroundImage = `url(${img})`
+
+      this.thumbnailTarget.appendChild(imgNode)
+    },
   }
 }
 </script>
@@ -89,14 +100,25 @@ export default {
 
   .title-detail-level{
     border-bottom: 1px solid $color-black;
+    padding: 0 !important;
+  }
+
+   .title-detail-level /deep/ .thumbnail-placeholder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-attachment: fixed;
+    /* >div {color: white;} */
   }
 
   .theme-work{
     background-color: $main-color;
   }
   .theme-about{
-    background-color: $color-black;
-    div, p {color: white;}
+    background-color: $third-color;
+    div, p {z-index: 10;}
   }
   .theme-journal{
     background-color: $color-black;

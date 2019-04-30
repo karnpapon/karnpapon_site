@@ -1,4 +1,5 @@
 import { 
+  FETCH_DATA,
   FETCH_WORKS,
   FETCH_WORKS_BY_YEAR,
   FETCH_SELECTED_WORK, 
@@ -16,6 +17,7 @@ import {
   FETCH_START, 
   FETCH_END,
   SET_WORKS,
+  SET_DATA,
   SET_WORKS_BY_YEAR,
   SET_SELECTED_WORK,
   SET_NEXT_SUGGESTED,
@@ -37,6 +39,7 @@ const state = {
   selectedJournal: "",
   nextSuggested: "",
   isSetScroll: false,
+  dataDetails:"",
   setScroll: () => {},
 };
 
@@ -71,12 +74,29 @@ const getters = {
   getSetScrollFunction(state){
     return state.setScroll
   },
-  getNextSuggestedItem(){
+  getNextSuggestedItem(state){
     return state.nextSuggested
+  },
+  getData(state){
+    return state.dataDetails
   }
 };
 
 const actions = {
+  [FETCH_DATA]({ commit}, payload){
+    const { action, params} = payload
+    let queryData = []
+    if (action == FETCH_ABOUT_DETAILS ){
+      queryData = dataAbout
+    } else if (action == FETCH_SELECTED_WORK){
+      queryData = dataWorks.filter(work => work.slug == params)
+    } else if (action == FETCH_SELECTED_JOURNAL){
+      queryData = dataJournal.filter(journal => journal.slug == params)
+    } else {
+      return  
+    }
+    commit( SET_DATA, queryData[0])
+  },
   [FETCH_WORKS]({ commit}){
     const works = dataWorks
     commit( SET_WORKS, works)
@@ -163,6 +183,9 @@ const mutations = {
   [FETCH_END](state, response) {
     state.isLoading = false;
     state.listData = response
+  },
+  [SET_DATA](state, queryData){
+    state.dataDetails = queryData
   },
   [SET_SELECTED_WORK](state, work){
     state.selectedWork = work
