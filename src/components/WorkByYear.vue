@@ -168,6 +168,7 @@ export default {
   .thumbnail-placeholder{
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     color: #ffffff00;
     -webkit-text-stroke: 2px white;
 

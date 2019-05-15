@@ -2,6 +2,8 @@
   <div class="column is-6">
     <div class="detail-render">
       <component :is="currentComponent"></component>
+      <!-- #region unused -->
+
       <!-- <div class="column padding-top" v-html="dataRender.contents"></div>
 
       <div v-if="dataRender.contentImages.length > 0">
@@ -21,6 +23,7 @@
         />
       </div> -->
 
+      <!-- #endregion -->
     </div>
   </div>
 </template>
@@ -33,7 +36,13 @@ import {
   songkranizer,
   ect,
   theBlacksmith,
-  about
+  about,
+  audiotrimmerScript,
+  livecodefest,
+  bkkDesignWeek,
+  bkkThroughPoster,
+  asFarAs,
+  theBlackCodesAw
 } from '@/markdowns'
 import BlogEntries from '../data/blogs.json';
 import { CodeSnippet }  from '@/components'
@@ -65,7 +74,13 @@ export default {
     'songkranizer': songkranizer,
     'ect-etc-tec': ect,
     'the-blacksmith': theBlacksmith,
-    'about': about
+    'about': about,
+    'audiotrimmer-scripts': audiotrimmerScript,
+    'livecodefest': livecodefest,
+    'bkk-through-poster':bkkThroughPoster,
+    'bkk-design-week': bkkDesignWeek,
+    'as-far-as': asFarAs,
+    'the-black-codes-aw': theBlackCodesAw
   },
   props: {
     dataRender: Object
@@ -102,9 +117,37 @@ export default {
         list-style: initial;
       }
 
+      a{
+        &:hover{
+          color: red !important;
+        }
+      }
+
       ul{
         padding: 0 40px;
         li {margin: 0px 0;}
+      }
+
+      img{ margin-bottom: 0;}
+
+      blockquote{
+        text-align: center;
+        >p {
+          font-size: 1.5rem;
+          font-style: italic;
+          font-weight: lighter;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+      }
+
+      hr{
+        background-color: black;
+        height: .5px;
+      }
+
+      small{ 
+        color: $secondary-color;
+        font-style: italic;
       }
 
       pre {

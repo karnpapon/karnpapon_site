@@ -1,4 +1,55 @@
-# ECT-ETC-TEC
-#### March 18, 2019
+![home](../../assets/images/ect-etc-tec/01.jpg)
+![home](../../assets/images/ect-etc-tec/02.png)
+![home](../../assets/images/ect-etc-tec/03.png)
 
-I'm not a 'natural' frontend developer, learning vue and re-learning Javascript with my Java knowledge came as a challenge. Not to mention all those bundlers, builders, like webpack, gulp, grunt and other weird noises that adds to the overall complexitiy of learning modern web frameworks. But if there's one thing that helped me in learning new technologies that is, to just jump right in and build little projects. Teaching is also a widely accepted technique that will greatly help you in learning. It doesn't mean that you have to gather a huge audience that will listen to you teach something. Sometimes, the audience you need is just yourself. Write what you've learn with the intention of teaching it to your old (or future) stupid self. It's kinda weird and paradoxical I know but just roll with me on this.
+
+
+# What.
+
+implementation on SJT ( Steinhaus-Johnson-Trotter's) algorithm for thai characters as a musical pattern sequencer. since letter contains an array of properties, one of the property is "Phonetic", in short, Phonetic of each individual letter determines how to produce a sound. thus, phonetic is picked up and using to determine an "envelope" for each particular synth voice. <br> 
+
+eg. letter "p" has percussive sound, then `attack = 0.01` ( in terms of tone.js ) letter "y" has a smooth attack,so ` attack = 0.5` and so on.
+
+------
+------
+
+# Why.
+
+inspired from word-playing where little permutation gives rhythmic sense.
+
+------
+------
+
+# How.
+
+VueJS as UI engine. <br>
+Tone.js as Synth engine.
+
+------
+------
+# Learn.
+
+(waiting..)
+
+------
+------
+# Caveats.
+(waiting..)
+
+------
+------
+# Notes.
+
+(waiting..)
+
+---
+
+
+### Useful Links
+- [Demo](https://vue-markdown-blog.netlify.com)
+- [Project Repository](https://github.com/josephharveyangeles/vue-markdown-blog)
+- [Dynamic Components](https://vuejs.org/v2/guide/components-dynamic-async.html#Async-Components)
+- [vue-cli webpack guide](https://cli.vuejs.org/guide/webpack.html#simple-configuration)
+- [vue-markdown-loader](https://github.com/QingWei-Li/vue-markdown-loader)
+- [Working with CSS Modules](https://cli.vuejs.org/guide/css.html#postcss)
+- [Markdown styles](http://markedstyle.com/styles)
