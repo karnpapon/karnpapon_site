@@ -20,17 +20,19 @@ const dataWorks = [
       If you need help, visit the chatroom and forum.
     `,
     contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg"},
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg"}
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
+        imgDesc: "jjjjj"
+      },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
+        imgDesc: "ffkfjfjfjfj"
+      }
     ],
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website"},
+      { title: "ssss.codes", url: "https://theblack.codes", type: "website"},
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github"}
     ],
     categories: [
       { title: 'Graphic Design'},
-      { title: 'Web Development'},
-      { title: 'Illustration'},
     ]
   },
   {
@@ -51,8 +53,12 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page02.jpg' },
       ],
     contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
+        imgDesc: "jjjjj"
+      },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
+        imgDesc: "ffkfjfjfjfj"
+      }
     ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
@@ -82,8 +88,12 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page02.jpg' },
       ],
     contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
+        imgDesc: "jjjjj"
+      },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
+        imgDesc: "ffkfjfjfjfj"
+      }
     ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
@@ -97,7 +107,7 @@ const dataWorks = [
   },
   {
     name: 'The Blacksmith.',
-    slug: 'theblacksmith',
+    slug: 'the-blacksmith',
     theme: 'work',
     year: '2019',
     thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
@@ -113,8 +123,12 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page02.jpg' },
       ],
     contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
+        imgDesc: "jjjjj"
+      },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
+        imgDesc: "ffkfjfjfjfj"
+      }
     ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
@@ -131,21 +145,42 @@ const dataWorks = [
     slug: 'the-black-codes-web',
     theme: 'work',
     year: '2018',
-    thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
-    img: "../assets/images/tbc10_cover_artwork.jpg",
+    thumbnail: require( '../assets/images/the-black-codes-web/01.jpg' ),
+    img: "",
     key: '004',
-    workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
-    contents: 
-      [
-        { type: 'image', img: 'Artwork-page00.gif' },
-        { type: 'image', img: 'Artwork-page01.jpg' },
-        { type: 'image', img: 'Artwork-page02.jpg' },
-      ],
+    workType: 'Graphic Design / Branding / Development / Music',
+    description1:'branding identity',
+    description2:'musical act from Bangkok, Thailand',
+    contents: `
+      Each letter of the alphabet is an operation, 
+      lowercase letters operate on bang, uppercase letters operate each frame.
+      Orca is designed to control other applications, 
+      create procedural sequencers, and to experiment with livecoding. 
+      See the documentation and installation instructions here, 
+      <div class="line"></div>
+      See the documentation and installation instructions here, 
+      <div class="image padding-top padding-bottom">
+        <img class="img-ctrl" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80.jpg">
+      </div>
+      or have a look at a tutorial video.
+      If you need help, visit the chatroom and forum.
+    `,
     contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+      { img: "the-black-codes-web/01.jpg",
+        imgDesc: ""
+      },
+      { img: "the-black-codes-web/02.jpg",
+        imgDesc: "website the black codes"
+      },
+      { img: "the-black-codes-web/03.png",
+        imgDesc: ""
+      },
+      { img: "the-black-codes-web/04.png",
+        imgDesc: ""
+      },
+      { img: "the-black-codes-web/05.png",
+        imgDesc: ""
+      },
     ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
@@ -155,6 +190,10 @@ const dataWorks = [
       { title: 'Graphic Design' },
       { title: 'Web Development' },
       { title: 'Illustration' },
+    ],
+    shareDataDetail:[
+      { name: "karnpapon"},
+      { name: "gingliu"},
     ]
   },
   {
@@ -175,8 +214,12 @@ const dataWorks = [
         { type: 'image', img: 'Artwork-page02.jpg' },
       ],
     contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
+      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
+        imgDesc: "jjjjj"
+      },
+      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
+        imgDesc: "ffkfjfjfjfj"
+      }
     ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
@@ -187,100 +230,7 @@ const dataWorks = [
       { title: 'Web Development' },
       { title: 'Illustration' },
     ]
-  },
-  {
-    name: 'lll',
-    slug: 'lll',
-    theme: 'work',
-    year: 'Late',
-    thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
-    img: "../assets/images/tbc10_cover_artwork.jpg",
-    key: '004',
-    workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
-    contents: 
-      [
-        { type: 'image', img: 'Artwork-page00.gif' },
-        { type: 'image', img: 'Artwork-page01.jpg' },
-        { type: 'image', img: 'Artwork-page02.jpg' },
-      ],
-    contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
-    ],
-    links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
-    ],
-    categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
-    ]
-  },
-  {
-    name: 'sirisirisiri',
-    slug: 'sirisirisiri',
-    theme: 'work',
-    year: 'Lab',
-    thumbnail: "https://images.unsplash.com/photo-1508780709619-79562169bc64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80.jpg",
-    img: "../assets/images/tbc10_cover_artwork.jpg",
-    key: '004',
-    workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
-    contents: 
-      [
-        { type: 'image', img: 'Artwork-page00.gif' },
-        { type: 'image', img: 'Artwork-page01.jpg' },
-        { type: 'image', img: 'Artwork-page02.jpg' },
-      ],
-    contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
-    ],
-    links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
-    ],
-    categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
-    ]
-  },
-  {
-    name: 'fififififi',
-    slug: 'fififififi',
-    theme: 'work',
-    year: 'Lab',
-    thumbnail: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80.jpg",
-    img: "../assets/images/tbc10_cover_artwork.jpg",
-    key: '004',
-    workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
-    contents: 
-      [
-        { type: 'image', img: 'Artwork-page00.gif' },
-        { type: 'image', img: 'Artwork-page01.jpg' },
-        { type: 'image', img: 'Artwork-page02.jpg' },
-      ],
-    contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg" },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" }
-    ],
-    links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
-    ],
-    categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
-    ]
-  },
+  }
 ];
 
 

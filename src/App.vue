@@ -24,7 +24,7 @@ export default {
     }
   },
  created() {
-   console.log("this.$root.route", this.$root._route)
+
   },
 
 }
@@ -49,13 +49,25 @@ export default {
 
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    /* padding: 0; */
+    /* margin: 0; */
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /* color: #2c3e50; */
   }
+
+  pre{
+    background-color: white !important;
+    margin: 20px 0 !important;
+  }
+
+ 
+
+  /* h1,h2,h3,h4{
+    font-size: unset !important;
+    font-weight: unset !important;
+  } */
 
   .fade-enter-active,
   .fade-leave-active {
@@ -172,6 +184,13 @@ export default {
     }
   }
 
+  .line{ 
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: $secondary-color;
+  }
+
   .flex-col{ 
     display: flex;
     flex-direction: column;
@@ -271,5 +290,6 @@ export default {
   .white-text{ color: white !important; }
 
   .auto-height{ height: auto;}
+
 
 </style>

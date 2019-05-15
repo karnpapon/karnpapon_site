@@ -72,7 +72,7 @@ export default {
       this.thumbnailTarget.style.backgroundImage = 'unset'
     },
     handleClick(data){
-      this.$router.push({ path: `/work/${data.slug}` })
+      this.$router.push({ path: `/work/${data.year}/${data.slug}` })
     }
   }
 }

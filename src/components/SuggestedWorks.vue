@@ -104,7 +104,7 @@ export default {
       } else {
         this.$store.dispatch(FETCH_SELECTED_WORK, selected.slug ) 
       }
-      this.$router.push({ path: '/' + selected.theme + '/' + selected.slug })
+      this.$router.push({ path: '/' + selected.theme + '/' + selected.year + '/' + selected.slug })
       this.$store.dispatch(FETCH_NEXT_SUGGESTED, payload)
     }
   }

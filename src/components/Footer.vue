@@ -18,7 +18,7 @@
               v-on:click="selectWork(itemlist)"
             >
               <router-link 
-                :to="{ path: `/work/${itemlist.slug}`}" 
+                :to="{ path: `/work/${itemlist.year}/${itemlist.slug}`}" 
                 active-class="active"
                 exact 
               >
@@ -159,7 +159,7 @@ export default {
        if(route == 'about'){
          this.$router.push({ path: '/about' })
        } else if ( route == 'work'){
-         this.$router.push({ path: `/work/${data.slug}` })
+         this.$router.push({ path: `/work/${data.year}/${data.slug}` })
        }
     },
     toggleOverview(){

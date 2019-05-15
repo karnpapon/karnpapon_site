@@ -1,12 +1,12 @@
 <template>
-  <div class="column is-3 w-light no-padding">
+  <div class="column is-3 w-light no-padding link-info">
     <div id="overview-console" class="position-sticky">
 
-      <div class="with-padding link-info">
+      <div class="with-padding ">
         <div 
           v-for="(data, index) of dataRender.links" 
           :key="index" 
-          class="flex-wrapper">
+          class="flex-wrapper width-auto">
           <span class="icon padding-right-small">
               <i v-if="data.type == 'website'" class="fas fa-link"></i>
               <i v-else-if="data.type == 'github'" class="fab fa-github"></i>
@@ -68,7 +68,11 @@ export default {
 <style lang="scss"  scoped>
 @import '../assets/styles/_base.scss';
   .w-light{ font-weight: lighter; }
-  .link-info{ }
+  .link-info{ 
+    position: sticky;
+    left: 0; 
+  }
+  .width-auto{ width: auto;}
 
   .cate-wrapper{ width: 50%; }
  

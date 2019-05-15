@@ -19,11 +19,12 @@ import {
   FETCH_NEXT_SUGGESTED
 } from "@/store/actions.type";
 import jump from 'jump.js'
-import Footer from '@/components/Footer'
-import NavHelper from '@/components/NavHelper'
-import SuggestedWorks from '@/components/SuggestedWorks'
-import WorkHeader from '@/components/WorkHeader'
-import WorkContent from '@/components/WorkContent'
+import { 
+  NavHelper,
+  SuggestedWorks,
+  WorkHeader ,
+  WorkContent
+} from '@/components'
 
 
 export default {
@@ -81,16 +82,17 @@ export default {
       let payload = {}
       let next_suggest_payload = {}
       let p = this.$route.params.slug
+      let y = this.$route.params.year
       switch (this.$route.path) {
         case '/about':
           payload = { action: FETCH_ABOUT_DETAILS, params:"" }
           next_suggest_payload = { path: p, theme: "about"}
           break;
-        case '/work/' + p:
+        case '/work/' + y + '/' + p:
           payload = { action: FETCH_SELECTED_WORK, params: p }
           next_suggest_payload = { path: p, theme: "work"}
           break;
-        case '/journal/' + p:
+        case '/journal/'+ y + '/' + p:
           payload = { action: FETCH_SELECTED_JOURNAL, params: p }
           next_suggest_payload = { path: p, theme: "journal"}
           break;
