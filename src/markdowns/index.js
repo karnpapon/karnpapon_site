@@ -10,6 +10,7 @@ import bkkThroughPoster from '@/markdowns/2018/bkk-through-poster.md'
 import about from '@/markdowns/about/about.md'
 import audiotrimmerScript from '@/markdowns/Lab/audiotrimmer-scripts.md'
 import asFarAs from '@/markdowns/2018/as-far-as.md'
+import illustrations from '@/markdowns/2018/illustrations.md'
 
 
 
@@ -27,5 +28,6 @@ export {
     bkkDesignWeek,
     bkkThroughPoster,
     asFarAs,
-    theBlackCodesAw
+    theBlackCodesAw,
+    illustrations
 }

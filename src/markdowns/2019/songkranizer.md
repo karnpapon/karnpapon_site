@@ -1,5 +1,5 @@
 ![home](../../assets/images/songkranizer/01.jpg)
-![home](../../assets/images/songkranizer/02.jpg)
+![home](../../assets/images/songkranizer/02.png)
 
 
 
@@ -30,7 +30,10 @@ web audio as audio processing.
 ------
 # Learn.
 
-my initial idea is to capturing audio from non-active tab and render webGL to current active tab, eg. sound from YouTube and visual from Pinterest. but afaik non-active tab can’t be captured due to security restriction, sadly currently have no workaround.
+- [veda.js](https://veda.gl/vedajs/) as a GLSL framework.
+- [Chrome Extension API](https://developer.chrome.com/extensions/api_index#stable_apis), exploring Chrome API.
+- [WebAudio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API), handle audio manipulation (filtering, feedback delay).
+
 
 ------
 ------
@@ -42,6 +45,8 @@ audio capturing is not stop when refreshing, only stop when close the tab.
 ------
 # Notes.
 
+my initial idea is to capturing audio from non-active tab and render webGL to current active tab, eg. sound from YouTube and visual from Pinterest. but afaik non-active tab can’t be captured due to security restriction, sadly currently have no workaround.
+<br>
 inspired from Amagi Takayosi’s work.
 
 ---
@@ -49,9 +54,3 @@ inspired from Amagi Takayosi’s work.
 
 ### Useful Links
 - [Demo](https://vue-markdown-blog.netlify.com)
-- [Project Repository](https://github.com/josephharveyangeles/vue-markdown-blog)
-- [Dynamic Components](https://vuejs.org/v2/guide/components-dynamic-async.html#Async-Components)
-- [vue-cli webpack guide](https://cli.vuejs.org/guide/webpack.html#simple-configuration)
-- [vue-markdown-loader](https://github.com/QingWei-Li/vue-markdown-loader)
-- [Working with CSS Modules](https://cli.vuejs.org/guide/css.html#postcss)
-- [Markdown styles](http://markedstyle.com/styles)

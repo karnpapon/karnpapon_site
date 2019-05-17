@@ -28,6 +28,15 @@
         </div>
       </div>
     </div>
+
+    <div  class="back-to-top helper" >
+     <div @click="goToHome">
+        <span class="icon padding-right-small helper-icon">
+          <i class="icon-arr-back"></i>
+        </span>
+      </div>
+    </div>
+    
   </section>
 </template>
 
@@ -91,6 +100,9 @@ export default {
 
       this.thumbnailTarget.appendChild(imgNode)
     },
+    goToHome(){
+      this.$router.push({ path: '/' })
+    },
   }
 }
 </script>
@@ -117,7 +129,7 @@ export default {
     background-color: $main-color;
   }
   .theme-about{
-    background-color: $third-color;
+    background-color: white;
     div, p {z-index: 10;}
   }
   .theme-journal{
@@ -130,6 +142,38 @@ export default {
     display: flex;
     position: relative;
     z-index: 12;
+    justify-content: space-between;
+  }
+
+  .helper{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+
+     /* @media screen and(max-width: $mobile-screen){
+      display: none;
+    } */
+  }
+
+  .helper-icon{
+     &:hover{
+      cursor: pointer;
+      i{color: $hover-color; background-color: black;}
+    }
+  }
+ 
+
+  .back-to-top{
+    right: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+    z-index: 7;
+    align-items: flex-end;
+  }
+
+  .show{ 
+    opacity: 1;
+    transform: translateY(0px);
   }
 
 </style>

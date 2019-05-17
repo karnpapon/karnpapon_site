@@ -37,9 +37,9 @@
         :class="{'no-border-top': isShowOverview }"
       >
         <div class="level">
-          <span class="icon padding-right-small">
+          <!-- <span class="icon padding-right-small">
             <i class="fas fa-arrow-up"></i>
-          </span>
+          </span> -->
           <span class="icon padding-right-small">
             <i class="fas fa-network-wired"></i>
           </span>
@@ -65,8 +65,8 @@
               </span>
               +
               <span class="icon">
-                <a target="blank" href="https://bulma.io">
-                  <i class="fab fa-bootstrap"></i>
+                <a target="blank" href="https://buefy.org/">
+                  <i class="icon-buefy-logo"></i>
                 </a>
               </span> 
               <p> + love. </p>
@@ -203,6 +203,7 @@ export default {
 
 <style lang="scss" scoped>
   @import '../assets/styles/_base.scss';
+  @import  '../assets/icon/icomoon/style.css';
  
   .footer-ctl{ 
     padding: 1rem 1.5rem;

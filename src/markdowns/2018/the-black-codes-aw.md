@@ -18,6 +18,14 @@ reflecting on the cover artwork, by collecting data from audiences and interpret
 
 start collecting data dates from 15/11/2017 - 15/12/2017 total 98 audiences’ dataset, the grid system was built around incoming dataset. back cover, sleeve, and website were arranged respectively according to the grid system. 
 
+![home](../../assets/images/the-black-codes-aw/11.gif)
+![home](../../assets/images/the-black-codes-aw/12.jpg)
+![home](../../assets/images/the-black-codes-aw/13.jpg)
+![home](../../assets/images/the-black-codes-aw/14.jpg)
+![home](../../assets/images/the-black-codes-aw/15.jpg)
+![home](../../assets/images/the-black-codes-aw/16.jpg)
+![home](../../assets/images/the-black-codes-aw/17.jpg)
+
 ------
 ------
 

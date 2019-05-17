@@ -1,6 +1,6 @@
 ![home](../../assets/images/seeq/01.jpg)
 ![home](../../assets/images/seeq/02.png)
-![home](../../assets/images/seeq/03.gif)
+![home](../../assets/images/seeq/04.gif)
 
 
 
@@ -47,8 +47,11 @@ since I started learning JavaScript via React,  this is a kind of the demystifie
 ------
 # Learn.
 
-Electron is kind of love-hate relationship to me ( and maybe among other developers as well)
-since it has such a huge overhead, that being said, only “Hello world” your application’s size can ridiculously takes around ~100mb.
+
+- [Electron.js](https://electronjs.org/), since it has such a huge overhead. that being said, only “Hello world” your application’s size can ridiculously takes around ~100mb.
+- raw DOM manipulation.
+- OOP (Object-Oriented Programming) in JavaScript.
+- MIDIAccess in WebAPI.
 
 ------
 ------
@@ -67,10 +70,7 @@ bigs up for an Orca, live coding environment, for inspirations.
 
 
 ### Useful Links
-- [Demo](https://vue-markdown-blog.netlify.com)
-- [Project Repository](https://github.com/josephharveyangeles/vue-markdown-blog)
-- [Dynamic Components](https://vuejs.org/v2/guide/components-dynamic-async.html#Async-Components)
-- [vue-cli webpack guide](https://cli.vuejs.org/guide/webpack.html#simple-configuration)
-- [vue-markdown-loader](https://github.com/QingWei-Li/vue-markdown-loader)
-- [Working with CSS Modules](https://cli.vuejs.org/guide/css.html#postcss)
-- [Markdown styles](http://markedstyle.com/styles)
+- [Electron.js](https://electronjs.org/)
+- [MIDIAccess](https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess)
+- [OOP in JavaScript](https://medium.freecodecamp.org/an-introduction-to-object-oriented-programming-in-javascript-8900124e316a)
+

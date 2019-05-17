@@ -42,7 +42,8 @@ import {
   bkkDesignWeek,
   bkkThroughPoster,
   asFarAs,
-  theBlackCodesAw
+  theBlackCodesAw,
+  illustrations
 } from '@/markdowns'
 import BlogEntries from '../data/blogs.json';
 import { CodeSnippet }  from '@/components'
@@ -80,7 +81,8 @@ export default {
     'bkk-through-poster':bkkThroughPoster,
     'bkk-design-week': bkkDesignWeek,
     'as-far-as': asFarAs,
-    'the-black-codes-aw': theBlackCodesAw
+    'the-black-codes-aw': theBlackCodesAw,
+    'illustrations': illustrations
   },
   props: {
     dataRender: Object
@@ -118,8 +120,9 @@ export default {
       }
 
       a{
+        font-weight: bolder;
         &:hover{
-          color: red !important;
+          color: $secondary-color !important;
         }
       }
 
@@ -127,6 +130,8 @@ export default {
         padding: 0 40px;
         li {margin: 0px 0;}
       }
+
+      ol{ padding: 0 40px;}
 
       img{ margin-bottom: 0;}
 

@@ -15,7 +15,8 @@ const dataWorks = [
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github"}
     ],
     categories: [
-      { title: 'Graphic Design'},
+      { title: 'Designer' },
+      { title: 'Developer' },
     ]
   },
   {
@@ -29,28 +30,14 @@ const dataWorks = [
     workType: 'personal project',
     description1:'SJT ( Steinhaus-Johnson-Trotter\'s) algorithm for letters',
     description2:'as a musical pattern ( currently support only Thai letters)',
-    contents: 
-      [
-        { type: 'image', img: 'Artwork-page00.gif' },
-        { type: 'image', img: 'Artwork-page01.jpg' },
-        { type: 'image', img: 'Artwork-page02.jpg' },
-      ],
-    contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
-        imgDesc: "jjjjj"
-      },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
-        imgDesc: "ffkfjfjfjfj"
-      }
-    ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Designer' },
+      { title: 'Developer' },
+      { title: 'Art Director' },
     ]
   },
   {
@@ -64,28 +51,12 @@ const dataWorks = [
     workType: 'personal project',
     description1:'Songkran festival simulator ',
     description2:'for Chrome\'s extension.',
-    contents: 
-      [
-        { type: 'image', img: 'Artwork-page00.gif' },
-        { type: 'image', img: 'Artwork-page01.jpg' },
-        { type: 'image', img: 'Artwork-page02.jpg' },
-      ],
-    contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
-        imgDesc: "jjjjj"
-      },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
-        imgDesc: "ffkfjfjfjfj"
-      }
-    ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Developer' },
     ]
   },
   {
@@ -99,32 +70,17 @@ const dataWorks = [
     workType: 'personal project',
     description1:'Songkran festival simulator ',
     description2:'for Chrome\'s extension.',
-    contents: 
-      [
-        { type: 'image', img: 'Artwork-page00.gif' },
-        { type: 'image', img: 'Artwork-page01.jpg' },
-        { type: 'image', img: 'Artwork-page02.jpg' },
-      ],
-    contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
-        imgDesc: "jjjjj"
-      },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
-        imgDesc: "ffkfjfjfjfj"
-      }
-    ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Designer' },
+      { title: 'Art Director' },
     ]
   },
   {
-    name: 'The Black Codes',
+    name: 'The Black Codes (website)',
     slug: 'the-black-codes-web',
     theme: 'work',
     year: '2018',
@@ -139,48 +95,31 @@ const dataWorks = [
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Designer' },
+      { title: 'Developer' },
+      { title: 'Art Director' },
     ],
-    shareDataDetail:[
-      { name: "karnpapon"},
-      { name: "gingliu"},
-    ]
   },
   {
-    name: 'The Black Codes (AW)',
+    name: 'The Black Codes (promo)',
     slug: 'the-black-codes-aw',
     theme: 'work',
-    year: 'Late',
+    year: '2018',
     thumbnail: require( '../assets/images/the-black-codes-aw/thumb-00.jpg' ),
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
     description1:'Songkran festival simulator ',
     description2:'for Chrome\'s extension.',
-    contents: 
-      [
-        { type: 'image', img: 'Artwork-page00.gif' },
-        { type: 'image', img: 'Artwork-page01.jpg' },
-        { type: 'image', img: 'Artwork-page02.jpg' },
-      ],
-    contentImages: [
-      { img: "https://images.unsplash.com/photo-1555902209-f5940d54c83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80.jpg",
-        imgDesc: "jjjjj"
-      },
-      { img: "https://images.unsplash.com/photo-1555767743-9548bfaa6ab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg" ,
-        imgDesc: "ffkfjfjfjfj"
-      }
-    ],
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Designer' },
+      { title: 'Developer' },
+      { title: 'Illustrator' },
+      { title: 'Art Director' },
     ]
   },
   {
@@ -220,9 +159,26 @@ const dataWorks = [
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Developer' },
+    ]
+  },
+  {
+    name: 'The Black Codes (illustrations)',
+    slug: 'illustrations',
+    theme: 'work',
+    year: 'Late',
+    thumbnail: require( '../assets/images/illustrations/thumb-00.jpg' ),
+    img: "../assets/images/tbc10_cover_artwork.jpg",
+    key: '004',
+    workType: 'personal project',
+    description1:'Songkran festival simulator ',
+    description2:'for Chrome\'s extension.',
+    links: [
+      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+    ],
+    categories: [
+      { title: 'Illustrator' },
     ]
   },
   {
@@ -241,9 +197,7 @@ const dataWorks = [
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Performer' },
     ]
   },
   {
@@ -252,7 +206,6 @@ const dataWorks = [
     theme: 'work',
     year: '2018',
     thumbnail: require( '../assets/images/as-far-as/thumb-00.jpg' ),
-    img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
     description1:'Songkran festival simulator ',
@@ -262,9 +215,8 @@ const dataWorks = [
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Designer' },
+      { title: 'Art Director' },
     ]
   },
   {
@@ -272,7 +224,7 @@ const dataWorks = [
     slug: 'bkk-design-week',
     theme: 'work',
     year: '2018',
-    thumbnail: "https://images.unsplash.com/photo-1528724977141-d90af338860c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1085&q=80.jpg",
+    thumbnail: require( '../assets/images/bkk-design-week/thumb-00.jpg' ),
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
@@ -283,9 +235,7 @@ const dataWorks = [
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Performer' },
     ]
   },
   {

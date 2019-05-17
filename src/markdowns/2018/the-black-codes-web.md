@@ -1,16 +1,49 @@
-# Club of Gargoyle
-#### August 7, 2018
+![home](../../assets/images/the-black-codes-web/03.png)
+![home](../../assets/images/the-black-codes-web/02.png)
+![home](../../assets/images/the-black-codes-web/01.png)
+![home](../../assets/images/the-black-codes-web/04.png)
+![home](../../assets/images/the-black-codes-web/05.png)
 
-Molly Thornhill suspected something was a little off when her creepy daddy tried to club her when she was just six years old. Nevertheless, she lived a relatively normal life among other humans.
 
-It wasn't until she bumped into the devilishly brunette gargoyle, Bob Hemingway, that her life finally began to make sense.
 
-However, Bob proved to be ample and seemed to have an unhealthy obsession with dancing. Molly soon learnt that Bob had taken an oath never to smoke a human being.
+# What.
 
-When Molly's creepy daddy is injured in an unfortunate accident, Molly realises her own life is at risk.
+The Black Codes is an electronic bangkok-based musical act, consists of Karnpapon Boonput. 
+the website intended to be a part of promoting the first album “Boring Original Nonsense” ( 2018, self-released).
+the website is simply SPA (Single-page application) meets minimal design.
+distorted reflection via webcam in the first page simulates the physical release where the holographic sticker was pasted on the transparent plastic cover.
 
-Despite Bob's evil eyes and whopping ears, Molly finds herself falling for the gargoyle. Only fate will decided whether he kills or protects her.
+![home](../../assets/images/the-black-codes-web/08.gif)
 
-One night, a zombie appears before Molly and warns her of a darkness within Bob. The zombie gives Molly the stripy knife - the only weapon that can defeat a brunette gargoyle.
+all the music and lyrics artworks, are available on the website.
 
-Will Molly find it in herself to kill the only creature who has ever made her feel truly frightened? (Hint: yes!)
+------
+------
+
+# Why.
+
+this website intended to be a part of promoting first album “Boring Original Nonsense” ( 2018, self-released).
+
+------
+------
+
+# How.
+
+ReactJS as UI engine.
+vedaJS as webGL ( manipulated input camera ).
+
+------
+------
+# Learn.
+
+since this is my first experience in web development
+I’ve leaned a lot from this project from scratch.
+obviously, the code is not as intuitive.
+
+------
+------
+---
+
+
+### Useful Links
+- [Demo](https://vue-markdown-blog.netlify.com)

@@ -161,6 +161,13 @@ export default {
     }
   }
 
+   .tag-about{ 
+    font-size: 0.8rem;
+    /* padding: $medium-padding; */
+    width: max-content;
+    p{ font-weight: normal;}
+  }
+
   .active{
     p{ font-weight: bolder;} 
   }
