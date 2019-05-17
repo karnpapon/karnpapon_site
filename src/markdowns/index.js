@@ -12,6 +12,10 @@ import audiotrimmerScript from '@/markdowns/Lab/audiotrimmer-scripts.md'
 import asFarAs from '@/markdowns/2018/as-far-as.md'
 import illustrations from '@/markdowns/2018/illustrations.md'
 
+import journal00 from '@/markdowns/journals/journal00.md'
+import journal01 from '@/markdowns/journals/journal01.md'
+import journal02 from '@/markdowns/journals/journal02.md'
+
 
 
 
@@ -29,5 +33,8 @@ export {
     bkkThroughPoster,
     asFarAs,
     theBlackCodesAw,
-    illustrations
+    illustrations,
+    journal00,
+    journal01,
+    journal02,
 }

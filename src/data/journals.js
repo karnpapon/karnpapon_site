@@ -1,6 +1,6 @@
 const dataJournal = [
   {
-  name: 'How to be a good programmer',
+  name: 'soon...',
   slug: 'journal-00',
   theme: 'journal',
   date: '12/02/2019',
@@ -13,7 +13,7 @@ const dataJournal = [
   contents: ""
   },
   {
-    name: 'How to be a good programmer2',
+    name: 'soon2...',
     slug: 'journal-01',
     theme: 'journal',
     date: '12/02/2019',
@@ -26,7 +26,7 @@ const dataJournal = [
     contents: ""
   },
   {
-    name: 'How to 2',
+    name: 'soon3...',
     slug: 'journal-02',
     theme: 'journal',
     readingTime: "5 mins read.",
@@ -38,32 +38,6 @@ const dataJournal = [
     description2: 'from noob to noober.',
     contents: ""
   },
-  {
-    name: 'How to 3 test',
-    slug: 'journal-03',
-    theme: 'journal',
-    readingTime: "5 mins read.",
-    date: '12/02/2019',
-    img: "../assets/images/tbc10_cover_artwork.jpg",
-    key: '003',
-    workType: 'portfolios',
-    description1: 'How to 2',
-    description2: 'from noob to noober.',
-    contents: ""
-  },
-  {
-    name: 'How to 4 test',
-    slug: 'journal-04',
-    theme: 'journal',
-    readingTime: "5 mins read.",
-    date: '12/02/2019',
-    img: "../assets/images/tbc10_cover_artwork.jpg",
-    key: '003',
-    workType: 'portfolios',
-    description1: 'How to 2',
-    description2: 'from noob to noober.',
-    contents: ""
-  }
 ]
 
 // let journalListsDisplay = [];

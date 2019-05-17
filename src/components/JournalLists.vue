@@ -69,7 +69,7 @@ export default {
     font-size: 20vw;
     font-weight: lighter;
     pointer-events: none;
-    color:  $main-colorize-color;
+    color:  $secondary-color;
   }
   .padding-top{ padding-top: $main-padding;}
 

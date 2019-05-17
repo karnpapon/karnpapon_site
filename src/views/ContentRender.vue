@@ -92,7 +92,7 @@ export default {
           payload = { action: FETCH_SELECTED_WORK, params: p }
           next_suggest_payload = { path: p, theme: "work"}
           break;
-        case '/journal/'+ y + '/' + p:
+        case '/journal/' + p:
           payload = { action: FETCH_SELECTED_JOURNAL, params: p }
           next_suggest_payload = { path: p, theme: "journal"}
           break;

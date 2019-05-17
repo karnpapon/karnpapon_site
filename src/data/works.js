@@ -8,11 +8,11 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '001',
     workType: 'collaboration',
-    description1:'custom sequencer',
-    description2:'live-coding environment',
+    description1:'Custom sequencer',
+    description2:'and live-coding environment.',
     links: [
-      { title: "ssss.codes", url: "https://theblack.codes", type: "website"},
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github"}
+      { title: "-", url: "-", type: "website"},
+      { title: "/Seeq", url: "https://github.com/karnpapon/Seeq", type: "github"}
     ],
     categories: [
       { title: 'Designer' },
@@ -31,13 +31,12 @@ const dataWorks = [
     description1:'SJT ( Steinhaus-Johnson-Trotter\'s) algorithm for letters',
     description2:'as a musical pattern ( currently support only Thai letters)',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "/ect-etc-tec", url: "https://github.com/karnpapon/ect-etc-tec", type: "github" }
     ],
     categories: [
       { title: 'Designer' },
       { title: 'Developer' },
-      { title: 'Art Director' },
     ]
   },
   {
@@ -53,14 +52,14 @@ const dataWorks = [
     description2:'for Chrome\'s extension.',
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "/songkranizer", url: "https://github.com/karnpapon/songkranizer", type: "github" }
     ],
     categories: [
       { title: 'Developer' },
     ]
   },
   {
-    name: 'The Blacksmith.',
+    name: 'I (jig)saw Russolo.',
     slug: 'the-blacksmith',
     theme: 'work',
     year: '2018',
@@ -68,11 +67,11 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    description1:'Noise(y) puzzle',
+    description2:'first product from The Blacksmith.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "-", url: "-", type: "github" }
     ],
     categories: [
       { title: 'Designer' },
@@ -88,11 +87,11 @@ const dataWorks = [
     img: "",
     key: '004',
     workType: 'Graphic Design / Branding / Development / Music',
-    description1:'branding identity',
+    description1:'Website for The ███████',
     description2:'musical act from Bangkok, Thailand',
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "github" }
     ],
     categories: [
       { title: 'Designer' },
@@ -109,16 +108,15 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    description1:'Promo and behind-the-scene process for The Black Codes ',
+    description2:'musical project.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "/TBC_coverArtwork", url: "https://github.com/karnpapon/TBC_coverArtwork", type: "github" }
     ],
     categories: [
       { title: 'Designer' },
       { title: 'Developer' },
-      { title: 'Illustrator' },
       { title: 'Art Director' },
     ]
   },
@@ -131,16 +129,14 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    description1:'Free time fun coding',
+    description2:'while searching for audio trimmer tool.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "/audiotrimmer_scripts", url: "https://github.com/karnpapon/audiotrimmer_scripts", type: "github" }
     ],
     categories: [
-      { title: 'Graphic Design' },
-      { title: 'Web Development' },
-      { title: 'Illustration' },
+      { title: 'Developer' },
     ]
   },
   {
@@ -152,30 +148,30 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    description1:'Livecode Festival, London ',
+    description2:'re-design for Livecode Fest.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "/livecodefest", url: "https://github.com/karnpapon/livecodefest", type: "github" }
     ],
     categories: [
       { title: 'Developer' },
     ]
   },
   {
-    name: 'The Black Codes (illustrations)',
+    name: 'Illustrations',
     slug: 'illustrations',
     theme: 'work',
     year: 'Late',
     thumbnail: require( '../assets/images/illustrations/thumb-00.jpg' ),
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
-    workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    workType: 'illustration',
+    description1:'Illustrations collection  ',
+    description2:'around 2016 ~ 2017.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "-", url: "-", type: "github" }
     ],
     categories: [
       { title: 'Illustrator' },
@@ -190,11 +186,11 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    description1:'Live-coding performance with two performance artists,',
+    description2:'at Kinjai Gallery.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "-", url: "-", type: "github" }
     ],
     categories: [
       { title: 'Performer' },
@@ -208,11 +204,11 @@ const dataWorks = [
     thumbnail: require( '../assets/images/as-far-as/thumb-00.jpg' ),
     key: '004',
     workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    description1:'DVD cover design for a Short-film directed by Jirat Sompakdee',
+    description2:'premiere at Bangkok Design Week 2018',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "-", url: "-", type: "github" }
     ],
     categories: [
       { title: 'Designer' },
@@ -228,8 +224,8 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    description1:'Live-coding performance',
+    description2:'in Bangkok Design Week\'18 event.',
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
@@ -247,8 +243,8 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Songkran festival simulator ',
-    description2:'for Chrome\'s extension.',
+    description1:'learning a new way to approach music via coding',
+    description2:'as part of Daily Studies.',
     links: [
       { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
       { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }

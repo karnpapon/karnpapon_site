@@ -43,7 +43,10 @@ import {
   bkkThroughPoster,
   asFarAs,
   theBlackCodesAw,
-  illustrations
+  illustrations,
+  journal00,
+  journal01,
+  journal02
 } from '@/markdowns'
 import BlogEntries from '../data/blogs.json';
 import { CodeSnippet }  from '@/components'
@@ -82,7 +85,10 @@ export default {
     'bkk-design-week': bkkDesignWeek,
     'as-far-as': asFarAs,
     'the-black-codes-aw': theBlackCodesAw,
-    'illustrations': illustrations
+    'illustrations': illustrations,
+    'journal-00':journal00,
+    'journal-01':journal01,
+    'journal-02':journal02,
   },
   props: {
     dataRender: Object
