@@ -123,6 +123,7 @@ export default {
 
     @media screen and(max-width: $mobile-screen){
       display: block;
+      padding: 0;
       width: 100%;
     }
     

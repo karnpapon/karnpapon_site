@@ -3,7 +3,7 @@
   <nprogress-container></nprogress-container> 
     <div id="app"></div>
     <transition name="fade" mode="out-in"><router-view :key="$route.fullPath"/></transition>
-    <Footer></Footer>
+    <Footer scrollContainer=".index-page-container" ></Footer>
   </div>
 </template>
 

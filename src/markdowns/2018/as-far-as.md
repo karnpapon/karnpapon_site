@@ -8,13 +8,11 @@
 ( waiting...)
 
 ------
-------
 
 # Why.
 
 ( waiting...)
 
-------
 ------
 
 # How.
@@ -22,17 +20,14 @@
 ( waiting...)
 
 ------
-------
 # Learn.
 
 (waiting..)
 
 ------
-------
 # Caveats.
 (waiting..)
 
-------
 ------
 # Notes.
 

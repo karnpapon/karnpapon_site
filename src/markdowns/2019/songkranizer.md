@@ -13,20 +13,17 @@ Chrome’s Extension to simulate Songkran festival through sight and sound witho
 the period where the heat’s at its peak of the year and embedded-sub-woofer-car-sound-system’s culture are commonly heard.
 
 ------
-------
 
 # Why.
 
 when wanted to feels like participating in the festival but not to get wet.
 
 ------
-------
 
 # How.
 using vedaJS as webGL.
 web audio as audio processing.
 
-------
 ------
 # Learn.
 
@@ -36,12 +33,10 @@ web audio as audio processing.
 
 
 ------
-------
 # Caveats.
 
 audio capturing is not stop when refreshing, only stop when close the tab.
 
-------
 ------
 # Notes.
 

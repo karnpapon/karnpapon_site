@@ -27,13 +27,11 @@ start collecting data dates from 15/11/2017 - 15/12/2017 total 98 audiences’ d
 ![home](../../assets/images/the-black-codes-aw/17.jpg)
 
 ------
-------
 
 # Why.
 
 (waiting..)
 
-------
 ------
 
 # How.
@@ -41,17 +39,14 @@ start collecting data dates from 15/11/2017 - 15/12/2017 total 98 audiences’ d
 (waiting..)
 
 ------
-------
 # Learn.
 
 (waiting..)
 
 ------
-------
 # Caveats.
 (waiting..)
 
-------
 ------
 # Notes.
 

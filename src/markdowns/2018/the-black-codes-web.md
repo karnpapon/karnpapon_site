@@ -18,13 +18,11 @@ distorted reflection via webcam in the first page simulates the physical release
 all the music and lyrics artworks, are available on the website.
 
 ------
-------
 
 # Why.
 
 this website intended to be a part of promoting first album “Boring Original Nonsense” ( 2018, self-released).
 
-------
 ------
 
 # How.
@@ -33,15 +31,12 @@ ReactJS as UI engine.
 vedaJS as webGL ( manipulated input camera ).
 
 ------
-------
 # Learn.
 
 since this is my first experience in web development
 I’ve leaned a lot from this project from scratch.
 obviously, the code is not as intuitive.
 
-------
-------
 ---
 
 

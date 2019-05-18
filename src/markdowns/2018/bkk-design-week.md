@@ -15,15 +15,12 @@ mangled with real-time `GLSL` code using [VEDA](https://veda.gl/), and GLSL fram
 route back to [Ableton](https://www.ableton.com/en/) for the sake of final composition.
 
 ------
-------
 # Learn.
 
 - generates sound with [TidalCycles](https://tidalcycles.org/index.php/Welcome).
 - access through GPC by using GLSL language, in this case [VEDA](https://veda.gl/).
 - communicate to each others via [ OSC ](http://opensoundcontrol.org/introduction-osc)  (Open Sound Control).
 
-
-------
 ------
 
 

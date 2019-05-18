@@ -28,8 +28,8 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '002',
     workType: 'personal project',
-    description1:'SJT ( Steinhaus-Johnson-Trotter\'s) algorithm for letters',
-    description2:'as a musical pattern ( currently support only Thai letters)',
+    description1:'SJT algorithm for letters',
+    description2:'as a musical pattern',
     links: [
       { title: "-", url: "-", type: "website" },
       { title: "/ect-etc-tec", url: "https://github.com/karnpapon/ect-etc-tec", type: "github" }
@@ -108,7 +108,7 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Promo and behind-the-scene process for The Black Codes ',
+    description1:'Process for The Black Codes ',
     description2:'musical project.',
     links: [
       { title: "-", url: "-", type: "website" },
@@ -186,7 +186,7 @@ const dataWorks = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
-    description1:'Live-coding performance with two performance artists,',
+    description1:'Live-coding performance',
     description2:'at Kinjai Gallery.',
     links: [
       { title: "-", url: "-", type: "website" },
@@ -204,8 +204,8 @@ const dataWorks = [
     thumbnail: require( '../assets/images/as-far-as/thumb-00.jpg' ),
     key: '004',
     workType: 'personal project',
-    description1:'DVD cover design for a Short-film directed by Jirat Sompakdee',
-    description2:'premiere at Bangkok Design Week 2018',
+    description1:'DVD cover design for a Short-film ',
+    description2:'directed by Jirat Sompakdee',
     links: [
       { title: "-", url: "-", type: "website" },
       { title: "-", url: "-", type: "github" }

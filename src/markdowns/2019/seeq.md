@@ -26,7 +26,6 @@ decrease BPM = ( keystroke = '<')
 <b><a href="https://www.youtube.com/watch?v=DGaakhSvYOg" target="_blank">click to watch in action!</a></b>
 
 ------
-------
 
 # Why.
 
@@ -37,13 +36,11 @@ this draw me back to fundamentally understanding and face it squarely, without a
 since I started learning JavaScript via React,  this is a kind of the demystified-JavaScript’s learning process. and encourages myself to learn more about Regex’s Pattern as well.
 
 ------
-------
 
 # How.
 
  Seeq is powered by Electron, JavaScript’s framework for cross-platform application. wrote with object-oriented paradigm.
 
-------
 ------
 # Learn.
 
@@ -54,13 +51,11 @@ since I started learning JavaScript via React,  this is a kind of the demystifie
 - MIDIAccess in WebAPI.
 
 ------
-------
 # Caveats.
  Seeq relied on external DAW/software to send MIDI to, 
  it’d be great to have it’s own internal synth
  also it’s still unstable, and buggy.
 
-------
 ------
 # Notes.
 

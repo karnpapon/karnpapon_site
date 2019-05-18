@@ -1,7 +1,7 @@
 <template>
   <section 
     id="header-render"
-    class="column is-full title-detail-level"
+    class="column is-full title-detail-level "
   >
     <div class="with-padding">
       <div v-if="dataDetails.theme == 'journal'">
@@ -113,6 +113,8 @@ export default {
   .title-detail-level{
     border-bottom: 1px solid $color-black;
     padding: 0 !important;
+    position: relative;
+    z-index: 5;
   }
 
    .title-detail-level /deep/ .thumbnail-placeholder {
@@ -140,8 +142,7 @@ export default {
 
   #header-render{
     display: flex;
-    position: relative;
-    z-index: 12;
+    
     justify-content: space-between;
   }
 

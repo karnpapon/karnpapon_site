@@ -13,13 +13,11 @@ with a quick glance it’s look not much change,
 but, eventually this design is never being used due to technical issue.
 
 ------
-------
 
 # Why.
 
 ( waiting...)
 
-------
 ------
 
 # How.
@@ -27,17 +25,14 @@ but, eventually this design is never being used due to technical issue.
 ( waiting...)
 
 ------
-------
 # Learn.
 
 (waiting..)
 
 ------
-------
 # Caveats.
 (waiting..)
 
-------
 ------
 # Notes.
 

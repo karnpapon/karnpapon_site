@@ -12,13 +12,11 @@ implementation on SJT ( Steinhaus-Johnson-Trotter's) algorithm for thai characte
 eg. letter "p" has percussive sound, then `attack = 0.01` ( in terms of tone.js ) letter "y" has a smooth attack,so ` attack = 0.5` and so on.
 
 ------
-------
 
 # Why.
 
 inspired from word-playing where little permutation gives rhythmic sense.
 
-------
 ------
 
 # How.
@@ -27,7 +25,6 @@ VueJS as UI engine. <br>
 Tone.js as Synth engine.
 
 ------
-------
 # Learn.
 
 - [Vue.js](https://vuejs.org/) as view-engine.
@@ -35,11 +32,9 @@ Tone.js as Synth engine.
 - [Tone.js](https://tonejs.github.io/) as audio engine.
 
 ------
-------
 # Caveats.
 (waiting..)
 
-------
 ------
 # Notes.
 
