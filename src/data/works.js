@@ -51,7 +51,7 @@ const dataWorks = [
     description1:'Songkran festival simulator ',
     description2:'for Chrome\'s extension.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "-", url: "-", type: "website" },
       { title: "/songkranizer", url: "https://github.com/karnpapon/songkranizer", type: "github" }
     ],
     categories: [
@@ -121,11 +121,11 @@ const dataWorks = [
     ]
   },
   {
-    name: 'Audiotrimmer',
+    name: 'Audiotrimmer Scripts',
     slug: 'audiotrimmer-scripts',
     theme: 'work',
     year: 'Lab',
-    thumbnail: "https://images.unsplash.com/photo-1528724977141-d90af338860c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1085&q=80.jpg",
+    thumbnail: require( '../assets/images/audiotrimmer-scripts/thumb-00.jpg' ),
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
@@ -227,8 +227,8 @@ const dataWorks = [
     description1:'Live-coding performance',
     description2:'in Bangkok Design Week\'18 event.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "-", url: "-", type: "github" }
     ],
     categories: [
       { title: 'Performer' },
@@ -239,15 +239,15 @@ const dataWorks = [
     slug: 'td-dailystd',
     theme: 'work',
     year: 'Lab',
-    thumbnail: "https://images.unsplash.com/photo-1528724977141-d90af338860c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1085&q=80.jpg",
+    thumbnail: require( '../assets/images/audiotrimmer-scripts/thumb-00.jpg' ),
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '004',
     workType: 'personal project',
     description1:'learning a new way to approach music via coding',
     description2:'as part of Daily Studies.',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
-      { title: "/karnpapon", url: "https://github.com/karnpapon", type: "github" }
+      { title: "-", url: "-", type: "website" },
+      { title: "-", url: "-", type: "github" }
     ],
     categories: [
       { title: 'Graphic Design' },

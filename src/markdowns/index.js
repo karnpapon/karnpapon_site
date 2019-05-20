@@ -11,6 +11,7 @@ import about from '@/markdowns/about/about.md'
 import audiotrimmerScript from '@/markdowns/Lab/audiotrimmer-scripts.md'
 import asFarAs from '@/markdowns/2018/as-far-as.md'
 import illustrations from '@/markdowns/2018/illustrations.md'
+import tidalCyclesStd from '@/markdowns/Lab/td-dailystd.md'
 
 import journal00 from '@/markdowns/journals/journal00.md'
 import journal01 from '@/markdowns/journals/journal01.md'
@@ -34,6 +35,8 @@ export {
     asFarAs,
     theBlackCodesAw,
     illustrations,
+    tidalCyclesStd,
+
     journal00,
     journal01,
     journal02,

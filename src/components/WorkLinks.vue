@@ -11,9 +11,13 @@
               <i v-if="data.type == 'website'" class="fas fa-link"></i>
               <i v-else-if="data.type == 'github'" class="fab fa-github"></i>
           </span>
-          <a target="blank" :href='data.url'>
+          <a v-if="data.url == '-'" target="blank">
+            <strong> - </strong>
+          </a>
+          <a v-else target="blank" :href='data.url'>
             <strong> {{ data.title }} </strong>
           </a>
+
         </div>
       </div>
 

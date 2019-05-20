@@ -26,6 +26,25 @@ export default {
  created() {
 
   },
+  metaInfo: () => ({
+    title: '(Enthusiastic)',
+    titleTemplate: '%s Developer',
+    htmlAttrs: {
+      lang: 'en',
+      amp: undefined
+    },
+    headAttrs: {
+      test: true
+    },
+    meta: [
+      { name: 'description', content: 'Hello', vmid: 'I\'m Karnpapon' }
+    ],
+    script: [
+      { innerHTML: '{ "@context": "http://www.karnpapon.me", "@type": "Organization" }', type: 'application/ld+json' },
+      { innerHTML: '{ "body": "yes" }', body: true, type: 'application/ld+json' }
+    ],
+    __dangerouslyDisableSanitizers: ['script']
+  })
 
 }
 </script>
@@ -176,6 +195,8 @@ export default {
     height: unset;
     z-index: 2;
     pointer-events: none;
+    max-width: unset !important;
+    width: 100% !important;
   }
 
  .detail-wrapper{

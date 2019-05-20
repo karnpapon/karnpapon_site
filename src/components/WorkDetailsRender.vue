@@ -44,6 +44,7 @@ import {
   asFarAs,
   theBlackCodesAw,
   illustrations,
+  tidalCyclesStd,
   journal00,
   journal01,
   journal02
@@ -86,6 +87,7 @@ export default {
     'as-far-as': asFarAs,
     'the-black-codes-aw': theBlackCodesAw,
     'illustrations': illustrations,
+    'td-dailystd': tidalCyclesStd,
     'journal-00':journal00,
     'journal-01':journal01,
     'journal-02':journal02,
@@ -154,6 +156,11 @@ export default {
       hr{
         background-color: black;
         height: .5px;
+      }
+
+      iframe{
+        width: 100%;
+        height: 315px;
       }
 
       small{ 
