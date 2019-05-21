@@ -5,42 +5,10 @@
 
 
 # What.
-( waiting...)
+a DVD cover,"as far as i can tell" directed by Jirat Sompakdee.
+<br/>
+first premiere in Bangkok Design Week 2018
+designed by <b>GLSL</b> language, 
+<br/>
+to simulate out-focused landscape.
 
-------
-
-# Why.
-
-( waiting...)
-
-------
-
-# How.
-
-( waiting...)
-
-------
-# Learn.
-
-(waiting..)
-
-------
-# Caveats.
-(waiting..)
-
-------
-# Notes.
-
-(waiting..)
-
----
-
-
-### Useful Links
-- [Demo](https://vue-markdown-blog.netlify.com)
-- [Project Repository](https://github.com/josephharveyangeles/vue-markdown-blog)
-- [Dynamic Components](https://vuejs.org/v2/guide/components-dynamic-async.html#Async-Components)
-- [vue-cli webpack guide](https://cli.vuejs.org/guide/webpack.html#simple-configuration)
-- [vue-markdown-loader](https://github.com/QingWei-Li/vue-markdown-loader)
-- [Working with CSS Modules](https://cli.vuejs.org/guide/css.html#postcss)
-- [Markdown styles](http://markedstyle.com/styles)

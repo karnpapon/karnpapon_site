@@ -14,10 +14,5 @@
 
 # What.
 
-an illustration collections.
+an illustration collections around 2016 ~ 2017.
 
----
-
-
-### Useful Links
-- [Demo](https://vue-markdown-blog.netlify.com)

@@ -6,6 +6,3 @@ eg. letter "p" has percussive sound, then `attack = 0.01` ( in terms of tone.js 
 ---
 
 
-### Useful Links
-- [Demo](https://vue-markdown-blog.netlify.com)
-

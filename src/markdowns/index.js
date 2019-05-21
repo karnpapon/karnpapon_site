@@ -12,6 +12,7 @@ import audiotrimmerScript from '@/markdowns/Lab/audiotrimmer-scripts.md'
 import asFarAs from '@/markdowns/2018/as-far-as.md'
 import illustrations from '@/markdowns/2018/illustrations.md'
 import tidalCyclesStd from '@/markdowns/Lab/td-dailystd.md'
+import runeJs from '@/markdowns/Lab/rune-js.md'
 
 import journal00 from '@/markdowns/journals/journal00.md'
 import journal01 from '@/markdowns/journals/journal01.md'
@@ -36,6 +37,7 @@ export {
     theBlackCodesAw,
     illustrations,
     tidalCyclesStd,
+    runeJs,
 
     journal00,
     journal01,

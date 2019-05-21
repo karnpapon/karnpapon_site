@@ -24,7 +24,3 @@ route back to [Ableton](https://www.ableton.com/en/) for the sake of final compo
 - communicate to each others via [ OSC ](http://opensoundcontrol.org/introduction-osc)  (Open Sound Control).
 
 ------
-
-
-### Useful Links
-- [Demo](https://vue-markdown-blog.netlify.com)

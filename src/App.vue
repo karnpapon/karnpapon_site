@@ -27,8 +27,8 @@ export default {
 
   },
   metaInfo: () => ({
-    title: '(Enthusiastic)',
-    titleTemplate: '%s Developer',
+    title: 'code/design/music',
+    titleTemplate: '%s',
     htmlAttrs: {
       lang: 'en',
       amp: undefined

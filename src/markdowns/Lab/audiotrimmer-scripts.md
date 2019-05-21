@@ -1,8 +1,18 @@
+![home](../../assets/images/audiotrimmer-scripts/01.gif)
+
 # AudioTrimmer Scripts
-#### March 18, 2019
+#### April, 2019
 
-web development is required such a steep-learning curve. Not to mention all those bundlers, builders, webpack, git, and other weird noises that adds to the overall complexitiy of learning modern web frameworks. 
 
-learning new thing is hard, but it's challenging at the same time,like learn how to ride a bicycles.
-it gives you an abilities, going far better than you thought, see more things, etc. but most important it keeps me hungry, enthusiast, and never stop to learn new things.
+# What.
+Audio Trimmer is an online audio utility, where you can easily trim the audio file . 
+an interesting point is start input / end input are two-ways binding.
+meaning, we can control current playing position by manipulating start input / end input.
+by controlling client-side via console,an interesting (algorithmic) plunderphonic-likes sound can be created.
+
+------
+# Learn.
+
+- create new context from existing tool.
+
 

@@ -45,7 +45,3 @@ my initial idea is to capturing audio from non-active tab and render webGL to cu
 inspired from Amagi Takayosi’s work.
 
 ---
-
-
-### Useful Links
-- [Demo](https://vue-markdown-blog.netlify.com)

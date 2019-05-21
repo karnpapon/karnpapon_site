@@ -45,6 +45,7 @@ import {
   theBlackCodesAw,
   illustrations,
   tidalCyclesStd,
+  runeJs,
   journal00,
   journal01,
   journal02
@@ -88,6 +89,7 @@ export default {
     'the-black-codes-aw': theBlackCodesAw,
     'illustrations': illustrations,
     'td-dailystd': tidalCyclesStd,
+    'rune-js': runeJs,
     'journal-00':journal00,
     'journal-01':journal01,
     'journal-02':journal02,

@@ -20,7 +20,7 @@ const dataAbout = [ {
       {lang: "TidalCycles"},
     ],
     roles:[
-      { role: "(Enthusiast) Developer"},
+      { role: "Developer"},
       { role: "Graphic Designer"},
       { role: "Illustrator"},
       { role: "Musician"},

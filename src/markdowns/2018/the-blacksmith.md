@@ -1,6 +1,7 @@
 ![home](../../assets/images/the-blacksmith/00.jpg)
 ![home](../../assets/images/the-blacksmith/01.jpg)
 ![home](../../assets/images/the-blacksmith/02.png)
+![home](../../assets/images/the-blacksmith/04.jpg)
 
 
 
@@ -31,9 +32,3 @@ the package is silkscreened by hands.
 # Learn.
 
 - [P5.js](https://p5js.org/) as noise pattern generator.
-
----
-
-
-### Useful Links
-- [Demo](https://editor.p5js.org/karnpapon/sketches/u8ky5uEEF)
