@@ -12,6 +12,7 @@
 import Footer from "./components/Footer";
 import NprogressContainer from '@/components/Nprogress'
 import router from "@/router"
+import ogImage from "@/assets/images/social-thumbnail.jpg"
 
 export default {
   name: 'app',
@@ -37,7 +38,8 @@ export default {
       test: true
     },
     meta: [
-      { name: 'description', content: 'Hello', vmid: 'I\'m Karnpapon' }
+      { name: 'description', content: 'Hello', vmid: 'I\'m Karnpapon' },
+      { hid: 'og:image', name: 'og:image', content: "https://www.karnpapon.me" + ogImage}
     ],
     script: [
       { innerHTML: '{ "@context": "http://www.karnpapon.me", "@type": "Organization" }', type: 'application/ld+json' },

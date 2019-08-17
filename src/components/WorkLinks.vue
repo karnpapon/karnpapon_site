@@ -38,8 +38,9 @@
         <!-- <strong> About:</strong> -->
         <div class="tag-about">
           <div class="flex-col">
-            <b>{{ dataRender.myname }}</b>
-            <p>{{ dataRender.exp }}</p>
+            <!-- <b>{{ dataRender.myname }}</b> -->
+            <b>{{ dataRender.exp }}</b>
+            <p>{{ dataRender.exp1 }}</p>
             <p>{{ dataRender.exp2 }}</p>
             <p>{{ dataRender.exp3 }}</p>
             <br/>
