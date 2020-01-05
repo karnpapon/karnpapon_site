@@ -117,7 +117,7 @@ export default {
     background-color: $main-color;
   }
   .theme-about{
-    background-color: $third-color;
+    background-color: white;
     div, p {z-index: 10;}
   }
   .theme-journal{

@@ -44,7 +44,8 @@ export default {
     NavHelper,
     SuggestedWorks,
     WorkHeader,
-    WorkContent
+    WorkContent,
+    // Footer
   },
   props: {
     msg: String
@@ -84,7 +85,7 @@ export default {
       switch (this.$route.path) {
         case '/about':
           payload = { action: FETCH_ABOUT_DETAILS, params:"" }
-          next_suggest_payload = { path: p, theme: "about"}
+          next_suggest_payload = { path: p, theme: "work"}
           break;
         case '/work/' + p:
           payload = { action: FETCH_SELECTED_WORK, params: p }

@@ -151,7 +151,6 @@ const actions = {
       length = dataAbout.length
     }
 
-    
     _data.find( ( work, index ) => {
       if (work.slug == path){
         exceptIndex = index
