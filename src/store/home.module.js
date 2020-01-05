@@ -147,8 +147,8 @@ const actions = {
       _data = dataJournal 
       length = dataJournal.length
     } else if (theme == 'about'){
-      _data = dataAbout
-      length = dataAbout.length
+      _data = dataWorks
+      length = dataWorks.length
     }
 
     _data.find( ( work, index ) => {

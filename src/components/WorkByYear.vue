@@ -72,7 +72,7 @@ export default {
       this.thumbnailTarget.style.backgroundImage = 'unset'
     },
     handleClick(data){
-      this.$router.push({ path: `/work/${data.slug}` })
+      this.$router.push({ path: `/work/${data.year}/${data.slug}` })
     }
   }
 }
@@ -123,6 +123,7 @@ export default {
 
     @media screen and(max-width: $mobile-screen){
       display: block;
+      padding: 0;
       width: 100%;
     }
     
@@ -168,6 +169,7 @@ export default {
   .thumbnail-placeholder{
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     color: #ffffff00;
     -webkit-text-stroke: 2px white;
 

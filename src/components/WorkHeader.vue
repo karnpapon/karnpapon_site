@@ -1,7 +1,7 @@
 <template>
   <section 
     id="header-render"
-    class="column is-full title-detail-level"
+    class="column is-full title-detail-level "
   >
     <div class="with-padding">
       <div v-if="dataDetails.theme == 'journal'">
@@ -28,6 +28,15 @@
         </div>
       </div>
     </div>
+
+    <div  class="back-to-top helper" >
+     <div @click="goToHome">
+        <span class="icon padding-right-small helper-icon">
+          <i class="icon-arr-back"></i>
+        </span>
+      </div>
+    </div>
+    
   </section>
 </template>
 
@@ -91,6 +100,9 @@ export default {
 
       this.thumbnailTarget.appendChild(imgNode)
     },
+    goToHome(){
+      this.$router.push({ path: '/' })
+    },
   }
 }
 </script>
@@ -101,6 +113,8 @@ export default {
   .title-detail-level{
     border-bottom: 1px solid $color-black;
     padding: 0 !important;
+    position: relative;
+    z-index: 5;
   }
 
    .title-detail-level /deep/ .thumbnail-placeholder {
@@ -128,8 +142,39 @@ export default {
 
   #header-render{
     display: flex;
-    position: relative;
-    z-index: 12;
+    
+    justify-content: space-between;
+  }
+
+  .helper{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+
+     /* @media screen and(max-width: $mobile-screen){
+      display: none;
+    } */
+  }
+
+  .helper-icon{
+     &:hover{
+      cursor: pointer;
+      i{color: $hover-color; background-color: black;}
+    }
+  }
+ 
+
+  .back-to-top{
+    right: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+    z-index: 7;
+    align-items: flex-end;
+  }
+
+  .show{ 
+    opacity: 1;
+    transform: translateY(0px);
   }
 
 </style>

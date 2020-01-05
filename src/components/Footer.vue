@@ -1,5 +1,5 @@
 <template>
-  <div v-if="currentRoute !== '/' " class="footer-container column is-full no-padding">
+  <div class="footer-container column is-full no-padding">
     <div 
       v-if="isShowOverview"
       class="overview-wrapper column is-full"
@@ -18,7 +18,7 @@
               v-on:click="selectWork(itemlist)"
             >
               <router-link 
-                :to="{ path: `/work/${itemlist.slug}`}" 
+                :to="{ path: `/work/${itemlist.year}/${itemlist.slug}`}" 
                 active-class="active"
                 exact 
               >
@@ -37,10 +37,10 @@
         :class="{'no-border-top': isShowOverview }"
       >
         <div class="level">
-          <span class="icon padding-right-small">
+          <!-- <span class="icon padding-right-small">
             <i class="fas fa-arrow-up"></i>
-          </span>
-          <span class="icon padding-right-small">
+          </span> -->
+          <span class="icon">
             <i class="fas fa-network-wired"></i>
           </span>
         </div>
@@ -65,8 +65,8 @@
               </span>
               +
               <span class="icon">
-                <a target="blank" href="https://bulma.io">
-                  <i class="fab fa-bootstrap"></i>
+                <a target="blank" href="https://buefy.org/">
+                  <i class="icon-buefy-logo"></i>
                 </a>
               </span> 
               <p> + love. </p>
@@ -88,53 +88,6 @@
       </div>
     </div>
   </div>
-
-  <div v-else>
-    <div class="footer-container column is-full no-padding">
-      <div class="footer-wrapper">
-        <div class="footer footer-ctl column is-11 full-width">
-          <div class="level">
-            <div 
-            @click="handleClick(undefined,'about')"
-              class="level-left left-col">
-              <div class="go-about">
-                <p><strong> Karnpapon </strong></p>
-              </div>
-              <span class="icon "><i class="fab fa-creative-commons"></i></span>
-              <p class="w-medium cc-details">CC BY NC SA 4.0</p>
-              <div class="credits">
-              <p> crafted by </p>  
-              <span class="icon">
-                  <a target="blank" href="https://vuejs.org/">
-                    <i class="fab fa-vuejs"></i>
-                  </a>
-                </span>
-                +
-                <span class="icon">
-                  <a target="blank" href="https://bulma.io">
-                    <i class="fab fa-bootstrap"></i>
-                  </a>
-                </span> 
-                <p> + love. </p>
-              </div>
-            </div>
-            <div class="level-right right-col">
-              <span class="icon icon-size-2x">
-                <a target="blank" href="https://twitter.com/snuffvideo1">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </span>
-              <span class="icon icon-size-2x">
-                <a target="blank" href="https://github.com/karnpapon">
-                  <i class="fab fa-github"></i>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -145,6 +98,7 @@ import {
   FETCH_WORKS_BY_YEAR
 } from "@/store/actions.type";
 import { mapGetters } from 'vuex'
+import jump from 'jump.js'
 
 export default {
   name: "Footer",
@@ -154,16 +108,24 @@ export default {
       isShowOverview: false,
     }
   },
+  props: {
+    scrollContainer: String,
+    currentPath: String
+  },
   methods: {
      handleClick(data, route){
        if(route == 'about'){
          this.$router.push({ path: '/about' })
        } else if ( route == 'work'){
-         this.$router.push({ path: `/work/${data.slug}` })
+         this.$router.push({ path: `/work/${data.year}/${data.slug}` })
        }
     },
     toggleOverview(){
-      this.isShowOverview = !this.isShowOverview
+      if(window.innerWidth <= 767) {
+        this.$router.push({ path: '/' })
+       } else {
+         this.isShowOverview = !this.isShowOverview
+       }
     },
     selectWork( selectedWork){
       const t = "work"
@@ -173,7 +135,10 @@ export default {
       this.toggleOverview()
       this.$store.dispatch(FETCH_NEXT_SUGGESTED, payload)
       // Work.methods.setIsScroll()
-    }
+    },
+   goToTop(){
+      jump(this.scrollContainer) 
+    },
   },
   mounted(){
   },
@@ -193,9 +158,6 @@ export default {
     //   })
     // },
     ...mapGetters(['isLoading', 'getWorksByYear']),
-  },
-  props: {
-    currentPath: String
   }
 }
 </script>
@@ -203,10 +165,11 @@ export default {
 
 <style lang="scss" scoped>
   @import '../assets/styles/_base.scss';
+  @import  '../assets/icon/icomoon/style.css';
  
   .footer-ctl{ 
     padding: 1rem 1.5rem;
-    width: 100%;
+    /* width: 100%; */
     bottom: 0;
     border-top: 1px solid $color-black;
     right: 0;
@@ -217,7 +180,7 @@ export default {
   .footer-overview{
     border-right: 1px solid $color-black;
     left: 0;
-    padding-left: 15px;
+    /* padding-left: 15px; */
     justify-content: center;
     display: flex;
 
@@ -285,6 +248,7 @@ export default {
   .ov-lists{
    @media screen and(max-width: $mobile-screen){
       display: flex;
+      flex-direction: column;
     }
   }
 

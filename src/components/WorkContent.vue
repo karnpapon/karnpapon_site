@@ -13,7 +13,10 @@
 import { mapGetters } from 'vuex'
 import { 
 } from "@/store/actions.type";
-import WorkDetailsRender from "@/components/WorkDetailsRender"
+import { 
+  WorkDetailsRender,
+} from "@/components"
+
 import WorkLinks from "@/components/WorkLinks"
 
 

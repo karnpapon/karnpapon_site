@@ -3,7 +3,7 @@
   <nprogress-container></nprogress-container> 
     <div id="app"></div>
     <transition name="fade" mode="out-in"><router-view :key="$route.fullPath"/></transition>
-    <Footer></Footer>
+    <Footer scrollContainer=".index-page-container" ></Footer>
   </div>
 </template>
 
@@ -12,6 +12,7 @@
 import Footer from "./components/Footer";
 import NprogressContainer from '@/components/Nprogress'
 import router from "@/router"
+import ogImage from "@/assets/images/social-thumbnail.jpg"
 
 export default {
   name: 'app',
@@ -24,8 +25,28 @@ export default {
     }
   },
  created() {
-   console.log("this.$root.route", this.$root._route)
+
   },
+  metaInfo: () => ({
+    title: 'code/design/music',
+    titleTemplate: '%s',
+    htmlAttrs: {
+      lang: 'en',
+      amp: undefined
+    },
+    headAttrs: {
+      test: true
+    },
+    meta: [
+      { name: 'description', content: 'Hello', vmid: 'I\'m Karnpapon' },
+      { hid: 'og:image', name: 'og:image', content: "https://www.karnpapon.me" + ogImage}
+    ],
+    script: [
+      { innerHTML: '{ "@context": "http://www.karnpapon.me", "@type": "Organization" }', type: 'application/ld+json' },
+      { innerHTML: '{ "body": "yes" }', body: true, type: 'application/ld+json' }
+    ],
+    __dangerouslyDisableSanitizers: ['script']
+  })
 
 }
 </script>
@@ -49,13 +70,25 @@ export default {
 
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    /* padding: 0; */
+    /* margin: 0; */
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /* color: #2c3e50; */
   }
+
+  pre{
+    background-color: white !important;
+    margin: 20px 0 !important;
+  }
+
+ 
+
+  /* h1,h2,h3,h4{
+    font-size: unset !important;
+    font-weight: unset !important;
+  } */
 
   .fade-enter-active,
   .fade-leave-active {
@@ -149,6 +182,13 @@ export default {
     }
   }
 
+   .tag-about{ 
+    font-size: 0.8rem;
+    /* padding: $medium-padding; */
+    width: max-content;
+    p{ font-weight: normal;}
+  }
+
   .active{
     p{ font-weight: bolder;} 
   }
@@ -157,6 +197,8 @@ export default {
     height: unset;
     z-index: 2;
     pointer-events: none;
+    max-width: unset !important;
+    width: 100% !important;
   }
 
  .detail-wrapper{
@@ -170,6 +212,13 @@ export default {
     @media screen and(max-width: $mobile-screen){
       display: block;
     }
+  }
+
+  .line{ 
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: $secondary-color;
   }
 
   .flex-col{ 
@@ -271,5 +320,6 @@ export default {
   .white-text{ color: white !important; }
 
   .auto-height{ height: auto;}
+
 
 </style>

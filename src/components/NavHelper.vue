@@ -5,12 +5,12 @@
   >
     <div @click="goToHome">
       <span class="icon padding-right-small helper-icon">
-        <i class="fas fa-angle-left"></i>
+        <i class="icon-arr-back"></i>
       </span>
     </div>
     <div @click="goToTop">
       <span class="icon padding-right-small helper-icon">
-        <i class="fas fa-angle-up"></i>
+        <i class="icon-arr-up"></i>
       </span>
     </div>
   </div>
@@ -89,7 +89,7 @@ export default {
   .helper-icon{
      &:hover{
       cursor: pointer;
-      i{color: $hover-color;}
+      i{color: $hover-color; background-color: black;}
     }
   }
  

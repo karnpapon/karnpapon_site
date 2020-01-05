@@ -7,9 +7,25 @@ const dataAbout = [ {
     thumbnail: "https://images.unsplash.com/photo-1555853159-b23e1b1bebd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg",
     key: '001',
     workType: 'portfolios',
-    description1: 'Karnpapon Boonput',
-    description2: 'I\'m a graphic designer turned enthuism developer.',
-    contents: ""
+    contents: "",
+    myname: "",
+    desc: 'I\'m a graphic designer turned enthuism developer.',
+    exp: "Born 1989, Thailand",
+    exp1: "2008 - 2012 : BFA Comm Design @ Bangkok U, TH",
+    exp2: "2014 - 2015 : MFA Creative Arts @ Chulalongkorn U, TH",
+    exp3: "2017 - 2019 : self-taught programming language",
+    language: [
+      {lang: "JavaScript"},
+      {lang: "SuperCollider"},
+      {lang: "TidalCycles"},
+    ],
+    roles:[
+      { role: "Developer"},
+      { role: "Graphic Designer"},
+      { role: "Illustrator"},
+      { role: "Musician"},
+    ]
+
   } ]
 
 
