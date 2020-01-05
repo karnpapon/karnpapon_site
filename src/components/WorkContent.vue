@@ -4,7 +4,7 @@
       <WorkLinks :dataRender="dataDetails"/>
       <WorkDetailsRender :dataRender="dataDetails"/>
     </div>
-    <!-- scroll-spacing: preserve space. -->
+    <!-- scroll-spacing: preserved space. -->
     <div class="column is-full scroll-spacing no-pointer-event"></div>
   </section>
 </template>

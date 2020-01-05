@@ -7,7 +7,7 @@ import theBlackCodesAw from '@/markdowns/2018/the-black-codes-aw.md'
 import livecodefest from '@/markdowns/2018/livecodefest.md'
 import bkkDesignWeek from '@/markdowns/2018/bkk-design-week.md'
 import bkkThroughPoster from '@/markdowns/2018/bkk-through-poster.md'
-import about from '@/markdowns/about/about.md'
+import aboutPage from '@/markdowns/about/about.md'
 import audiotrimmerScript from '@/markdowns/Lab/audiotrimmer-scripts.md'
 import asFarAs from '@/markdowns/2018/as-far-as.md'
 import illustrations from '@/markdowns/2018/illustrations.md'
@@ -19,27 +19,30 @@ import journal01 from '@/markdowns/journals/journal01.md'
 import journal02 from '@/markdowns/journals/journal02.md'
 
 
+import ct from '@/markdowns/2019/ct.md'
+import tsiangt from '@/markdowns/2019/tsiangt.md'
 
+const md = [
+    { id: 'seeq', component: seeq },
+    { id: 'the-black-codes-web', component: theBlackCodesWeb },
+    { id: 'songkranizer', component: songkranizer },
+    { id: 'ect-etc-tec', component: ect },
+    { id: 'the-blacksmith', component: theBlacksmith },
+    { id: 'audiotrimmer-scripts', component: audiotrimmerScript },
+    { id: 'livecodefest', component: livecodefest },
+    { id: 'bkk-design-week', component: bkkDesignWeek },
+    { id: 'bkk-through-poster', component: bkkThroughPoster },
+    { id: 'as-far-as', component: asFarAs },
+    { id: 'the-black-codes-aw', component: theBlackCodesAw },
+    { id: 'illustrations', component: illustrations },
+    { id: 'td-dailystd', component: tidalCyclesStd },
+    { id: 'rune-js', component: runeJs },
+    { id: 'journal-00', component: journal00 },
+    { id: 'journal-01', component: journal01 },
+    { id: 'journal-02', component: journal02 },
+    { id: 'about', component: aboutPage },
+    { id: 'ct', component: ct },
+    { id: 'tsiangt', component: tsiangt },
+]
 
-
-export {
-    seeq,
-    theBlackCodesWeb,
-    songkranizer,
-    ect,
-    theBlacksmith,
-    about,
-    audiotrimmerScript,
-    livecodefest,
-    bkkDesignWeek,
-    bkkThroughPoster,
-    asFarAs,
-    theBlackCodesAw,
-    illustrations,
-    tidalCyclesStd,
-    runeJs,
-
-    journal00,
-    journal01,
-    journal02,
-}
+export default md

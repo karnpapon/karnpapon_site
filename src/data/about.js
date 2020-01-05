@@ -11,13 +11,13 @@ const dataAbout = [ {
     myname: "",
     desc: 'I\'m a graphic designer turned enthuism developer.',
     exp: "Born 1989, Thailand",
-    exp1: "2008 - 2012 : BFA Comm Design @ Bangkok U, TH",
-    exp2: "2014 - 2015 : MFA Creative Arts @ Chulalongkorn U, TH",
-    exp3: "2017 - 2019 : self-taught programming language",
+    exp1: "2008 - 2012 : BFA Comm Design @ BU",
+    // exp2: "2014 - 2015 : MFA Creative Arts @ Chulalongkorn U, TH",
+    exp3: "2017 : self-taught programming language",
     language: [
       {lang: "JavaScript"},
+      {lang: "Rust"},
       {lang: "SuperCollider"},
-      {lang: "TidalCycles"},
     ],
     roles:[
       { role: "Developer"},

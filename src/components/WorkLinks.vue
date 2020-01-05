@@ -4,8 +4,8 @@
 
       <div class="with-padding ">
         <div 
-          v-for="(data, index) of dataRender.links" 
-          :key="index" 
+          v-for="(data, linkIdx) of dataRender.links" 
+          :key="linkIdx" 
           class="flex-wrapper width-auto">
           <span class="icon padding-right-small">
               <i v-if="data.type == 'website'" class="fas fa-link"></i>
@@ -24,7 +24,7 @@
       <div 
         v-if="dataRender.theme == 'work'" 
         class="inline-grid-wrapper with-padding cate-wrapper">
-        <strong> Roles:</strong>
+        <p> Roles:</p>
         <strong 
           v-for="(cate , cateIndex) of dataRender.categories" 
           :key="cateIndex" 
@@ -48,7 +48,7 @@
             <p v-for="(lang, langIndex) of dataRender.language" :key="langIndex">- {{lang.lang}}</p>
             <br/>
             <b>Roles: </b>
-            <p v-for="(role, roleIndex) of dataRender.roles" :key="roleIndex">- {{role.role}}</p>
+            <p v-for="(role) of dataRender.roles" :key="role.role">- {{role.role}}</p>
           </div>
           </div>
         </div>
@@ -99,6 +99,9 @@ export default {
   }
   .width-auto{ width: auto;}
 
-  .cate-wrapper{ width: 50%; }
+  .cate-wrapper{ 
+    width: 50%; 
+    p{ font-weight: bold;}
+  }
  
 </style>

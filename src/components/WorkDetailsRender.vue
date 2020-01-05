@@ -2,57 +2,14 @@
   <div class="column is-6">
     <div class="detail-render">
       <component :is="currentComponent"></component>
-      <!-- #region unused -->
-
-      <!-- <div class="column padding-top" v-html="dataRender.contents"></div>
-
-      <div v-if="dataRender.contentImages.length > 0">
-        <figure v-for="(img, indexImg) of dataRender.contentImages" :key="indexImg" class="image">
-          <img v-if="img.img !== ''" class="img-ctrl" :src="require(`@/assets/images/${img.img}`)">
-          <p v-if="img.imgDesc !== ''" class="with-padding-medium"> {{ img.imgDesc}} </p> 
-        </figure>
-      </div>
-     
-      <CodeSnippet/>
-
-      <div v-if="dataRender.shareDataDetail.length > 0">
-        <LinkShare 
-          v-for="(dataShare, indexDataShare) of dataRender.shareDataDetail" 
-          :key="indexDataShare"
-          :shareDataDetail="dataShare"
-        />
-      </div> -->
-
-      <!-- #endregion -->
     </div>
   </div>
 </template>
 
 <script>
 
-import { 
-  seeq,
-  theBlackCodesWeb,
-  songkranizer,
-  ect,
-  theBlacksmith,
-  about,
-  audiotrimmerScript,
-  livecodefest,
-  bkkDesignWeek,
-  bkkThroughPoster,
-  asFarAs,
-  theBlackCodesAw,
-  illustrations,
-  tidalCyclesStd,
-  runeJs,
-  journal00,
-  journal01,
-  journal02
-} from '@/markdowns'
+import md from '@/markdowns'
 import BlogEntries from '../data/blogs.json';
-import { CodeSnippet }  from '@/components'
-import LinkShare from '@/components/LinkShare'
 import { mapGetters } from 'vuex'
 import { 
   FETCH_SELECTED_WORK,
@@ -72,37 +29,15 @@ export default {
   },
   destroyed () {
   },
-  components: {
-    CodeSnippet,
-    LinkShare,
-    'seeq': seeq,
-    'the-black-codes-web': theBlackCodesWeb,
-    'songkranizer': songkranizer,
-    'ect-etc-tec': ect,
-    'the-blacksmith': theBlacksmith,
-    'about': about,
-    'audiotrimmer-scripts': audiotrimmerScript,
-    'livecodefest': livecodefest,
-    'bkk-through-poster':bkkThroughPoster,
-    'bkk-design-week': bkkDesignWeek,
-    'as-far-as': asFarAs,
-    'the-black-codes-aw': theBlackCodesAw,
-    'illustrations': illustrations,
-    'td-dailystd': tidalCyclesStd,
-    'rune-js': runeJs,
-    'journal-00':journal00,
-    'journal-01':journal01,
-    'journal-02':journal02,
-  },
   props: {
     dataRender: Object
   },
   computed: {
     currentComponent: function () {
       if(this.$route.path == '/about'){
-        return 'about'
+        return md.filter( item => 'about' == item.id )[0].component
       } else {
-        return this.$route.params.slug
+        return md.filter( item => this.$route.params.slug == item.id )[0].component
       }
     },
     ...mapGetters(['isLoading']),

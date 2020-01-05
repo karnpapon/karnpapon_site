@@ -2,12 +2,15 @@
   <section class="color-grey detail-section">
     <div class="detail-wrapper relative flex-col">
       <section v-for="( data, index) of dataList" :key="index" class="flex-wrapper works-wrapper">
+
+        <!-- year's column -->
         <div class="column is-half w-light year-txt-dp">
           <div class="cate-year position-sticky">
             <p>{{ data.year}}</p>
           </div>
         </div>
 
+        <!-- works' column -->
         <div class="column is-half no-padding-top no-padding-bottom no-padding-right control-worklist-detail">
           <div 
             v-for="( _data, _index ) of data.works" 
@@ -26,6 +29,7 @@
             </div>
           </div>
         </div>
+
       </section>
     </div>
     <div class="column is-full home-scroll-spacing no-pointer-event"></div>
