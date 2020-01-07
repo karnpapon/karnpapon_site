@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?865vpt');
-  src:  url('fonts/icomoon.eot?865vpt#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?865vpt') format('truetype'),
-    url('fonts/icomoon.woff?865vpt') format('woff'),
-    url('fonts/icomoon.svg?865vpt#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?dn6bhj');
+  src:  url('fonts/icomoon.eot?dn6bhj#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dn6bhj') format('truetype'),
+    url('fonts/icomoon.woff?dn6bhj') format('woff'),
+    url('fonts/icomoon.svg?dn6bhj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -24,6 +25,69 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-contentful:before {
+  content: "\e917";
+}
+.icon-aftereffect:before {
+  content: "\e914";
+}
+.icon-illustrator:before {
+  content: "\e915";
+}
+.icon-photoshop:before {
+  content: "\e916";
+}
+.icon-digitalocean:before {
+  content: "\e913";
+}
+.icon-chrome:before {
+  content: "\e903";
+}
+.icon-electron:before {
+  content: "\e904";
+}
+.icon-gatsby:before {
+  content: "\e905";
+}
+.icon-glsl:before {
+  content: "\e906";
+}
+.icon-graphql:before {
+  content: "\e907";
+}
+.icon-iannix:before {
+  content: "\e908";
+}
+.icon-javascript:before {
+  content: "\e909";
+}
+.icon-netlify:before {
+  content: "\e90a";
+}
+.icon-p5:before {
+  content: "\e90b";
+}
+.icon-react:before {
+  content: "\e90c";
+}
+.icon-rust:before {
+  content: "\e90d";
+}
+.icon-sass:before {
+  content: "\e90e";
+}
+.icon-supercollider:before {
+  content: "\e90f";
+}
+.icon-tidalcycles:before {
+  content: "\e910";
+}
+.icon-vim:before {
+  content: "\e911";
+}
+.icon-vue:before {
+  content: "\e912";
+}
 .icon-arr-back:before {
   content: "\e901";
 }

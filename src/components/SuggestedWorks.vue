@@ -14,7 +14,7 @@
           @click="handleClick(data)"
         >
         <div class="flex-wrapper">
-          <span class="icon icon-size-2x">
+          <span class="icon icon-size-2x padding-top">
             <i v-if="index == 0" class="fas padding-top padding-right fa-arrow-left"/>
             <i v-else class="fas padding-top padding-right fa-arrow-right"/>
           </span>

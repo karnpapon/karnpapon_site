@@ -4,7 +4,7 @@ const dataWorks = [
     slug: 'tsiangt',
     theme: 'work',
     year: '2019',
-    thumbnail: require( '../assets/images/tsiangt/01.png' ),
+    thumbnail: require( '../assets/images/tsiangt/thumb-00.jpg' ),
     key: '001',
     workType: 'coding',
     description1:'an audio music player',
@@ -15,6 +15,30 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'rust'}
+    ]
+  },
+  {
+    name: 'again again',
+    slug: 'again-again',
+    theme: 'work',
+    year: '2019',
+    thumbnail: require( '../assets/images/again-again/thumb-00.jpg' ),
+    key: '001',
+    workType: 'coding',
+    description1:'the black codes re-interpretation',
+    description2:'algorithmic composition with SDF.',
+    links: [
+      { title: "/again-again", url: "https://github.com/karnpapon/againagain", type: "github"},
+      { title: "-", url: "-", type: "-"}
+    ],
+    categories: [
+      { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'javascript'}
     ]
   },
   {
@@ -22,7 +46,7 @@ const dataWorks = [
     slug: 'ct',
     theme: 'work',
     year: '2019',
-    thumbnail: require( '../assets/images/ct/thumb-00.png' ),
+    thumbnail: require( '../assets/images/ct/thumb-00.jpg' ),
     key: '001',
     workType: 'coding',
     description1:'CT design website',
@@ -33,6 +57,11 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'gatsby'},
+      { title: 'netlify'},
+      { title: 'contentful'},
     ]
   },
   {
@@ -52,6 +81,9 @@ const dataWorks = [
     categories: [
       { title: 'Designer' },
       { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'electron'}
     ]
   },
   {
@@ -71,6 +103,9 @@ const dataWorks = [
     categories: [
       { title: 'Designer' },
       { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'vue'}
     ]
   },
   {
@@ -89,6 +124,9 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'chrome'}
     ]
   },
   {
@@ -108,10 +146,13 @@ const dataWorks = [
     categories: [
       { title: 'Designer' },
       { title: 'Art Director' },
+    ],
+    tags: [
+      { title: 'p5'}
     ]
   },
   {
-    name: 'The Black Codes (website)',
+    name: 'The Black Codes',
     slug: 'the-black-codes-web',
     theme: 'work',
     year: '2018',
@@ -130,6 +171,11 @@ const dataWorks = [
       { title: 'Developer' },
       { title: 'Art Director' },
     ],
+    tags: [
+      { title: 'react'},
+      { title: 'sass'},
+      { title: 'digitalocean'},
+    ]
   },
   {
     name: 'The Black Codes (promo)',
@@ -149,6 +195,10 @@ const dataWorks = [
       { title: 'Designer' },
       { title: 'Developer' },
       { title: 'Art Director' },
+    ],
+    tags: [
+      { title: 'photoshop'},
+      { title: 'aftereffect'}
     ]
   },
   {
@@ -167,6 +217,9 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'javascript'}
     ]
   },
   {
@@ -185,6 +238,9 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'vue'}
     ]
   },
   {
@@ -203,6 +259,9 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Illustrator' },
+    ],
+    tags: [
+      { title: 'illustrator'}
     ]
   },
   {
@@ -221,6 +280,10 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Performer' },
+    ],
+    tags: [
+      { title: 'iannix'},
+      { title: 'supercollider'}
     ]
   },
   {
@@ -240,6 +303,9 @@ const dataWorks = [
     categories: [
       { title: 'Designer' },
       { title: 'Art Director' },
+    ],
+    tags: [
+      { title: 'glsl'}
     ]
   },
   {
@@ -258,6 +324,10 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Performer' },
+    ],
+    tags: [
+      { title: 'tidalcycles'},
+      { title: 'glsl'},
     ]
   },
   {
@@ -277,6 +347,9 @@ const dataWorks = [
     categories: [
       { title: 'Graphic Design' },
       { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'javascript'}
     ]
   }
 ];

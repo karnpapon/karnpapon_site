@@ -21,6 +21,7 @@ import journal02 from '@/markdowns/journals/journal02.md'
 
 import ct from '@/markdowns/2019/ct.md'
 import tsiangt from '@/markdowns/2019/tsiangt.md'
+import againagain from '@/markdowns/2019/againagain.md'
 
 const md = [
     { id: 'seeq', component: seeq },
@@ -43,6 +44,7 @@ const md = [
     { id: 'about', component: aboutPage },
     { id: 'ct', component: ct },
     { id: 'tsiangt', component: tsiangt },
+    { id: 'again-again', component: againagain },
 ]
 
 export default md

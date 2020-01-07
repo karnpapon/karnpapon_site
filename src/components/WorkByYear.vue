@@ -20,12 +20,23 @@
             @mouseleave="handleHidePreview(_data)"
             @click="handleClick(_data)"
           >
-            <div class="next-item-wrapper">
-              <p class="title is-3 ">{{_data.name}}</p>
-              <div class="subtitle is-6  padding-top work-lists-subtitle">
-                <p>{{ _data.description1}}</p>  
-                <p>{{_data.description2}}</p>  
+            <div class="next-item-wrapper flex-wrapper ">
+              <div class="flex3">
+                <p class="title is-3 ">{{_data.name}}</p>
+                <div class="subtitle is-6  padding-top work-lists-subtitle">
+                  <p>{{ _data.description1}}</p>  
+                  <p>{{_data.description2}}</p>  
+                </div>
               </div>
+
+              <div class="flex1 align-end icon-size">
+                <i 
+                  v-for="(_tag, _tagIdx) of _data.tags" 
+                  :key="_tagIdx"  
+                  :class=" 'icon-'+ _tag.title" >
+                </i>
+              </div>
+
             </div>
           </div>
         </div>
@@ -77,7 +88,7 @@ export default {
     },
     handleClick(data){
       this.$router.push({ path: `/work/${data.year}/${data.slug}` })
-    }
+    },
   }
 }
 </script>

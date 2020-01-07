@@ -168,7 +168,7 @@ export default {
   @import  '../assets/icon/icomoon/style.css';
  
   .footer-ctl{ 
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     /* width: 100%; */
     bottom: 0;
     border-top: 1px solid $color-black;
@@ -313,7 +313,7 @@ export default {
     width: 100%;
   }
 
-  .footer{ background-color: white;}
+  .footer{ background-color: white; font-size: 14px;}
 
   .go-about{
     color: $color-black;

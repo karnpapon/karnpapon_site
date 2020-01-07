@@ -13,10 +13,10 @@
               class="journal-list-select with-padding"
               :key="index"
             >
-              <router-link 
+              <!-- <router-link 
                 :to="{ path: '/journal/' + data.slug}" 
                 exact 
-              >
+              > -->
                 <div class="flex-wrapper">
                   <div class="next-item-wrapper">
                     <p class="title is-3">{{data.name}}</p>
@@ -25,7 +25,7 @@
                     </div>
                   </div>
                 </div>
-              </router-link>
+              <!-- </router-link> -->
             </div>
           </div>
         </div>

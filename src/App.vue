@@ -56,7 +56,7 @@ export default {
 @import './assets/styles/_font.scss';
 
   html, body{
-    font-size: 14px !important;
+    font-size: 16px !important;
     box-sizing: border-box !important;
     -webkit-font-smoothing: antialiased !important;
     margin: 0 !important;
@@ -156,6 +156,12 @@ export default {
   .flex-wrapper{ display: flex;}
   .inline-grid-wrapper{ display: inline-grid; grid-row-gap: 10px;}
 
+  .align-end{
+    justify-content: flex-end;
+    align-self: center;
+    display: flex;
+  }
+
   .no-pointer-event{ pointer-events: none; }
 
   .no-flex-basis{ flex-basis: initial !important;}
@@ -241,6 +247,7 @@ export default {
 
  .next-item-wrapper{
     height: 100%;
+    width: 100%;
 
     @media screen and(max-width: $mobile-screen){
       >p{ margin-bottom: 10px !important;}
@@ -251,6 +258,11 @@ export default {
     }
 
   }
+
+  .flex1{ flex: 1};
+  .flex3{ flex: 3};
+
+  .icon-size{ font-size: 3rem;}
 
   .scroll-spacing{
     height: $scroll-space-height;
@@ -303,6 +315,8 @@ export default {
     /* transition: 150ms; */
     height: 100%;
 
+    i{ color: $main-color; pointer-events: none; padding: 9px;}
+
     &:hover{
       cursor: pointer;
       background-color: $color-black;
@@ -320,6 +334,10 @@ export default {
   .white-text{ color: white !important; }
 
   .auto-height{ height: auto;}
+
+  .disable-click{
+    pointer-events: none;
+  }
 
 
 </style>
