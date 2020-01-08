@@ -1,16 +1,15 @@
 <template>
-  <div class="padding-right">
     <section class="column is-full nav-next-work-section background-black">
       <div class="columns home-scroll-spacing">
-        <div class="column is-half no-padding-top no-flex-basis">
+        <div class="column is-half title-wrapper">
           <p class="journal-title">Journal</p>
         </div>
 
-        <div class="padding-top padding-bottom control-worklist-detail overflow">
+        <div class="journal-lists">
           <div class="scrollable">
             <div 
               v-for="( data, index ) of getJournalDetails" 
-              class="journal-list-select with-padding"
+              class="journal-list-select"
               :key="index"
             >
               <!-- <router-link 
@@ -20,7 +19,7 @@
                 <div class="flex-wrapper">
                   <div class="next-item-wrapper">
                     <p class="title is-3">{{data.name}}</p>
-                    <div class="subtitle is-6  padding-top journal-lists-subtitle">
+                    <div class="subtitle is-6  journal-lists-subtitle">
                       <p> {{data.date}} : {{data.readingTime}} </p>  
                     </div>
                   </div>
@@ -32,7 +31,6 @@
         <dir class="footer-h-space"></dir>
       </div>
     </section>
-  </div>
 </template>
 
 <script>
@@ -62,8 +60,13 @@ export default {
 }
 </script>
 
-<style lang="scss"  scoped>
+<style lang="scss" scoped>
 @import '../assets/styles/_base.scss';
+
+  .title-wrapper{
+    padding-top: 0;
+    flex-basis: initial;
+  }
  
   .journal-title{
     font-size: 20vw;
@@ -71,19 +74,12 @@ export default {
     pointer-events: none;
     color:  $secondary-color;
   }
-  .padding-top{ padding-top: $main-padding;}
 
-  .home-scroll-spacing{
-    height: $home-scroll-space-height;
+  .journal-lists{
+    padding-top: $main-padding;
+    padding-bottom: $main-padding;
+    overflow: hidden;
 
-    @media screen and(max-width: $mobile-screen){
-      height: calc(100vh - 50px);
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  .control-worklist-detail{
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -97,19 +93,24 @@ export default {
     }
   }
 
+  .home-scroll-spacing{
+    height: $home-scroll-space-height;
+
+    @media screen and(max-width: $mobile-screen){
+      height: calc(100vh - 50px);
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   .journal-lists-subtitle{
+    padding-top: $main-padding;
     @media screen and(max-width: $mobile-screen){
       p{font-size: 1rem !important;}
     }
   }
 
-  .control-worklist-detail >.work-list-detail{
-    border-bottom: 1px solid black;
-    align-items: center;
-    display: flex;
-  }
-
-  .footer-h-space{
+   .footer-h-space{
     height: 50px;
     width: 100%;
     display: none;
@@ -120,38 +121,13 @@ export default {
 
   }
 
-  .works-wrapper{
-    height: 100%; 
-    &:last-child{
-      .control-worklist-detail{
-        div {
-          &:last-child{
-            border-bottom: unset;
-          }
-        }
-      }
-    }
-  }
-
-  .work-list-detail{
-    height: 100%;
-    width: 100%;
-
-    &:hover{
-      cursor: pointer;
-      background-color: $color-black;
-     p{ color: white;}
-     i{ color: white;}
-    }
-  }
-
   .journal-list-select{
     border-bottom: 1px solid white;
-    p{ color: white !important;}
+    padding: $main-padding;
     &:hover{
       cursor: pointer;
       background-color: $main-color;
-     p{ color: $color-black !important;}
+     p{ color: $color-black}
     }
     &:last-child{ border-bottom: unset ;}
   }

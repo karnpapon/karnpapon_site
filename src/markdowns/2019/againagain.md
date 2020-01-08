@@ -5,25 +5,24 @@
 
 # What.
 
-Website for CT Design, an independent design firm based in Bangkok, Thailand
-
-------
-
-# Why.
-CT is a design studio based in Thailand, 
-creating communication design such as brand identity, packaging design, illustration and print.
+I was commissioned to remix the song called [ "อย่างเสียใจ ( again again)" ](https://www.youtube.com/watch?v=s6216p1ANpU) <br>
+by [ Cadson Demak Record ](https://www.facebook.com/cadsondemakrecords/),
+part of [ Cadson Demak ](https://cadsondemak.com/home/), a business to business service based in Bangkok, Thailand. 
+<br>
+<br>
+Decided to use SuperCollider for audio synthesis and algorithmic composition <br>
+to intepret an unique story, this website is part of song promo. 
+Demonstrate the song structure and let audience play with composition with thier own wills.
 
 ------
 
 # How.
 
-Gatsby as UI engine. <br>
-Contentful as a Content Management System (CMS)
-Netlify as a hosting.
+an audio is passed through Tone.js, visualized by Marching.js, Ray-marching library.
 
 ------
 # Learn.
 
-- [Gatsby.js](https://www.gatsbyjs.org/) as view-engine.
-- [Contentful](https://www.contentful.com/) as a Content Management System (CMS).
-- [Netlify](https://www.netlify.com/) as a hosting.
+- [SuperCollider](https://supercollider.github.io/) audio synthesis, algorithmic composition.
+- [Tone.js](https://tonejs.github.io/) audio playback.
+- [Marching.js](https://github.com/charlieroberts/marching) visuallizer.

@@ -11,7 +11,7 @@
               <i v-if="data.type == 'website'" class="fas fa-link"></i>
               <i v-else-if="data.type == 'github'" class="fab fa-github"></i>
           </span>
-          <a v-if="data.url == '-'" target="blank">
+          <a v-if="data.url == '-'" target="blank" class="no-link">
             <strong> - </strong>
           </a>
           <a v-else target="blank" :href='data.url'>
@@ -103,5 +103,7 @@ export default {
     width: 50%; 
     p{ font-weight: bold;}
   }
+
+  .no-link{ pointer-events: none; cursor: initial;}
  
 </style>

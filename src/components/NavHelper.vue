@@ -47,9 +47,9 @@ export default {
       let clientHeight = document.documentElement.getBoundingClientRect().height
 
       if(window.scrollY < clientHeight/2){
-        scrollSpeed = 1000
+        scrollSpeed = 500
       } else {
-        scrollSpeed = 1500
+        scrollSpeed = 1000
       }
       return scrollSpeed
     },

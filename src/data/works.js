@@ -15,9 +15,10 @@ const dataWorks = [
     ],
     categories: [
       { title: 'Developer' },
+      { title: 'UI Designer' },
     ],
     tags: [
-      { title: 'rust'}
+      { title: 'Rust', key: 'rust'}
     ]
   },
   {
@@ -28,17 +29,19 @@ const dataWorks = [
     thumbnail: require( '../assets/images/again-again/thumb-00.jpg' ),
     key: '001',
     workType: 'coding',
-    description1:'the black codes re-interpretation',
-    description2:'algorithmic composition with SDF.',
+    description1:'interactive website',
+    description2:'algorithmic composition with Ray-Marching technique.',
     links: [
       { title: "/again-again", url: "https://github.com/karnpapon/againagain", type: "github"},
-      { title: "-", url: "-", type: "-"}
+      { title: "again-again", url: "https://www.llllllllllllllllllll.world/", type: "website"}
     ],
     categories: [
       { title: 'Developer' },
+      { title: 'UI Designer' },
+      { title: 'Musician' },
     ],
     tags: [
-      { title: 'javascript'}
+      { title: 'JavaScript', key: 'javascript'}
     ]
   },
   {
@@ -59,9 +62,9 @@ const dataWorks = [
       { title: 'Developer' },
     ],
     tags: [
-      { title: 'gatsby'},
-      { title: 'netlify'},
-      { title: 'contentful'},
+      { title: 'Gatsby', key: 'gatsby'},
+      { title: 'Netlify', key: 'netlify'},
+      { title: 'Contentful', key: 'contentful'},
     ]
   },
   {
@@ -83,7 +86,7 @@ const dataWorks = [
       { title: 'Developer' },
     ],
     tags: [
-      { title: 'electron'}
+      { title: 'Electron', key: 'electron'}
     ]
   },
   {
@@ -105,7 +108,7 @@ const dataWorks = [
       { title: 'Developer' },
     ],
     tags: [
-      { title: 'vue'}
+      { title: 'Vue', key: 'vue'}
     ]
   },
   {
@@ -126,7 +129,7 @@ const dataWorks = [
       { title: 'Developer' },
     ],
     tags: [
-      { title: 'chrome'}
+      { title: 'Chrome', key: 'chrome'}
     ]
   },
   {
@@ -148,7 +151,7 @@ const dataWorks = [
       { title: 'Art Director' },
     ],
     tags: [
-      { title: 'p5'}
+      { title: 'p5', key: 'p5'}
     ]
   },
   {
@@ -172,13 +175,13 @@ const dataWorks = [
       { title: 'Art Director' },
     ],
     tags: [
-      { title: 'react'},
-      { title: 'sass'},
-      { title: 'digitalocean'},
+      { title: 'React', key: 'react'},
+      { title: 'Sass', key: 'sass'},
+      { title: 'DigitalOcean', key: 'digitalocean'},
     ]
   },
   {
-    name: 'The Black Codes (promo)',
+    name: 'The Black Codes (design)',
     slug: 'the-black-codes-aw',
     theme: 'work',
     year: '2018',
@@ -197,8 +200,8 @@ const dataWorks = [
       { title: 'Art Director' },
     ],
     tags: [
-      { title: 'photoshop'},
-      { title: 'aftereffect'}
+      { title: 'Photoshop', key: 'photoshop'},
+      { title: 'AfterEffect' , key: 'aftereffect'}
     ]
   },
   {
@@ -219,7 +222,7 @@ const dataWorks = [
       { title: 'Developer' },
     ],
     tags: [
-      { title: 'javascript'}
+      { title: 'JavaScript', key: 'javascript'}
     ]
   },
   {
@@ -230,7 +233,7 @@ const dataWorks = [
     thumbnail: require( '../assets/images/livecodefest/thumb-00.jpg' ),
     key: '004',
     workType: 'coding',
-    description1:'Livecode Festival, London ',
+    description1:'Livecode festival, London(unofficial)',
     description2:'re-design for Livecode Fest.',
     links: [
       { title: "-", url: "-", type: "website" },
@@ -240,7 +243,7 @@ const dataWorks = [
       { title: 'Developer' },
     ],
     tags: [
-      { title: 'vue'}
+      { title: 'Vue' , key: 'vue'}
     ]
   },
   {
@@ -261,7 +264,7 @@ const dataWorks = [
       { title: 'Illustrator' },
     ],
     tags: [
-      { title: 'illustrator'}
+      { title: 'Illustrator', key: 'illustrator'}
     ]
   },
   {
@@ -282,8 +285,8 @@ const dataWorks = [
       { title: 'Performer' },
     ],
     tags: [
-      { title: 'iannix'},
-      { title: 'supercollider'}
+      { title: 'IanniX' , key: 'iannix'},
+      { title: 'SuperCollider', key: 'supercollider'}
     ]
   },
   {
@@ -301,11 +304,12 @@ const dataWorks = [
       { title: "-", url: "-", type: "github" }
     ],
     categories: [
+      { title: 'Developer' },
       { title: 'Designer' },
       { title: 'Art Director' },
     ],
     tags: [
-      { title: 'glsl'}
+      { title: 'GLSL', key: 'glsl'}
     ]
   },
   {
@@ -326,8 +330,8 @@ const dataWorks = [
       { title: 'Performer' },
     ],
     tags: [
-      { title: 'tidalcycles'},
-      { title: 'glsl'},
+      { title: 'TidalCycles' , key: 'tidalcycles'},
+      { title: 'GLSL', key: 'glsl'},
     ]
   },
   {
@@ -349,7 +353,7 @@ const dataWorks = [
       { title: 'Developer' },
     ],
     tags: [
-      { title: 'javascript'}
+      { title: 'JavaScript', key: 'javascript'}
     ]
   }
 ];

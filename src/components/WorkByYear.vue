@@ -11,7 +11,7 @@
         </div>
 
         <!-- works' column -->
-        <div class="column is-half no-padding-top no-padding-bottom no-padding-right control-worklist-detail">
+        <div class="column is-half control-worklist-detail">
           <div 
             v-for="( _data, _index ) of data.works" 
             class="work-list-detail with-padding"
@@ -30,11 +30,15 @@
               </div>
 
               <div class="flex1 align-end icon-size">
-                <i 
+                <b-tooltip 
                   v-for="(_tag, _tagIdx) of _data.tags" 
                   :key="_tagIdx"  
-                  :class=" 'icon-'+ _tag.title" >
-                </i>
+                  :label="_tag.title"
+                  type="is-light"
+                  square
+                >
+                  <i :class=" 'icon-'+ _tag.key"> </i>
+                </b-tooltip>
               </div>
 
             </div>
@@ -105,17 +109,10 @@ export default {
     pointer-events: none;
     color:  $color-black;
     width: 100%;
-    /* line-height: .8; */
-    /* -webkit-text-stroke: 1px $color-black; */
-
-    /* @media screen and(max-width: $mobile-screen){
-      font-size: 5rem;
-    } */
   }
 
   .w-light{ font-weight: lighter; }
 
-  .padding-top{ padding-top: $main-padding;}
 
   .relative{ 
     position: relative;
@@ -135,6 +132,9 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
 
     @media screen and(max-width: $mobile-screen){
       display: block;

@@ -56,7 +56,7 @@ export default {
 @import './assets/styles/_font.scss';
 
   html, body{
-    font-size: 16px !important;
+    font-size: 14px !important;
     box-sizing: border-box !important;
     -webkit-font-smoothing: antialiased !important;
     margin: 0 !important;
@@ -70,12 +70,9 @@ export default {
 
 * {
     box-sizing: border-box;
-    /* padding: 0; */
-    /* margin: 0; */
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* color: #2c3e50; */
   }
 
   pre{
@@ -84,12 +81,6 @@ export default {
   }
 
  
-
-  /* h1,h2,h3,h4{
-    font-size: unset !important;
-    font-weight: unset !important;
-  } */
-
   .fade-enter-active,
   .fade-leave-active {
     transition-duration: 0.3s;
@@ -102,13 +93,11 @@ export default {
     opacity: 0
   }
 
-  a{
-    color: $color-black !important;
-  }
+  a { color: $color-black !important;}
 
   a p{ 
-    color: $color-black !important;
-    &:hover{ color: $hover-color !important; }
+    color: $color-black;
+    &:hover{ color: $hover-color; }
   }
 
   .container{

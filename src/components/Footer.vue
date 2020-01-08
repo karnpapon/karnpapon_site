@@ -1,11 +1,11 @@
 <template>
-  <div class="footer-container column is-full no-padding">
+  <div class="column is-full footer-container">
     <div 
       v-if="isShowOverview"
-      class="overview-wrapper column is-full"
+      class="column is-full overview-wrapper"
     >
       <div class="overview-container">
-        <div class="columns is-full ov-lists">
+        <div class="columns is-full overview-lists">
           <div 
             v-for="(list, index) of getWorksByYear" :key="index" 
             class="column with-padding"
@@ -14,7 +14,7 @@
             <p class="title is-6 padding-top-small">{{ list.year }}</p>
             <div 
               v-for="(itemlist , itemindex) of list.works" :key="itemindex" 
-              class="padding-top-medium list-overview"
+              class="list-overview"
               v-on:click="selectWork(itemlist)"
             >
               <router-link 
@@ -57,13 +57,13 @@
             <span class="icon "><i class="fab fa-creative-commons"></i></span>
             <p class="w-medium cc-details">CC BY NC SA 4.0</p>
             <div class="credits">
-            <p> crafted by </p>  
+            <p> made by </p>  
             <span class="icon">
                 <a target="blank" href="https://vuejs.org/">
                   <i class="fab fa-vuejs"></i>
                 </a>
               </span>
-              +
+              <p>+</p>
               <span class="icon">
                 <a target="blank" href="https://buefy.org/">
                   <i class="icon-buefy-logo"></i>
@@ -73,12 +73,12 @@
             </div>
           </div>
           <div class="level-right right-col">
-            <span class="icon icon-size-2x">
+            <span class="icon footer-icon-size">
               <a target="blank" href="https://twitter.com/snuffvideo1">
                 <i class="fab fa-twitter"></i>
               </a>
             </span>
-            <span class="icon icon-size-2x">
+            <span class="icon footer-icon-size">
               <a target="blank" href="https://github.com/karnpapon">
                 <i class="fab fa-github"></i>
               </a>
@@ -169,7 +169,6 @@ export default {
  
   .footer-ctl{ 
     padding: 1rem 1rem;
-    /* width: 100%; */
     bottom: 0;
     border-top: 1px solid $color-black;
     right: 0;
@@ -180,7 +179,6 @@ export default {
   .footer-overview{
     border-right: 1px solid $color-black;
     left: 0;
-    /* padding-left: 15px; */
     justify-content: center;
     display: flex;
 
@@ -245,7 +243,8 @@ export default {
 
   }
 
-  .ov-lists{
+  .overview-lists{
+    // p {font-size: $small-font-size;}
    @media screen and(max-width: $mobile-screen){
       display: flex;
       flex-direction: column;
@@ -263,7 +262,7 @@ export default {
     }
   }
 
-  .icon-size-2x{ 
+  .footer-icon-size{ 
     font-size: 1.5em;
     cursor: pointer;
     &:hover{
@@ -286,6 +285,7 @@ export default {
 
   .list-overview{
     transition: 200ms;
+    padding-top: $medium-padding;
     p { color: $color-black;};
     &:hover{
       p{
@@ -306,6 +306,7 @@ export default {
     bottom: 0;
     z-index: 5;
     width: 100%;
+    padding: 0;
   }
 
   .footer-wrapper{ 
