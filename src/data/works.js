@@ -236,14 +236,16 @@ const dataWorks = [
     description1:'Livecode festival, London(unofficial)',
     description2:'re-design for Livecode Fest.',
     links: [
-      { title: "-", url: "-", type: "website" },
+      { title: "livecodefest", url: "https://unruffled-keller-e5ce56.netlify.com/", type: "website" },
       { title: "/livecodefest", url: "https://github.com/karnpapon/livecodefest", type: "github" }
     ],
     categories: [
       { title: 'Developer' },
     ],
     tags: [
-      { title: 'Vue' , key: 'vue'}
+      { title: 'React' , key: 'react'},
+      { title: 'NextJS' , key: 'nextjs'},
+      { title: 'Netlify' , key: 'netlify'}
     ]
   },
   {
