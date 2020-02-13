@@ -117,6 +117,8 @@ export default {
       h2{ font-size: large;}
       h3{ font-size: larger;}
       h4{ font-size: medium;}
+
+      p{ word-wrap: break-word;}
     }
   }
 </style>

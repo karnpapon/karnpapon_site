@@ -23,6 +23,8 @@ import ct from '@/markdowns/2019/ct.md'
 import tsiangt from '@/markdowns/2019/tsiangt.md'
 import againagain from '@/markdowns/2019/againagain.md'
 
+import patithin from '@/markdowns/2020/patithin.md'
+
 const md = [
     { id: 'seeq', component: seeq },
     { id: 'the-black-codes-web', component: theBlackCodesWeb },
@@ -45,6 +47,7 @@ const md = [
     { id: 'ct', component: ct },
     { id: 'tsiangt', component: tsiangt },
     { id: 'again-again', component: againagain },
+    { id: 'patithin', component: patithin },
 ]
 
 export default md

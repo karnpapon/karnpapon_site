@@ -1,5 +1,29 @@
 const dataWorks = [
   {
+    name: 'patithin',
+    slug: 'patithin',
+    theme: 'work',
+    year: '2020',
+    thumbnail: require( '../assets/images/patithin/thumb-00.jpg' ),
+    key: '001',
+    workType: 'coding',
+    description1:'calendrical sequencer',
+    description2:'based-on Github\'s contribution calendar.',
+    links: [
+      { title: "/patithin", url: "https://github.com/karnpapon/patithin", type: "github"},
+      { title: "playground", url: "https://tender-banach-703feb.netlify.com/", type: "website"}
+    ],
+    categories: [
+      { title: 'Developer' },
+      { title: 'UX/UI Designer' },
+    ],
+    tags: [
+      { title: 'TypeScript', key: 'typescript'},
+      { title: 'React', key: 'react'},
+      { title: 'Redux', key: 'redux'}
+    ]
+  },
+  {
     name: 'tsiangt',
     slug: 'tsiangt',
     theme: 'work',
