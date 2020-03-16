@@ -3,13 +3,15 @@
 
 
 
-# What.
+# What
 
 calendrical sequencer based on Github's contribution history. <br/>
 where velocity of the note is determined by commit's frequency. 
 total 53 weeks, the only way to assign trigger is just commit!.
 
-[watch in action](https://twitter.com/karnpaponn/status/1222228556031250432)
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/0MEqRyrv7BA">
+</iframe>
 
 ### features
     - MIDI protocol (out only)
@@ -25,16 +27,16 @@ total 53 weeks, the only way to assign trigger is just commit!.
         - track mute.
         - step mute.
 
-[PLAY HERE](https://tender-banach-703feb.netlify.com/)
+> [play here](https://tender-banach-703feb.netlify.com/)
 
 ------
 
-# How.
+# How
 Internal Synth by Tone.js 
 
 
 ------
-# Learn.
+# Learn
 
 - [TypeScript](https://supercollider.github.io/) JavaScript superset.
 - [Web Audio Clock Scheduling](https://www.html5rocks.com/en/tutorials/audio/scheduling/) scheduling tempo clock to another thread apart from DOM thread.

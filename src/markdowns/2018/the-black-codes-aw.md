@@ -10,7 +10,7 @@
 
 
 
-# What.
+# What
 
 Boring Original Nonsense is first full length album from The Black Codes, the term "Boring Original Nonsense" demonstrates methodology on suspecting and questioning “Originality” in modern world and contexts which inevitably for music and design (or art-related works), its fluidity becomes more noticeable and the line between one side and the others has been blurred, thus, it had simultaneously teared down a huge mental blocks and weave music and design together. 
 

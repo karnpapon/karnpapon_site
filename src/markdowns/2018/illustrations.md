@@ -12,7 +12,7 @@
 
 
 
-# What.
+# What
 
 an illustration collections around 2016 ~ 2017.
 

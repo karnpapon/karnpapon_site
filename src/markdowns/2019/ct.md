@@ -3,19 +3,19 @@
 
 
 
-# What.
+# What
 
 Website for CT Design, an independent design firm based in Bangkok, Thailand
 
 ------
 
-# Why.
+# Why
 CT is a design studio, 
 creating communication design such as brand identity, packaging design, illustration and print.
 
 ------
 
-# How.
+# How
 
 Gatsby as UI engine. <br>
 Contentful as a Content Management System (CMS)

@@ -5,7 +5,7 @@
 
 
 
-# What.
+# What
 Livecode festival is algorithmic music festival, held in England,
 the former design is only orange texts with plain white background.
 this design picked up key elements like color, plain layout and organized them systematically.

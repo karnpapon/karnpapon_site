@@ -6,7 +6,7 @@
 
 
 
-# What.
+# What
 
 The Black Codes is an electronic bangkok-based musical act, consists of Karnpapon Boonput. 
 the website intended to be a part of promoting the first album “Boring Original Nonsense” ( 2018, self-released).
@@ -19,7 +19,7 @@ music, lyrics, and artworks, are available on the website.
 
 ------
 
-# Learn.
+# Learn
 
 - [ReactJS](https://reactjs.org/), as View-engine.
 - deploying to [ DigitalOcean ](https://www.digitalocean.com/).

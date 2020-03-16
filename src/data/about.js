@@ -16,6 +16,7 @@ const dataAbout = [ {
     exp3: "2017 : self-taught programming language",
     language: [
       {lang: "JavaScript"},
+      {lang: "TypeScript"},
       {lang: "Rust"},
       {lang: "SuperCollider"},
     ],

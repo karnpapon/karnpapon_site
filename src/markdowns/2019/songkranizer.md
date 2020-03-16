@@ -3,7 +3,7 @@
 
 
 
-# What.
+# What
 Chrome’s Extension to simulate Songkran festival through sight and sound without any VR’s equipment needed!, for those who wanted to *feels*  like participating in one of the most famous festival in Thailand, where people prompt to pour water on each others, 
 
 
@@ -14,18 +14,18 @@ the period where the heat’s at its peak of the year and embedded-sub-woofer-ca
 
 ------
 
-# Why.
+# Why
 
 when wanted to feels like participating in the festival but not to get wet.
 
 ------
 
-# How.
+# How
 using vedaJS as webGL.
 web audio as audio processing.
 
 ------
-# Learn.
+# Learn
 
 - [veda.js](https://veda.gl/vedajs/) as a GLSL framework.
 - [Chrome Extension API](https://developer.chrome.com/extensions/api_index#stable_apis), exploring Chrome API.
@@ -33,12 +33,12 @@ web audio as audio processing.
 
 
 ------
-# Caveats.
+# Caveats
 
 audio capturing is not stop when refreshing, only stop when close the tab.
 
 ------
-# Notes.
+# Notes
 
 my initial idea is to capturing audio from non-active tab and render webGL to current active tab, eg. sound from YouTube and visual from Pinterest. but afaik non-active tab can’t be captured due to security restriction, sadly currently have no workaround.
 <br>

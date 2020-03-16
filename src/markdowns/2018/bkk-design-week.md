@@ -7,7 +7,7 @@
 
 
 
-# What.
+# What
 
 Live-coding performance for Bangkok Design Week'18 at [TCDC](https://web.tcdc.or.th/th) (Thailand Creative Design Center's building) rooftop 5th fl.
 <br>
@@ -17,7 +17,7 @@ mangled with real-time `GLSL` code using [VEDA](https://veda.gl/), and GLSL fram
 route back to [Ableton](https://www.ableton.com/en/) for the sake of final composition.
 
 ------
-# Learn.
+# Learn
 
 - generates sound with [TidalCycles](https://tidalcycles.org/index.php/Welcome).
 - access through GPC by using GLSL language, in this case [VEDA](https://veda.gl/).
