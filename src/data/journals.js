@@ -9,7 +9,7 @@ const dataJournal = [
   readingTime: "8 mins read.",
   workType: 'portfolios',
   description1: 'How to use JavaScript',
-  description2: 'to create precision time.',
+  description2: 'to create precision timing',
   subdescription1: 'demystified time in javascript.',
   subdescription2: 'a notes behind my sequencer project.',
   contents: ""

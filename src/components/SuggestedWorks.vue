@@ -1,7 +1,8 @@
 <template>
   <section id="suggested-work-theme" class="column is-full nav-next-work-section scroll-spacing no-padding">
       <div class="column is-half no-padding-top suggested-title">
-        <div class="title detail-level padding-top-3rem">Project</div>
+        <div v-if="dataDetails[0].theme == 'journal'" class="title detail-level padding-top-3rem">Journal</div>
+        <div v-else class="title detail-level padding-top-3rem">Project</div>
       </div>
     
       <div class="column is-half no-padding control-worklist-detail">

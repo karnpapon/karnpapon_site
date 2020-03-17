@@ -96,6 +96,10 @@ export default {
       font-family: 'Pridi', sans-serif; 
       font-size: 20px;
     }
+
+    blockquote{
+      border: 1px solid white;
+    }
   }
  
   .fade-enter-active,
