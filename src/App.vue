@@ -68,7 +68,7 @@ export default {
     /* font-smoothing: antialiased !important; */
 
     code, pre{
-      // font-family: inherit !important;
+      font-family: inherit !important;
     }
 
     pre code{
