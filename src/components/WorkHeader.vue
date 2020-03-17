@@ -10,8 +10,8 @@
           <p>{{ dataDetails.description2}}</p>  
         </div>
         <div class="subtitle is-6 padding-top">
-          <p>{{ dataDetails.description1}}</p>  
-          <p>{{ dataDetails.description2}}</p>  
+          <p>{{ dataDetails.subdescription1}}</p>  
+          <p>{{ dataDetails.subdescription2}}</p>  
         </div>
       </div>
       <div v-else>

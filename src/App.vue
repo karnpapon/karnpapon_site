@@ -80,6 +80,23 @@ export default {
     margin: 20px 0 !important;
   }
 
+  .th-txt {
+    a { font-family: 'Mitr', sans-serif;}
+    p { font-family: 'Bai Jamjuree', sans-serif; }
+    h1, h2{
+      font-family: 'Mitr', sans-serif;
+      font-size: 22px;
+    }
+    h2 {
+      text-decoration: underline;
+      font-size: xx-large;
+    }
+
+    .intro{
+      font-family: 'Pridi', sans-serif; 
+      font-size: 20px;
+    }
+  }
  
   .fade-enter-active,
   .fade-leave-active {
@@ -287,6 +304,7 @@ export default {
     overflow: hidden;
   }
 
+  
   .scrollable{
     overflow-y: scroll;
     margin-right: -30px;

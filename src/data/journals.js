@@ -1,15 +1,17 @@
 const dataJournal = [
   {
-  name: 'soon...',
+  name: 'a matter of javascript\'s time',
   slug: 'journal-00',
   theme: 'journal',
   date: '12/02/2019',
   img: "../assets/images/tbc10_cover_artwork.jpg",
   key: '001',
-  readingTime: "2 mins read.",
+  readingTime: "8 mins read.",
   workType: 'portfolios',
-  description1: 'How to be a noob developer',
-  description2: 'from noob to noober.',
+  description1: 'How to use JavaScript',
+  description2: 'to create precision time.',
+  subdescription1: 'demystified time in javascript.',
+  subdescription2: 'a notes behind my sequencer project.',
   contents: ""
   },
   {
@@ -21,8 +23,10 @@ const dataJournal = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '002',
     workType: 'portfolios',
-    description1: 'How to be a good programmer2',
-    description2: 'from noob to noober.',
+    description1: 'soon',
+    description2: '...',
+    subdescription1: 'new article soon.',
+    subdescription2: '...',
     contents: ""
   },
   {
@@ -34,8 +38,10 @@ const dataJournal = [
     img: "../assets/images/tbc10_cover_artwork.jpg",
     key: '003',
     workType: 'portfolios',
-    description1: 'How to 2',
-    description2: 'from noob to noober.',
+    description1: 'soon',
+    description2: '...',
+    subdescription1: 'new article soon.',
+    subdescription2: '...',
     contents: ""
   },
 ]
