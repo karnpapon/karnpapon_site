@@ -5,7 +5,7 @@
 
 # What
 
-calendrical sequencer based on Github's contribution history. <br/>
+calendrical sequencer based on Github's contribution history.
 where velocity of the note is determined by commit's frequency. 
 total 53 weeks, the only way to assign trigger is just commit!.
 
@@ -14,18 +14,20 @@ src="https://www.youtube.com/embed/0MEqRyrv7BA">
 </iframe>
 
 ### features
-    - MIDI protocol (out only)
-    - Internal Synth voice (13 instruments) 
-    - adjustable 
-        - steps length.
-        - scale / root note.
-        - pitch.
-        - midi-channel.
-        - volumn ( only works for internal synth).
-        - octave.
-        - BPM
-        - track mute.
-        - step mute.
+
+- MIDI protocol (out only)
+- Internal Synth voice (13 instruments) 
+- adjustable
+    - steps length.
+    - scale / root note.
+    - pitch.
+    - midi-channel.
+    - volumn ( only works for internal synth).
+    - octave.
+    - BPM
+    - track mute.
+    - step mute.
+
 
 > [play here](https://tender-banach-703feb.netlify.com/)
 

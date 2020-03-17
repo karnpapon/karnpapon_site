@@ -66,6 +66,13 @@ export default {
     -moz-osx-font-smoothing: grayscale !important;
     -webkit-font-smoothing: antialiased !important;
     /* font-smoothing: antialiased !important; */
+
+    code, pre{
+      // font-family: inherit !important;
+    }
+
+    pre code{
+    }
   }
 
 * {
@@ -78,6 +85,7 @@ export default {
   pre{
     background-color: white !important;
     margin: 20px 0 !important;
+    width: 100%;
   }
 
   .th-txt {
@@ -87,6 +95,11 @@ export default {
       font-family: 'Mitr', sans-serif;
       font-size: 22px;
     }
+
+    .code{
+      // background-color: white;
+    }
+
     h2 {
       text-decoration: underline;
       font-size: xx-large;

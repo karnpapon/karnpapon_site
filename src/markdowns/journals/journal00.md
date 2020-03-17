@@ -60,24 +60,23 @@ JavaScript เป็นภาษาที่ทำงานบน single-thread 
 ในภาษา JavaScript เราสามารถจัดการ audio event ด้วย Web Audio API ซึ่งไอ้เจ้า web audio เนี่ยจะมี property ที่ชื่อ currentTime ที่สามารถเข้าถึง audio subsystem’s hardware clock ได้ และมีความแม่นยำสูง ( คือทำงานในระดับ sample level ) ซึ่งเป็น floating point ที่ละเอียดระดับจุดทศนิยม 15 หลัก ( double ) ตัวอย่างการใช้งานด้านล่างนี้เลย
 
 ```
+  window.AudioContext = window.AudioContext;
+  var context = new AudioContext();
 
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-var context = new AudioContext();
-
-function playSound(buffer) {
-  var source = context.createBufferSource(); 
-  source.buffer = buffer;                    
-  source.connect(context.destination);       
-  source.start(0);                           
-}
-
-for (var bar = 0; bar < 2; bar++) {
-  var time = startTime + bar * 8 * eighthNoteTime;
-
-  for (var i = 0; i < 8; ++i) {
-    playSound(hihat, time + i * eighthNoteTime);
+  function playSound(buffer) {
+    var source = context.createBufferSource(); 
+    source.buffer = buffer;                    
+    source.connect(context.destination);       
+    source.start(0);                           
   }
-}
+
+  for (var bar = 0; bar < 2; bar++) {
+    var time=startTime + bar * 8 * noteTime;
+
+    for (var i = 0; i < 8; ++i) {
+      playSound(hihat, time + i * noteTime);
+    }
+  }
 ```
 
 จากตัวอย่างข้างบนเป็นการเล่น 8th note ( ใน 1 ห้อง (bar) มี 8 จังหวะ )
@@ -104,14 +103,17 @@ for (var bar = 0; bar < 2; bar++) {
     this.timerWorker = new MetronomeWorker
 
     onmessage = function(e) {
-       // listen to main execute thread in audio thread.
+       // listen to main execute thread.
         if (e.data == "tick") {
           self.scheduler();
         } else { 
           console.log("message: " + e.data)
         }
     }
-    window.parent.postMessage({ "interval": this.lookahead }, '*')
+    window.parent.postMessage({ 
+      "interval": this.lookahead }, 
+      '*'
+    )
   }
 ```
 ```
@@ -123,8 +125,8 @@ for (var bar = 0; bar < 2; bar++) {
       if (e.data=="start") {
         this.timerID = setInterval(
           function(){
-            // จะส่ง msg "tick" กลับไปยัง audio event
-            // และฟังก์ชั่นที่คอยจัดการดูคิวการรัน ( scheduling process ) จะทำงาน
+            // ส่ง msg "tick" ไปยัง audio event
+            // และฟังก์ชั่นที่คอยดูคิวการรัน จะทำงาน
             window.parent.postMessage("tick", '*'); 
           },this.interval
         )
@@ -162,24 +164,29 @@ for (var bar = 0; bar < 2; bar++) {
 
 core function ของการเข้าคิวการทำงาน ( scheduling process )
 ```
-while (nextNoteTime < audioContext.currentTime + scheduleAheadTime ) {
-  scheduleNote( current16thNote, nextNoteTime );
-  nextNote();
+
+let n = this.nextNoteTime
+let a = this.scheduleAheadTime
+let time = this.audioContext.currentTime
+while (n < time + a ) {
+  this.scheduleNote( this.current16thNote, n );
+  this.nextNote();
 }
 ```
 
 ด้านล่างจะเป็นตัวกำหนดล่วงหน้าว่า note ต่อไปจะเป็นอะไร
 
 ```
-function nextNote() {
-  var secondsPerBeat = 60.0 / tempo;	
-  nextNoteTime += 0.25 * secondsPerBeat;
-
-  current16thNote++;
-  if (current16thNote == 16) {
-    current16thNote = 0;
+nextNote = function()  {
+  let bpm = store.getState().session.bpm
+    var sec = 60.0 / bpm;
+    this.nextNoteTime += 0.25 * sec;  
+    this.current16thNote++; 
+    if (this.current16thNote == 16) {
+      this.current16thNote = 0;
+    }
   }
-}
+
 ```
 
 ค่อนข้างซับซ้อนพอสมควรแต่ก็ช่วยแก้ปัญหาเรื่อง jittery ไปได้เยอะทีเดียว ในทางปฏิบัติแล้วในท้ายที่สุดก็ต้องมาลองปรับๆหาจุดที่ลงตัวเอาอยู่ดี เพียงแต่ไอเดียคือการหาจุดที่เหมาะสมของการ "คอยดูคิวล่วงหน้า ( Schedule ahead )" คือไม่ให้ระยะเวลามันสั้นหรือยาวเกินไปจนมีผลต่อความคลาดเคลื่อน ( Delay ) ในการปรับพารามิเตอร์แต่ละที อาจจะเริ่มจาก lookahead ซัก 100ms และ interval ประมาณ 25ms ก็เป็นเรทที่ค่อนข้างเหมาะ
