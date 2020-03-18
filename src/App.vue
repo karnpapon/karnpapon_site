@@ -89,10 +89,10 @@ export default {
   }
 
   .th-txt {
-    a { font-family: 'noto_sans_th', sans-serif; font-style: initial;}
+    a { font-family: 'noto_sans_th', 'noto_sans_en', sans-serif; font-style: initial;}
     p { font-family: 'Bai Jamjuree', sans-serif; }
     h1, h2{
-      font-family: 'noto_sans_th', sans-serif;
+      font-family: 'noto_sans_th', 'noto_sans_en', sans-serif;
       font-size: 22px;
     }
 
@@ -106,10 +106,10 @@ export default {
     }
 
     .intro{
-      font-family: 'noto_sans_th', sans-serif; 
+      font-family: 'noto_sans_th', 'noto_sans_en', sans-serif; 
       font-size: 20px;
       a{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'noto_sans_th','noto_sans_en', sans-serif;
         text-decoration: underline;
       }
     }
