@@ -1,5 +1,45 @@
 const dataWorks = [
   {
+    name: 'worng',
+    slug: 'worng',
+    theme: 'work',
+    year: '2020',
+    thumbnail: require( '../assets/images/worng/thumb-00.jpg' ),
+    key: '001',
+    workType: 'coding',
+    description1:'dynamic programming language and tree-walk interpreter',
+    description2:'written in Rust based on Lox Language',
+    links: [
+      { title: "/worng", url: "https://github.com/karnpapon/worng", type: "github"}
+    ],
+    categories: [
+      { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'Rust', key: 'rust'},
+    ]
+  },
+  {
+    name: 'blozxom',
+    slug: 'blozxom',
+    theme: 'work',
+    year: '2020',
+    thumbnail: require( '../assets/images/blozxom/thumb-00.jpg' ),
+    key: '001',
+    workType: 'coding',
+    description1:'blozxom is the cutting edge\'s cultural research & development project. ',
+    description2:'Also, exchanges and introduces friends from different towns in the world.',
+    links: [
+      { title: "blozxom", url: "https://blozxom.com/", type: "website"}
+    ],
+    categories: [
+      { title: 'Developer' },
+    ],
+    tags: [
+      { title: 'NextJS', key: 'nextjs'},
+    ]
+  },
+  {
     name: 'patithin',
     slug: 'patithin',
     theme: 'work',

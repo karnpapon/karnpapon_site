@@ -24,6 +24,8 @@ import tsiangt from '@/markdowns/2019/tsiangt.md'
 import againagain from '@/markdowns/2019/againagain.md'
 
 import patithin from '@/markdowns/2020/patithin.md'
+import blozxom from '@/markdowns/2020/blozxom.md'
+import worng from '@/markdowns/2020/worng.md'
 
 const md = [
     { id: 'seeq', component: seeq },
@@ -48,6 +50,8 @@ const md = [
     { id: 'tsiangt', component: tsiangt },
     { id: 'again-again', component: againagain },
     { id: 'patithin', component: patithin },
+    { id: 'blozxom', component: blozxom },
+    { id: 'worng', component: worng },
 ]
 
 export default md
