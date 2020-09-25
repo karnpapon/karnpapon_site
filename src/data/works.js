@@ -230,7 +230,7 @@ const dataWorks = [
     description1:'Website for The ███████',
     description2:'created by React.js',
     links: [
-      { title: "theblack.codes", url: "https://theblackcodes.netlify.app", type: "website" },
+      { title: "theblack.codes", url: "https://theblackcodesweb.vercel.app/", type: "website" },
       { title: "-", url: "-", type: "github" }
     ],
     categories: [
