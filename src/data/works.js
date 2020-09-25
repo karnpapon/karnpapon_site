@@ -97,7 +97,7 @@ const dataWorks = [
     description2:'algorithmic composition with Ray-Marching technique.',
     links: [
       { title: "/again-again", url: "https://github.com/karnpapon/againagain", type: "github"},
-      { title: "again-again", url: "https://www.llllllllllllllllllll.world/", type: "website"}
+      { title: "again-again", url: "https://againagain.netlify.app", type: "website"}
     ],
     categories: [
       { title: 'Developer' },
@@ -230,7 +230,7 @@ const dataWorks = [
     description1:'Website for The ███████',
     description2:'created by React.js',
     links: [
-      { title: "theblack.codes", url: "https://theblack.codes", type: "website" },
+      { title: "theblack.codes", url: "https://theblackcodes.netlify.app", type: "website" },
       { title: "-", url: "-", type: "github" }
     ],
     categories: [

@@ -14,7 +14,7 @@ Decided to use SuperCollider for audio synthesis and algorithmic composition <br
 to intepret an unique story, this website is part of song promo. 
 Demonstrate the song structure and let audience play with composition with thier own wills.
 
-> <a href="https://www.llllllllllllllllllll.world/" target="_blank">play here</a>
+> <a href="https://againagain.netlify.app" target="_blank">play here</a>
 
 ------
 
