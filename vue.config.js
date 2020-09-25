@@ -1,7 +1,4 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-      ? '/karnpapon-site/'
-      : '/',
     chainWebpack(config){
       config.module.rule('md')
         .test(/\.md/)
